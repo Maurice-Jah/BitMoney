@@ -1,0 +1,114 @@
+.wave {
+  height: 70vh;
+  width: 100%;
+  position: absolute;
+  background-image: url(../../images/wave.png);
+  background-position: 0% 100%;
+}
+
+//============ Hero Section ===================//
+.hero {
+  display: flex;
+  justify-content: space-between;
+  &__welcome {
+    &-main {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    &-sub {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    &-button {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+  }
+
+  &__cta {
+    padding: 0rem 1.5rem;
+    width: 24rem;
+    position: relative;
+    z-index: 10;
+    background: $color-white;
+    box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 0.95rem;
+    padding-bottom: 5rem; ////////////////////remove later
+
+    & > * {
+      margin: 2rem 0;
+    }
+
+    &-step {
+      font-weight: 500;
+    }
+
+    &-progress {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &--bar {
+        width: 16em;
+        height: 0.7em;
+        border-radius: 0.35em;
+        background-color: rgba($color-primary, 0.26);
+        position: relative;
+
+        &::before {
+          content: "";
+          background-color: $color-primary;
+          position: absolute;
+          width: 60%;
+          height: 0.7em;
+          border-radius: 0.35em;
+        }
+      }
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+
+    &-option {
+      display: flex;
+      align-items: center;
+
+      &--tab {
+        cursor: pointer;
+        padding: 0.5rem 1.2rem;
+        display: inline-block;
+        border-radius: 3px 3px 0px 0px;
+        font-weight: 500;
+      }
+
+      .radio {
+        display: none;
+      }
+    }
+    &-heading {
+      font-size: 1rem;
+      margin-bottom: -1rem;
+    }
+  }
+}
+
+select {
+  width: 100%;
+  padding: 0.6rem;
+  position: relative;
+}
+
+//============ Leverage Section ===================//
+
+.leverage {
+  // border: 2px solid red;
+
+  &__heading {
+    text-align: center;
+    padding-bottom: 0.2rem;
+  }
+}

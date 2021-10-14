@@ -1,0 +1,41 @@
+.nav {
+  position: relative;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+
+  &__logo {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    display: flex;
+    list-style-type: none;
+
+    &-list {
+      margin: 0 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &--item {
+        text-decoration: none;
+        color: $color-black;
+        cursor: pointer;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__button {
+    padding: 0.8rem 2rem;
+    border-radius: 1.6rem;
+    text-decoration: none;
+    display: block;
+  }
+}

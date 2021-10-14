@@ -1,0 +1,40 @@
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 1.6rem;
+  outline: none;
+  border: 0;
+  color: $color-white;
+  background-color: $color-primary;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  z-index: 20;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.tab-active {
+  border-width: 1px;
+  border-style: solid solid none solid;
+  border-color: $color-primary;
+  color: $color-primary;
+  background-color: rgba($color-primary, 0.01);
+}
+
+.underline {
+  position: relative;
+  padding-bottom: 0.2rem;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 1.5rem;
+    height: 2px;
+    background-color: $color-primary;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
