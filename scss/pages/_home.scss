@@ -105,10 +105,111 @@ select {
 //============ Leverage Section ===================//
 
 .leverage {
-  // border: 2px solid red;
-
   &__heading {
     text-align: center;
-    padding-bottom: 0.2rem;
+    font-weight: 700;
   }
+
+  &-us {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__about {
+      font-weight: 600;
+      &-main {
+        color: $color-primary;
+      }
+
+      &-sub {
+        font-size: 1.875rem;
+      }
+    }
+
+    &__text {
+      font-weight: 500;
+    }
+  }
+
+  &__leverage {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      border: 1px solid $color-ash;
+      width: 25%;
+      padding: 3rem 1rem;
+
+      img {
+        width: 5rem;
+        height: 5rem;
+        object-fit: contain;
+        display: inline-block;
+      }
+
+      & > p {
+        margin-top: 1rem;
+
+        &:nth-child(2) {
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+
+        &:nth-child(3) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+//============ Process Section ===================//
+.process {
+  &__heading {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__stage {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      width: 28%;
+      padding: 3rem 1rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+      }
+
+      & > p {
+        margin-top: 1rem;
+
+        &:nth-child(2) {
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+
+        &:nth-child(3) {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+//============ Information Section ===================//
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    93.84deg,
+    rgba(241, 89, 14, 0.81) 41.47%,
+    #f1590e 102.88%
+  );
 }

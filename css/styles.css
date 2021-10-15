@@ -202,4 +202,89 @@ select {
 
 .leverage__heading {
   text-align: center;
-  padding-bottom: 0.2rem; }
+  font-weight: 700; }
+
+.leverage-us {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .leverage-us__about {
+    font-weight: 600; }
+    .leverage-us__about-main {
+      color: #f1590e; }
+    .leverage-us__about-sub {
+      font-size: 1.875rem; }
+  .leverage-us__text {
+    font-weight: 500; }
+
+.leverage__leverage {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .leverage__leverage > * {
+    border: 1px solid #cbc8c8;
+    width: 25%;
+    padding: 3rem 1rem; }
+    .leverage__leverage > * img {
+      width: 5rem;
+      height: 5rem;
+      -o-object-fit: contain;
+         object-fit: contain;
+      display: inline-block; }
+    .leverage__leverage > * > p {
+      margin-top: 1rem; }
+      .leverage__leverage > * > p:nth-child(2) {
+        font-weight: 500;
+        font-size: 1.2rem; }
+      .leverage__leverage > * > p:nth-child(3) {
+        font-size: 0.9rem; }
+
+.process__heading {
+  text-align: center;
+  font-weight: 700; }
+
+.process__stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .process__stage > * {
+    width: 28%;
+    padding: 3rem 1rem; }
+    .process__stage > * img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block; }
+    .process__stage > * > p {
+      margin-top: 1rem; }
+      .process__stage > * > p:nth-child(2) {
+        font-weight: 500;
+        font-size: 1.2rem; }
+      .process__stage > * > p:nth-child(3) {
+        font-size: 0.9rem; }
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -o-linear-gradient(356.16deg, rgba(241, 89, 14, 0.81) 41.47%, #f1590e 102.88%);
+  background: linear-gradient(93.84deg, rgba(241, 89, 14, 0.81) 41.47%, #f1590e 102.88%); }
