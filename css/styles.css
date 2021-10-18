@@ -84,12 +84,12 @@ section {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
 
-.hero__cta-register--heading {
+.hero__cta-register--heading, .hero__cta-signIn--heading {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 3rem; }
 
-.hero__cta-register--form .input-group {
+.hero__cta-register--form .input-group, .hero__cta-signIn--form .input-group {
   margin-top: 1.5rem;
   position: relative;
   display: -webkit-box;
@@ -102,10 +102,10 @@ section {
   border: 1px solid #cbc8c8;
   background-color: #fff;
   border-radius: 8px; }
-  .hero__cta-register--form .input-group img {
+  .hero__cta-register--form .input-group img, .hero__cta-signIn--form .input-group img {
     display: inline-block;
     margin: 0 0.5rem; }
-  .hero__cta-register--form .input-group input {
+  .hero__cta-register--form .input-group input, .hero__cta-signIn--form .input-group input {
     padding: 1.2rem 10px;
     background-color: #fff;
     color: #383838;
@@ -114,17 +114,20 @@ section {
     outline: none;
     font-size: 1rem;
     border-radius: 8px; }
-    .hero__cta-register--form .input-group input:focus-within {
+    .hero__cta-register--form .input-group input:focus-within, .hero__cta-signIn--form .input-group input:focus-within {
       background-color: #fff; }
   .hero__cta-register--form .input-group input:-webkit-autofill,
   .hero__cta-register--form .input-group input:-webkit-autofill:hover,
   .hero__cta-register--form .input-group input:-webkit-autofill:focus,
-  .hero__cta-register--form .input-group input:-webkit-autofill:active {
+  .hero__cta-register--form .input-group input:-webkit-autofill:active, .hero__cta-signIn--form .input-group input:-webkit-autofill,
+  .hero__cta-signIn--form .input-group input:-webkit-autofill:hover,
+  .hero__cta-signIn--form .input-group input:-webkit-autofill:focus,
+  .hero__cta-signIn--form .input-group input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 90px white inset !important;
             box-shadow: 0 0 0 90px white inset !important; }
-  .hero__cta-register--form .input-group input:focus::-webkit-input-placeholder {
+  .hero__cta-register--form .input-group input:focus::-webkit-input-placeholder, .hero__cta-signIn--form .input-group input:focus::-webkit-input-placeholder {
     color: transparent; }
-  .hero__cta-register--form .input-group label {
+  .hero__cta-register--form .input-group label, .hero__cta-signIn--form .input-group label {
     position: absolute;
     opacity: 0;
     visibility: hidden;
@@ -136,24 +139,25 @@ section {
     font-weight: 500;
     padding: 0 10px;
     color: #383838; }
-  .hero__cta-register--form .input-group input:not(:-moz-placeholder-shown) ~ label {
+  .hero__cta-register--form .input-group input:not(:-moz-placeholder-shown) ~ label, .hero__cta-signIn--form .input-group input:not(:-moz-placeholder-shown) ~ label {
     top: -20%;
     left: 5%;
     opacity: 1;
     visibility: visible; }
-  .hero__cta-register--form .input-group input:not(:-ms-input-placeholder) ~ label {
+  .hero__cta-register--form .input-group input:not(:-ms-input-placeholder) ~ label, .hero__cta-signIn--form .input-group input:not(:-ms-input-placeholder) ~ label {
     top: -20%;
     left: 5%;
     opacity: 1;
     visibility: visible; }
   .hero__cta-register--form .input-group:focus-within label,
-  .hero__cta-register--form .input-group input:not(:placeholder-shown) ~ label {
+  .hero__cta-register--form .input-group input:not(:placeholder-shown) ~ label, .hero__cta-signIn--form .input-group:focus-within label,
+  .hero__cta-signIn--form .input-group input:not(:placeholder-shown) ~ label {
     top: -20%;
     left: 5%;
     opacity: 1;
     visibility: visible; }
 
-.hero__cta-register--form .sumbit-btn {
+.hero__cta-register--form .sumbit-btn, .hero__cta-signIn--form .sumbit-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,11 +165,15 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 2rem; }
-  .hero__cta-register--form .sumbit-btn input {
+  .hero__cta-register--form .sumbit-btn input, .hero__cta-signIn--form .sumbit-btn input {
     border-radius: 8px;
     font-size: 1.2rem;
     font-weight: 600;
     padding: 1rem 2rem; }
+
+.hero__cta-signIn h3 {
+  margin-top: 5rem;
+  font-size: 2rem; }
 
 .color {
   color: #f1590e; }

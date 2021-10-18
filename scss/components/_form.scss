@@ -1,5 +1,6 @@
 .hero__cta {
-  &-register {
+  &-register,
+  &-signIn {
     &--heading {
       font-size: 1.5rem;
       font-weight: 600;
@@ -79,6 +80,15 @@
           padding: 1rem 2rem;
         }
       }
+    }
+  }
+
+  //   ============ for sign in
+
+  &-signIn {
+    h3 {
+      margin-top: 5rem;
+      font-size: 2rem;
     }
   }
 }
