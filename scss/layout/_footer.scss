@@ -8,7 +8,7 @@
 
   @include respond(tab-port) {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   &__cta {
@@ -56,6 +56,10 @@
 
     @include respond(tab-land) {
       margin-top: 1rem;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 0rem;
     }
 
     li {
@@ -119,6 +123,10 @@
         color: $color-white;
         margin: 1rem;
         font-size: 1rem;
+
+        @include respond(smallest) {
+          margin: 0.8rem;
+        }
       }
     }
   }
