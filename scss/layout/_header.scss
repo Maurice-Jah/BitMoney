@@ -16,8 +16,19 @@
     display: flex;
     list-style-type: none;
 
+    @include respond(tab-port) {
+      display: none;
+    }
+
     &-list {
       margin: 0 2rem;
+
+      @include respond(mini-lap) {
+        margin: 0 1rem;
+      }
+      @include respond(tab-land) {
+        margin: 0 0.5rem;
+      }
 
       &:last-child {
         margin-right: 0;
@@ -28,6 +39,11 @@
         color: $color-black;
         cursor: pointer;
         font-weight: 500;
+
+        @include respond(tab-land) {
+          font-weight: 400;
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -37,5 +53,9 @@
     border-radius: 1.6rem;
     text-decoration: none;
     display: block;
+
+    @include respond(mini-lap) {
+      display: none;
+    }
   }
 }

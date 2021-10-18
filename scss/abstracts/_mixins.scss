@@ -1,12 +1,10 @@
-
-
 // MEDIA QUERY MANAGER
 
 /*
 0 - 600px : Phone
 600 - 768px : portrait tablets 
 768px - 992px : landscape tablets
-992px - 1200px: mini-laptops/desktops
+992px - 1200px: mini-laptops/desktops 1104
 1200 - 1800px : laptops .....my desktop
 1800px+: Big desktops
 */
@@ -23,47 +21,47 @@ $breakpoints
 
 */
 
-// @mixin respond($breakpoint) {
-//   @if $breakpoint == smallest {
-//     @media only screen and (max-width: 22.5em) {
-//       @content;
-//     }
-//   }
+@mixin respond($breakpoint) {
+  //   @if $breakpoint == smallest {
+  //     @media only screen and (max-width: 22.5em) {
+  //       @content;
+  //     }
+  //   }
 
-//   @if $breakpoint == sm-phone {
-//     @media only screen and (max-width: 25em) {
-//       @content;
-//     }
-//   }
+  //   @if $breakpoint == sm-phone {
+  //     @media only screen and (max-width: 25em) {
+  //       @content;
+  //     }
+  //   }
 
-//   @if $breakpoint == phone {
-//     @media only screen and (max-width: 37.5em) {
-//       @content;
-//     }
-//   }
-//   @if $breakpoint == tab-port {
-//     @media only screen and (max-width: 48em) {
-//       @content;
-//     }
-//   }
-//   @if $breakpoint == tab-land {
-//     @media only screen and (max-width: 62em) {
-//       @content;
-//     }
-//   }
-//   @if $breakpoint == mini-lap {
-//     @media only screen and (max-width: 75em) {
-//       @content;
-//     }
-//   }
-//   @if $breakpoint == desktop {
-//     @media only screen and (max-width: 112.5em) {
-//       @content;
-//     }
-//   }
-//   @if $breakpoint == big-desktop {
-//     @media only screen and (min-width: 112.5em) {
-//       @content;
-//     }
-//   }
-// }
+  //   @if $breakpoint == phone {
+  //     @media only screen and (max-width: 37.5em) {
+  //       @content;
+  //     }
+  //   }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 43.75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == mini-lap {
+    @media only screen and (max-width: 69em) {
+      @content;
+    }
+  }
+  //   @if $breakpoint == desktop {
+  //     @media only screen and (max-width: 112.5em) {
+  //       @content;
+  //     }
+  //   }
+  //   @if $breakpoint == big-desktop {
+  //     @media only screen and (min-width: 112.5em) {
+  //       @content;
+  //     }
+  //   }
+}

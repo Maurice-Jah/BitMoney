@@ -6,8 +6,17 @@
   color: #6f706f;
   background: #fcfdfd;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
   &__cta {
     width: 30%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
     &-image {
       img {
         display: inline-block;
@@ -16,6 +25,10 @@
     &-text {
       font-size: 0.9rem;
       padding: 1.5rem 0;
+
+      @include respond(tab-land) {
+        font-size: 0.8rem;
+      }
     }
 
     &-button {
@@ -29,19 +42,37 @@
   p:first-child {
     font-size: 1.1rem;
     font-weight: 500;
+
+    @include respond(tab-land) {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 1rem;
+    }
   }
 
   ul {
     list-style-type: none;
     margin-top: 3rem;
 
+    @include respond(tab-land) {
+      margin-top: 1rem;
+    }
+
     li {
       margin: 0.8rem 0;
+
+      @include respond(tab-land) {
+        margin: 0.4rem 0;
+      }
 
       a {
         color: #6f706f;
         text-decoration: none;
         font-size: 0.9rem;
+
+        @include respond(tab-land) {
+          font-size: 0.8rem;
+        }
       }
     }
   }
@@ -53,14 +84,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     color: $color-white;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @include respond(tab-port) {
+      &::before {
+        content: "";
+        bottom: 50%;
+        position: absolute;
+        width: 100%;
+        height: 0.08px;
+        background-color: $color-white;
+      }
+    }
 
     &-text {
       font-size: 1rem;
       font-weight: 300;
+
+      @include respond(tab-port) {
+        order: 1;
+      }
     }
 
     &-social {
+      position: relative;
       a {
         text-decoration: none;
         color: $color-white;
