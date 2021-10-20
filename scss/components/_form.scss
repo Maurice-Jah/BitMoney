@@ -92,3 +92,161 @@
     }
   }
 }
+
+//   ============ buy section
+
+.hero__cta {
+  &-buy,
+  &-trade,
+  &-sell {
+    &--heading {
+      font-size: 1rem;
+    }
+
+    &--form {
+      .input-select {
+        position: relative;
+        border: 1px solid $color-ash;
+        display: flex;
+        padding: 0.8rem 0.5rem;
+        align-items: center;
+        border-radius: 8px;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        background-color: $color-white;
+
+        img {
+          display: inline-block;
+          margin-right: 0.8rem;
+          width: 20px;
+          height: 20px;
+          object-fit: cover;
+        }
+
+        .title {
+          position: absolute;
+          top: -10px;
+          left: 25px;
+          font-size: 0.6rem;
+          font-weight: 600;
+          background: $color-white;
+          padding: 0.2rem 0.6rem;
+        }
+
+        .coin-name {
+          font-weight: 500;
+          font-size: 1rem;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          top: 1rem;
+          width: 0;
+          height: 0;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid $color-black;
+          right: 1rem;
+        }
+
+        &::after {
+          position: absolute;
+          content: "";
+          top: 1.7rem;
+          width: 0;
+          height: 0;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-top: 7px solid $color-black;
+          right: 1rem;
+        }
+      }
+
+      // For the input forms
+      .input-group {
+        margin-top: 1.5rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        border: 1px solid $color-ash;
+        background-color: #fff;
+        border-radius: 8px;
+
+        img {
+          display: inline-block;
+          margin-left: 0.8rem;
+          width: 20px;
+          height: 20px;
+          object-fit: contain;
+        }
+
+        input {
+          padding: 1.2rem 10px;
+          background-color: #fff;
+          color: #383838;
+          width: 100%;
+          border: none;
+          outline: none;
+          font-size: 1rem;
+          border-radius: 8px;
+          font-weight: 600;
+
+          &:focus-within {
+            background-color: #fff;
+          }
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          box-shadow: 0 0 0 90px white inset !important;
+        }
+
+        input:focus::-webkit-input-placeholder {
+          color: transparent;
+        }
+
+        label {
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+          font-size: 0.6rem;
+          background-color: #fff;
+          transition: 500ms opacity ease-in;
+          font-weight: 600;
+          padding: 0 10px;
+          color: #383838;
+        }
+
+        &:focus-within label,
+        input:not(:placeholder-shown) ~ label {
+          top: -13%;
+          left: 5%;
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      .sumbit-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+
+        input {
+          border-radius: 8px;
+          font-size: 1.2rem;
+          font-weight: 600;
+          padding: 1rem 3rem;
+        }
+      }
+    }
+  }
+
+  &-sell {
+    img:nth-child(4) {
+      margin-right: 1rem;
+    }
+  }
+}

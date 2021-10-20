@@ -175,6 +175,157 @@ section {
   margin-top: 5rem;
   font-size: 2rem; }
 
+.hero__cta-buy--heading, .hero__cta-trade--heading, .hero__cta-sell--heading {
+  font-size: 1rem; }
+
+.hero__cta-buy--form .input-select, .hero__cta-trade--form .input-select, .hero__cta-sell--form .input-select {
+  position: relative;
+  border: 1px solid #cbc8c8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.8rem 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 8px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  background-color: #fff; }
+  .hero__cta-buy--form .input-select img, .hero__cta-trade--form .input-select img, .hero__cta-sell--form .input-select img {
+    display: inline-block;
+    margin-right: 0.8rem;
+    width: 20px;
+    height: 20px;
+    -o-object-fit: cover;
+       object-fit: cover; }
+  .hero__cta-buy--form .input-select .title, .hero__cta-trade--form .input-select .title, .hero__cta-sell--form .input-select .title {
+    position: absolute;
+    top: -10px;
+    left: 25px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    background: #fff;
+    padding: 0.2rem 0.6rem; }
+  .hero__cta-buy--form .input-select .coin-name, .hero__cta-trade--form .input-select .coin-name, .hero__cta-sell--form .input-select .coin-name {
+    font-weight: 500;
+    font-size: 1rem; }
+  .hero__cta-buy--form .input-select::before, .hero__cta-trade--form .input-select::before, .hero__cta-sell--form .input-select::before {
+    position: absolute;
+    content: "";
+    top: 1rem;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #000;
+    right: 1rem; }
+  .hero__cta-buy--form .input-select::after, .hero__cta-trade--form .input-select::after, .hero__cta-sell--form .input-select::after {
+    position: absolute;
+    content: "";
+    top: 1.7rem;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #000;
+    right: 1rem; }
+
+.hero__cta-buy--form .input-group, .hero__cta-trade--form .input-group, .hero__cta-sell--form .input-group {
+  margin-top: 1.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px; }
+  .hero__cta-buy--form .input-group img, .hero__cta-trade--form .input-group img, .hero__cta-sell--form .input-group img {
+    display: inline-block;
+    margin-left: 0.8rem;
+    width: 20px;
+    height: 20px;
+    -o-object-fit: contain;
+       object-fit: contain; }
+  .hero__cta-buy--form .input-group input, .hero__cta-trade--form .input-group input, .hero__cta-sell--form .input-group input {
+    padding: 1.2rem 10px;
+    background-color: #fff;
+    color: #383838;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 600; }
+    .hero__cta-buy--form .input-group input:focus-within, .hero__cta-trade--form .input-group input:focus-within, .hero__cta-sell--form .input-group input:focus-within {
+      background-color: #fff; }
+  .hero__cta-buy--form .input-group input:-webkit-autofill,
+  .hero__cta-buy--form .input-group input:-webkit-autofill:hover,
+  .hero__cta-buy--form .input-group input:-webkit-autofill:focus,
+  .hero__cta-buy--form .input-group input:-webkit-autofill:active, .hero__cta-trade--form .input-group input:-webkit-autofill,
+  .hero__cta-trade--form .input-group input:-webkit-autofill:hover,
+  .hero__cta-trade--form .input-group input:-webkit-autofill:focus,
+  .hero__cta-trade--form .input-group input:-webkit-autofill:active, .hero__cta-sell--form .input-group input:-webkit-autofill,
+  .hero__cta-sell--form .input-group input:-webkit-autofill:hover,
+  .hero__cta-sell--form .input-group input:-webkit-autofill:focus,
+  .hero__cta-sell--form .input-group input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 90px white inset !important;
+            box-shadow: 0 0 0 90px white inset !important; }
+  .hero__cta-buy--form .input-group input:focus::-webkit-input-placeholder, .hero__cta-trade--form .input-group input:focus::-webkit-input-placeholder, .hero__cta-sell--form .input-group input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  .hero__cta-buy--form .input-group label, .hero__cta-trade--form .input-group label, .hero__cta-sell--form .input-group label {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.6rem;
+    background-color: #fff;
+    -webkit-transition: 500ms opacity ease-in;
+    -o-transition: 500ms opacity ease-in;
+    transition: 500ms opacity ease-in;
+    font-weight: 600;
+    padding: 0 10px;
+    color: #383838; }
+  .hero__cta-buy--form .input-group input:not(:-moz-placeholder-shown) ~ label, .hero__cta-trade--form .input-group input:not(:-moz-placeholder-shown) ~ label, .hero__cta-sell--form .input-group input:not(:-moz-placeholder-shown) ~ label {
+    top: -13%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .hero__cta-buy--form .input-group input:not(:-ms-input-placeholder) ~ label, .hero__cta-trade--form .input-group input:not(:-ms-input-placeholder) ~ label, .hero__cta-sell--form .input-group input:not(:-ms-input-placeholder) ~ label {
+    top: -13%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .hero__cta-buy--form .input-group:focus-within label,
+  .hero__cta-buy--form .input-group input:not(:placeholder-shown) ~ label, .hero__cta-trade--form .input-group:focus-within label,
+  .hero__cta-trade--form .input-group input:not(:placeholder-shown) ~ label, .hero__cta-sell--form .input-group:focus-within label,
+  .hero__cta-sell--form .input-group input:not(:placeholder-shown) ~ label {
+    top: -13%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+
+.hero__cta-buy--form .sumbit-btn, .hero__cta-trade--form .sumbit-btn, .hero__cta-sell--form .sumbit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem; }
+  .hero__cta-buy--form .sumbit-btn input, .hero__cta-trade--form .sumbit-btn input, .hero__cta-sell--form .sumbit-btn input {
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 1rem 3rem; }
+
+.hero__cta-sell img:nth-child(4) {
+  margin-right: 1rem; }
+
 .color {
   color: #f1590e; }
 
