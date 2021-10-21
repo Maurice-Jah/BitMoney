@@ -566,16 +566,19 @@ section {
       margin-top: 1rem; }
   .hero__cta {
     padding: 0rem 1.5rem;
-    width: 24rem;
+    width: 33rem;
     z-index: 10;
     background: #fff;
     -webkit-box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);
     border-radius: 0.95rem;
-    padding-bottom: 5rem; }
+    padding-bottom: 3rem; }
     @media only screen and (max-width: 43.75em) {
       .hero__cta {
-        width: 22rem; } }
+        width: 32rem; } }
+    @media only screen and (max-width: 25em) {
+      .hero__cta {
+        width: 21rem; } }
     @media only screen and (max-width: 22.5em) {
       .hero__cta {
         width: 18rem; } }
@@ -594,14 +597,14 @@ section {
           -ms-flex-pack: justify;
               justify-content: space-between; }
       .hero__cta-progress--bar {
-        width: 16em;
+        width: 20em;
         height: 0.7em;
         border-radius: 0.35em;
         background-color: rgba(241, 89, 14, 0.26);
         position: relative; }
         @media only screen and (max-width: 43.75em) {
           .hero__cta-progress--bar {
-            width: 14rem; } }
+            width: 20rem; } }
         .hero__cta-progress--bar::before {
           content: "";
           background-color: #f1590e;
