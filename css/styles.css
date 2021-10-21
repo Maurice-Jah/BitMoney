@@ -329,6 +329,9 @@ section {
 .color {
   color: #f1590e; }
 
+.hidden {
+  display: none; }
+
 .footer {
   position: relative;
   display: -webkit-box;
@@ -564,7 +567,6 @@ section {
   .hero__cta {
     padding: 0rem 1.5rem;
     width: 24rem;
-    position: relative;
     z-index: 10;
     background: #fff;
     -webkit-box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.2);

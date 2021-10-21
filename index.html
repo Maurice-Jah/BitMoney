@@ -88,27 +88,90 @@
         <p class="hero__cta-text">Buy and Sell Instantly</p>
 
         <div class="hero__cta-option">
-          <input class="radio" id="one" name="option" type="radio" checked />
-          <label class="hero__cta-option--tab tab-active" id="one-tab" for="one"
+          <input
+            class="radio"
+            id="one"
+            name="option"
+            type="radio"
+            onclick="showBuy();"
+          />
+          <label class="hero__cta-option--tab tab-active" for="one" id="buy_id"
             >Buy</label
           >
 
-          <input class="radio" id="two" name="option" type="radio" />
-          <label class="hero__cta-option--tab" id="two-tab" for="two"
+          <input
+            class="radio"
+            id="two"
+            name="option"
+            type="radio"
+            onclick="showSell();"
+          />
+          <label class="hero__cta-option--tab" for="two" id="sell_id"
             >Sell</label
           >
 
-          <input class="radio" id="three" name="option" type="radio" />
-          <label class="hero__cta-option--tab" id="three-tab" for="three"
+          <input
+            class="radio"
+            id="three"
+            name="option"
+            type="radio"
+            onclick="showTrade();"
+          />
+          <label class="hero__cta-option--tab" for="three" id="trade_id"
             >Trade</label
           >
         </div>
 
-        <p class="hero__cta-heading">Select the coin type to buy or sell</p>
+        <!-- default -->
+        <!-- <p class="hero__cta-heading">Select the coin type to buy or sell</p>
 
         <select>
           <option>Select Coin To Trade</option>
-        </select>
+        </select> -->
+
+        <!-- Ends here -->
+
+        <!----------- For the buy section --------------->
+        <div class="hero__cta-buy hidden" id="buy">
+          <p class="hero__cta-buy--heading">Select the coin type to buy</p>
+
+          <form class="hero__cta-buy--form">
+            <div class="input-select">
+              <img src="images/money_bag.svg" alt="money-img" />
+              <p class="title">SELECT COIN</p>
+              <p class="coin-name">ETH</p>
+            </div>
+
+            <div class="input-group">
+              <img src="images/fa-brands_ethereum.svg" alt="ethereum-img" />
+              <input type="text" id="eth-amount" placeholder="0.000000" />
+              <label for="eth-amount"> ETH AMOUNT </label>
+            </div>
+
+            <div class="input-group">
+              <img src="images/pencil_icon.svg" alt="ethereum-img" />
+              <input type="text" id="naira-amount" placeholder="5,000" />
+              <label for="naira-amount"> NAIRA AMOUNT </label>
+            </div>
+
+            <div class="input-group">
+              <img src="images/mail.svg" alt="email-img" />
+              <input type="text" id="email" placeholder="EMAIL ADDRESS" />
+              <label for="email"> EMAIL ADDRESS </label>
+            </div>
+
+            <div class="input-group">
+              <img src="images/flag.png" alt="flag-img" />
+              <input type="text" id="phone" placeholder=" PHONE NUMBER" />
+              <label for="phone"> PHONE NUMBER </label>
+            </div>
+
+            <div class="sumbit-btn">
+              <input type="submit" value="BUY ETH" class="btn" />
+            </div>
+          </form>
+        </div>
+        <!-- Ends here -->
 
         <!-----------Register section------------- -->
         <!-- <div class="hero__cta-register">
@@ -172,52 +235,8 @@
         </div> -->
         <!-- Ends here -->
 
-        <!----------- For the buy section --------------->
-        <!-- <div class="hero__cta-buy">
-          <p class="hero__cta-buy--heading">
-            Select the coin type to buy or sell
-          </p>
-
-          <form class="hero__cta-buy--form">
-            <div class="input-select">
-              <img src="images/money_bag.svg" alt="money-img" />
-              <p class="title">SELECT COIN</p>
-              <p class="coin-name">ETH</p>
-            </div>
-
-            <div class="input-group">
-              <img src="images/fa-brands_ethereum.svg" alt="ethereum-img" />
-              <input type="text" id="eth-amount" placeholder="0.000000" />
-              <label for="eth-amount"> ETH AMOUNT </label>
-            </div>
-
-            <div class="input-group">
-              <img src="images/pencil_icon.svg" alt="ethereum-img" />
-              <input type="text" id="naira-amount" placeholder="5,000" />
-              <label for="naira-amount"> NAIRA AMOUNT </label>
-            </div>
-
-            <div class="input-group">
-              <img src="images/mail.svg" alt="email-img" />
-              <input type="text" id="email" placeholder="EMAIL ADDRESS" />
-              <label for="email"> EMAIL ADDRESS </label>
-            </div>
-
-            <div class="input-group">
-              <img src="images/flag.png" alt="flag-img" />
-              <input type="text" id="phone" placeholder=" PHONE NUMBER" />
-              <label for="phone"> PHONE NUMBER </label>
-            </div>
-
-            <div class="sumbit-btn">
-              <input type="submit" value="BUY ETH" class="btn" />
-            </div>
-          </form>
-        </div> -->
-        <!-- Ends here -->
-
         <!----------- For the trade section --------------->
-        <!-- <div class="hero__cta-trade">
+        <div class="hero__cta-trade hidden" id="trade">
           <p class="hero__cta-trade--heading">Select the coin type to trade</p>
 
           <form class="hero__cta-trade--form">
@@ -255,11 +274,11 @@
               <input type="submit" value="BUY ETH" class="btn" />
             </div>
           </form>
-        </div> -->
+        </div>
         <!-- Ends here -->
 
         <!----------- For the sell section --------------->
-        <!-- <div class="hero__cta-sell">
+        <div class="hero__cta-sell hidden" id="sell">
           <p class="hero__cta-sell--heading">Select the coin type to sell</p>
 
           <form class="hero__cta-sell--form">
@@ -309,7 +328,7 @@
               <input type="submit" value="SELL ETH" class="btn" />
             </div>
           </form>
-        </div> -->
+        </div>
 
         <!-- Ends here -->
       </div>
