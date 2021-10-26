@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- add icon link -->
+    <link rel="icon" href="images/bitmoney-logo.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>BitMoney</title>
+  </head>
+  <body>
+    <div class="curve"></div>
+    <!-- Nav section -->
+    <div class="dashboard">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="../images/logo-2.svg" alt="logo-img" />
+          </a>
+        </div>
+
+        <ul class="nav__link">
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Home</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item underline-white">Wallet</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Trade</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Referrals</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Profile</a>
+          </li>
+        </ul>
+
+        <a href="#" class="nav__button btn">
+          <img src="../images/wallet.svg" />
+          <p>Log out</p>
+        </a>
+      </nav>
+    </div>
+
+    <!--------------------- Hero section------------------------>
+
+    <section class="dashboard-hero">
+      <div class="dashboard-hero__text">
+        <p class="dashboard-hero__text-welcome">Welcome Mustapha,</p>
+        <p class="dashboard-hero__text-amount">300,0000.00</p>
+      </div>
+    </section>
+
+    <!--------------------- Dashboard-Activities section------------------------>
+
+    <section class="dashboard-activities">
+      <div class="dashboard-activities__options">
+        <div class="dashboard-activities__options-buy">
+          <a href="">
+            <img
+              src="../images/bitcoin_logo.svg"
+              class="dashboard-activities__options-buy--img"
+            />
+            <h4 class="dashboard-activities__options-buy--title">BUY</h4>
+          </a>
+        </div>
+        <div class="dashboard-activities__options-sell">
+          <a href="">
+            <img
+              src="../images/sell_icon.svg"
+              class="dashboard-activities__options-sell--img"
+            />
+            <h4 class="dashboard-activities__options-sell--title">SELL</h4>
+          </a>
+        </div>
+        <div class="dashboard-activities__options-trade">
+          <a href="">
+            <img
+              src="../images/trade_icon.svg"
+              class="dashboard-activities__options-trade--img"
+            />
+            <h4 class="dashboard-activities__options-trade--title">TRADE</h4>
+          </a>
+        </div>
+        <div class="dashboard-activities__options-more">
+          <a href="">
+            <img
+              src="../images/more_icon.svg"
+              class="dashboard-activities__options-more--img"
+            />
+            <h4 class="dashboard-activities__options-more--title">MORE</h4>
+          </a>
+        </div>
+      </div>
+      <div class="dashboard-activities__naira"></div>
+      <div class="dashboard-activities__bitcoin"></div>
+      <div class="dashboard-activities__eth"></div>
+    </section>
+
+    <!-- footer -->
+    <!-- <section class="footer">
+      <div class="footer__cta">
+        <div class="footer__cta-image">
+          <img src="../images/logo.png" alt="logo-img" />
+          <p class="footer__cta-text">
+            BitMoney is the easiest way to buy and sell crypto in Nigeria. No
+            payment delay. No stress.
+          </p>
+          <a href="#" class="footer__cta-button btn">Get Started</a>
+        </div>
+      </div>
+      <div class="footer__developers">
+        <p class="footer__developers-heading">Developers</p>
+        <ul class="footer__developers-link">
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Integrations</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">TechnicaL Help</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Overview</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Documentation</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__support">
+        <p class="footer__developers-heading">Support</p>
+        <ul class="footer__developers-link">
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Knowledge Base</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Help</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">FAQ</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__company">
+        <p class="footer__developers-heading">Company</p>
+        <ul class="footer__developers-link">
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">About Us</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item"> Careers</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Blog</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Privacy Policy</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__services">
+        <p class="footer__developers-heading">Services</p>
+        <ul class="footer__developers-link">
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Buy Crypto</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Sell Crypto</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Margin Trade</a>
+          </li>
+          <li class="footer__developers-list">
+            <a href="" class="footer__developers-list--item">Our Fees</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer__copyright">
+      <p class="footer__copyright-text">BitMoney &copy; 2021</p>
+
+      <div class="footer__copyright-social">
+        <a href=""> <i class="fab fa-facebook"></i> </a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+        <a href=""><i class="fab fa-twitter"></i></a>
+      </div>
+    </div> -->
+
+    <!-- javascript -->
+  </body>
+</html>

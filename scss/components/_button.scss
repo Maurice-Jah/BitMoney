@@ -23,7 +23,8 @@
   background-color: rgba($color-primary, 0.01);
 }
 
-.underline {
+.underline,
+.underline-white {
   position: relative;
   padding-bottom: 0.2rem;
 
@@ -36,5 +37,11 @@
     background-color: $color-primary;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+.underline-white {
+  &::before {
+    background-color: $color-white;
   }
 }
