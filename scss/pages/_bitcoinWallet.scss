@@ -1,17 +1,17 @@
 // ======================================== DASHBOARD NAIRA SECTION ==================================================//
 
-.curve_naira {
+.curve_bitcoin {
   height: 60vh;
   width: 100%;
   position: absolute;
-  background-image: url(../../images/curve_nigeria.svg);
+  background-image: url(../../images/curve_bitcoin.svg);
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
   top: -10px;
 }
 
-.naira-hero {
+.bitcoin-hero {
   position: relative;
   z-index: 100;
 
@@ -26,30 +26,34 @@
       margin-bottom: 0.5rem;
     }
 
-    &-amount {
+    &-amountBTC {
+      font-size: 1.1rem;
+    }
+
+    &-amountNaira {
       font-weight: 300;
-      font-size: 1.2rem;
+      font-size: 0.8rem;
     }
   }
 }
 
-// ======================================== DASHBOARD NAIRA ACTIVITES SECTION ==================================================//
+// ======================================== DASHBOARD BITCOIN ACTIVITES SECTION ==================================================//
 
-.dashboard-naira {
+.dashboard-bitcoin {
   position: relative;
   z-index: 800;
-  margin-top: -5rem;
+  margin-top: -8rem;
 
   &__options {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 40%;
+    justify-content: space-around;
+    width: 45%;
     margin: 0 auto;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background: $color-white;
-    padding: 2.5rem 2rem 2rem;
+    padding: 2.5rem 1.5rem 1.5rem;
 
     a {
       display: flex;
@@ -57,17 +61,18 @@
       color: $color-primary;
       text-decoration: none;
       align-items: center;
-      font-weight: 300;
-      font-size: 0.9rem;
-      gap: 0.8rem;
 
       img {
         display: inline-block;
       }
     }
 
-    h4 {
-      font-weight: 500;
+    //for the smaller images
+    &-trade,
+    &-more {
+      &--img {
+        padding: 1rem;
+      }
     }
   }
 

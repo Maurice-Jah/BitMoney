@@ -1158,39 +1158,6 @@ select {
   background-size: cover;
   top: -10px; }
 
-.dashboard .nav__link-list--item {
-  color: #fff; }
-
-.dashboard .nav__button {
-  background-color: #fff;
-  color: #f1590e;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 0.4rem;
-  position: relative; }
-  .dashboard .nav__button img {
-    display: inline-block; }
-  .dashboard .nav__button::before {
-    content: "";
-    position: absolute;
-    border-top: 5px solid #f1590e;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    right: 10%; }
-  .dashboard .nav__button p {
-    margin-right: 0.5rem; }
-
 .naira-hero {
   position: relative;
   z-index: 100; }
@@ -1277,4 +1244,100 @@ select {
     .dashboard-naira__start img {
       display: inline-block; }
     .dashboard-naira__start .text h3 {
+      font-weight: 300; }
+
+.curve_bitcoin {
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  background-image: url(../../images/curve_bitcoin.svg);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -10px; }
+
+.bitcoin-hero {
+  position: relative;
+  z-index: 100; }
+  .bitcoin-hero__text {
+    margin-top: 4rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500; }
+    .bitcoin-hero__text-welcome {
+      margin-bottom: 0.5rem; }
+    .bitcoin-hero__text-amountBTC {
+      font-size: 1.1rem; }
+    .bitcoin-hero__text-amountNaira {
+      font-weight: 300;
+      font-size: 0.8rem; }
+
+.dashboard-bitcoin {
+  position: relative;
+  z-index: 800;
+  margin-top: -8rem; }
+  .dashboard-bitcoin__options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 45%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff;
+    padding: 2.5rem 1.5rem 1.5rem; }
+    .dashboard-bitcoin__options a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      color: #f1590e;
+      text-decoration: none;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .dashboard-bitcoin__options a img {
+        display: inline-block; }
+    .dashboard-bitcoin__options-trade--img, .dashboard-bitcoin__options-more--img {
+      padding: 1rem; }
+  .dashboard-bitcoin__transaction {
+    text-align: center;
+    margin: 3rem auto; }
+    .dashboard-bitcoin__transaction img {
+      display: inline-block; }
+    .dashboard-bitcoin__transaction-text {
+      font-weight: 500;
+      color: #525050;
+      font-size: 1.2rem; }
+  .dashboard-bitcoin__start {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 2.5rem auto;
+    padding: 1.2rem 1rem;
+    width: 20%;
+    border-radius: 8px;
+    text-decoration: none;
+    gap: 0.5rem;
+    color: #fff;
+    background-color: #f1590e; }
+    .dashboard-bitcoin__start img {
+      display: inline-block; }
+    .dashboard-bitcoin__start .text h3 {
       font-weight: 300; }
