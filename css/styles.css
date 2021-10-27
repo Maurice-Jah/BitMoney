@@ -1115,3 +1115,35 @@ select {
         display: inline-block; }
     .dashboard-activities__options-trade--img, .dashboard-activities__options-more--img {
       padding: 1rem; }
+  .dashboard-activities__naira, .dashboard-activities__bitcoin, .dashboard-activities__eth, .dashboard-activities__add {
+    margin: 1.4rem;
+    max-height: 6.5rem;
+    width: 40%;
+    margin: 2.5rem auto;
+    padding: 2rem 1rem;
+    -webkit-box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; }
+    .dashboard-activities__naira a, .dashboard-activities__bitcoin a, .dashboard-activities__eth a, .dashboard-activities__add a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-decoration: none;
+      gap: 0.5rem;
+      color: #000; }
+      .dashboard-activities__naira a img, .dashboard-activities__bitcoin a img, .dashboard-activities__eth a img, .dashboard-activities__add a img {
+        display: block; }
+    .dashboard-activities__naira .text p, .dashboard-activities__bitcoin .text p, .dashboard-activities__eth .text p, .dashboard-activities__add .text p {
+      font-weight: 300; }
+  .dashboard-activities__naira {
+    margin-top: 1.5rem; }
+  .dashboard-activities__add {
+    background-color: #f1590e; }
+    .dashboard-activities__add a {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.5rem; }

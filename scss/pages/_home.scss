@@ -633,7 +633,7 @@ select {
     }
 
     &__button {
-      background-color: #fff;
+      background-color: $color-white;
       color: $color-primary;
       display: flex;
       align-items: center;
@@ -714,6 +714,50 @@ select {
       &--img {
         padding: 1rem;
       }
+    }
+  }
+
+  &__naira,
+  &__bitcoin,
+  &__eth,
+  &__add {
+    margin: 1.4rem;
+    max-height: 6.5rem;
+    width: 40%;
+    margin: 2.5rem auto;
+    padding: 2rem 1rem;
+    box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 0.5rem;
+      color: $color-black;
+
+      img {
+        display: block;
+      }
+    }
+    .text {
+      p {
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__naira {
+    margin-top: 1.5rem;
+  }
+
+  &__add {
+    background-color: $color-primary;
+
+    a {
+      color: $color-white;
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
     }
   }
 }
