@@ -1341,3 +1341,99 @@ select {
       display: inline-block; }
     .dashboard-bitcoin__start .text h3 {
       font-weight: 300; }
+
+.curve_ethereum {
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  background-image: url(../../images/curve_ethereum.svg);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -10px; }
+
+.ethereum-hero {
+  position: relative;
+  z-index: 100; }
+  .ethereum-hero__text {
+    margin-top: 4rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500; }
+    .ethereum-hero__text-welcome {
+      margin-bottom: 0.5rem; }
+    .ethereum-hero__text-amountETH {
+      font-size: 1.1rem; }
+    .ethereum-hero__text-amountNaira {
+      font-weight: 300;
+      font-size: 0.8rem; }
+
+.dashboard-ethereum {
+  position: relative;
+  z-index: 800;
+  margin-top: -8rem; }
+  .dashboard-ethereum__options {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 45%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff;
+    padding: 2.5rem 1.5rem 1.5rem; }
+    .dashboard-ethereum__options a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      color: #f1590e;
+      text-decoration: none;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .dashboard-ethereum__options a img {
+        display: inline-block; }
+    .dashboard-ethereum__options-trade--img, .dashboard-ethereum__options-more--img {
+      padding: 1rem; }
+  .dashboard-ethereum__transaction {
+    text-align: center;
+    margin: 3rem auto; }
+    .dashboard-ethereum__transaction img {
+      display: inline-block; }
+    .dashboard-ethereum__transaction-text {
+      font-weight: 500;
+      color: #525050;
+      font-size: 1.2rem; }
+  .dashboard-ethereum__start {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 2.5rem auto;
+    padding: 1.2rem 1rem;
+    width: 20%;
+    border-radius: 8px;
+    text-decoration: none;
+    gap: 0.5rem;
+    color: #fff;
+    background-color: #f1590e; }
+    .dashboard-ethereum__start img {
+      display: inline-block; }
+    .dashboard-ethereum__start .text h3 {
+      font-weight: 300; }

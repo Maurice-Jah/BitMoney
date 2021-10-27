@@ -29,7 +29,7 @@
     <title>BitMoney</title>
   </head>
   <body>
-    <div class="curve"></div>
+    <div class="curve_ethereum"></div>
     <!-- Nav section -->
     <div class="dashboard">
       <nav class="nav">
@@ -41,10 +41,14 @@
 
         <ul class="nav__link">
           <li class="nav__link-list">
-            <a href="#" class="nav__link-list--item">Home</a>
+            <a href="index_dashboard.html" class="nav__link-list--item">Home</a>
           </li>
           <li class="nav__link-list">
-            <a href="#" class="nav__link-list--item underline-white">Wallet</a>
+            <a
+              href="ethereumWallet.html"
+              class="nav__link-list--item underline-white"
+              >Wallet</a
+            >
           </li>
           <li class="nav__link-list">
             <a href="#" class="nav__link-list--item">Trade</a>
@@ -66,91 +70,71 @@
 
     <!--------------------- Hero section------------------------>
 
-    <section class="dashboard-hero">
-      <div class="dashboard-hero__text">
-        <p class="dashboard-hero__text-welcome">Welcome Mustapha,</p>
-        <p class="dashboard-hero__text-amount">300,0000.00</p>
+    <section class="ethereum-hero">
+      <div class="ethereum-hero__text">
+        <p class="ethereum-hero__text-welcome">ETH Wallet</p>
+        <p class="ethereum-hero__text-amountETH">ETH 0.00</p>
+        <p class="ethereum-hero__text-amountNaira">NGN 0.00</p>
       </div>
     </section>
 
     <!--------------------- Dashboard-Activities section------------------------>
 
-    <section class="dashboard-activities">
-      <div class="dashboard-activities__options">
-        <div class="dashboard-activities__options-buy">
+    <section class="dashboard-ethereum">
+      <div class="dashboard-ethereum__options">
+        <div class="dashboard-ethereum__options-buy">
           <a href="">
             <img
               src="../images/bitcoin_logo.svg"
-              class="dashboard-activities__options-buy--img"
+              class="dashboard-ethereum__options-buy--img"
             />
-            <h4 class="dashboard-activities__options-buy--title">BUY</h4>
+            <h4 class="dashboard-ethereum__options-buy--title">BUY</h4>
           </a>
         </div>
-        <div class="dashboard-activities__options-sell">
+        <div class="dashboard-ethereum__options-sell">
           <a href="">
             <img
               src="../images/sell_icon.svg"
-              class="dashboard-activities__options-sell--img"
+              class="dashboard-ethereum__options-sell--img"
             />
-            <h4 class="dashboard-activities__options-sell--title">SELL</h4>
+            <h4 class="dashboard-ethereum__options-sell--title">SELL</h4>
           </a>
         </div>
-        <div class="dashboard-activities__options-trade">
+        <div class="dashboard-ethereum__options-trade">
           <a href="">
             <img
               src="../images/trade_icon.svg"
-              class="dashboard-activities__options-trade--img"
+              class="dashboard-ethereum__options-trade--img"
             />
-            <h4 class="dashboard-activities__options-trade--title">TRADE</h4>
+            <h4 class="dashboard-ethereum__options-trade--title">TRADE</h4>
           </a>
         </div>
-        <div class="dashboard-activities__options-more">
+        <div class="dashboard-ethereum__options-more">
           <a href="">
             <img
               src="../images/more_icon.svg"
-              class="dashboard-activities__options-more--img"
+              class="dashboard-ethereum__options-more--img"
             />
-            <h4 class="dashboard-activities__options-more--title">MORE</h4>
+            <h4 class="dashboard-ethereum__options-more--title">MORE</h4>
           </a>
         </div>
       </div>
-      <div class="dashboard-activities__naira">
-        <a href="nairaWallet.html">
-          <img src="../images/logo_nigeria.svg" />
-          <h3 class="text">NGN 0.00</h3>
-        </a>
-      </div>
-      <div class="dashboard-activities__bitcoin">
-        <a href="bitcoinWallet.html">
-          <img
-            src="../images/bitcoin.png"
-            alt="image"
-            style="width: 32px; height: 32px"
-          />
-          <div class="text">
-            <h3>BTC 0.00</h3>
-            <p>NGN 0.00</p>
-          </div>
-        </a>
-      </div>
-      <div class="dashboard-activities__eth">
-        <a href="ethereumWallet.html">
-          <img src="../images/logo_eth.svg" />
-          <div class="text">
-            <h3>ETH 0.00</h3>
-            <p>NGN 0.00</p>
-          </div>
-        </a>
+
+      <!--------------------- Transactions------------------------>
+
+      <div class="dashboard-ethereum__transaction">
+        <div class="dashboard-ethereum__transaction-img">
+          <img src="../images/wallet_icon.svg" />
+        </div>
+        <p class="dashboard-ethereum__transaction-text">No transactions yet</p>
       </div>
 
-      <div class="dashboard-activities__add">
-        <a href="">
-          <img src="../images/add_icon.svg" />
-          <div class="text">
-            <p>Add a new wallet address</p>
-          </div>
-        </a>
-      </div>
+      <a href="" class="dashboard-ethereum__start">
+        <div class="text">
+          <h3>Start Transacting</h3>
+        </div>
+        <img src="../images/pointer.svg" />
+      </a>
     </section>
 
     <!-- footer -->

@@ -1,0 +1,115 @@
+.curve_ethereum {
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  background-image: url(../../images/curve_ethereum.svg);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -10px;
+}
+
+.ethereum-hero {
+  position: relative;
+  z-index: 100;
+
+  &__text {
+    margin-top: 4rem;
+    text-align: center;
+    color: $color-white;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+    &-welcome {
+      margin-bottom: 0.5rem;
+    }
+
+    &-amountETH {
+      font-size: 1.1rem;
+    }
+
+    &-amountNaira {
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// ======================================== DASHBOARD ETHEREUM  SECTION ==================================================//
+
+.dashboard-ethereum {
+  position: relative;
+  z-index: 800;
+  margin-top: -8rem;
+
+  &__options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 45%;
+    margin: 0 auto;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: $color-white;
+    padding: 2.5rem 1.5rem 1.5rem;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      color: $color-primary;
+      text-decoration: none;
+      align-items: center;
+
+      img {
+        display: inline-block;
+      }
+    }
+
+    //for the smaller images
+    &-trade,
+    &-more {
+      &--img {
+        padding: 1rem;
+      }
+    }
+  }
+
+  &__transaction {
+    text-align: center;
+    margin: 3rem auto;
+
+    img {
+      display: inline-block;
+    }
+
+    &-text {
+      font-weight: 500;
+      color: #525050;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem auto;
+    padding: 1.2rem 1rem;
+    width: 20%;
+    border-radius: 8px;
+    text-decoration: none;
+    gap: 0.5rem;
+    color: $color-white;
+    background-color: $color-primary;
+
+    img {
+      display: inline-block;
+    }
+
+    .text {
+      h3 {
+        font-weight: 300;
+      }
+    }
+  }
+}
