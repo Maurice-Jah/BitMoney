@@ -3,10 +3,12 @@
 
 @import "base/animation";
 @import "base/base";
-@import "components/button";
-@import "components/form";
 @import "base/typography";
 @import "base/utilities";
+
+@import "components/button";
+@import "components/form";
+@import "components/popup";
 
 @import "layout/footer";
 @import "layout/header";
