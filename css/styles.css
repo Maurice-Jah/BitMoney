@@ -380,6 +380,27 @@ section {
     -webkit-transition: all 0.5s 0.3s;
     -o-transition: all 0.5s 0.3s;
     transition: all 0.5s 0.3s; }
+    @media only screen and (max-width: 69em) {
+      .popup-more {
+        padding: 2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .popup-more {
+        width: 60%;
+        padding: 1.5rem 1rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .popup-more {
+        width: 70%;
+        padding: 1rem; } }
+    @media only screen and (max-width: 25em) {
+      .popup-more {
+        left: 0%;
+        bottom: 0%;
+        top: auto;
+        -webkit-transform: translate(0%, 0%) scale(0.5);
+            -ms-transform: translate(0%, 0%) scale(0.5);
+                transform: translate(0%, 0%) scale(0.5);
+        width: 100%;
+        border-radius: 8px 8px 0px 0px; } }
     .popup-more a {
       text-decoration: none;
       display: -webkit-box;
@@ -393,16 +414,50 @@ section {
       font-size: 1.2rem;
       font-weight: 300;
       width: 28%; }
+      @media only screen and (max-width: 43.75em) {
+        .popup-more a {
+          font-size: 1.1rem;
+          gap: 1rem; } }
     .popup-more img {
       display: inline-block;
       border-radius: 50%;
       padding: 0.8rem;
       background-color: #f1590e; }
+      @media only screen and (max-width: 43.75em) {
+        .popup-more img {
+          padding: 0.5rem;
+          width: 40px;
+          height: 40px; } }
+    .popup-more__back {
+      display: none; }
+      @media only screen and (max-width: 25em) {
+        .popup-more__back {
+          display: block; } }
+      .popup-more__back a {
+        width: 35%;
+        gap: 0.5rem; }
+        .popup-more__back a img {
+          height: 1.5rem;
+          width: 1.5rem;
+          display: block;
+          border-radius: 0%;
+          padding: 0rem;
+          background-color: white; }
+      .popup-more__back p:nth-child(3) {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        font-weight: 500; }
   .popup:target .popup-more {
     opacity: 1;
     -webkit-transform: translate(-50%, -50%) scale(1);
         -ms-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1); }
+    @media only screen and (max-width: 25em) {
+      .popup:target .popup-more {
+        -webkit-transform: translate(0%, 0%) scale(1);
+            -ms-transform: translate(0%, 0%) scale(1);
+                transform: translate(0%, 0%) scale(1); } }
 
 .close-popup {
   width: 100%;
