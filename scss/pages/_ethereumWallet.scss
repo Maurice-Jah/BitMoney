@@ -7,11 +7,55 @@
   background-repeat: no-repeat;
   background-size: cover;
   top: -10px;
+
+  @include respond(tab-land) {
+    height: 50vh;
+  }
+
+  @include respond(tab-port) {
+    height: 45vh;
+  }
+
+  @include respond(sm-phone) {
+    display: none;
+  }
 }
 
 .ethereum-hero {
   position: relative;
   z-index: 100;
+
+  @include respond(sm-phone) {
+    background-color: #4e537d;
+    padding-bottom: 5rem;
+  }
+
+  &__header {
+    display: none;
+
+    @include respond(sm-phone) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: $color-white;
+
+      p {
+        font-size: 0.9rem;
+      }
+
+      img {
+        display: block;
+        width: 0.8rem;
+        height: 0.8rem;
+      }
+    }
+  }
 
   &__text {
     margin-top: 4rem;
@@ -19,6 +63,16 @@
     color: $color-white;
     font-size: 1.5rem;
     font-weight: 500;
+
+    @include respond(mini-lap) {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(tab-port) {
+      padding-bottom: 0.8rem;
+      margin-top: 4rem;
+    }
 
     &-welcome {
       margin-bottom: 0.5rem;
@@ -42,6 +96,21 @@
   z-index: 800;
   margin-top: -8rem;
 
+  @include respond(mini-lap) {
+    margin-top: -5rem;
+  }
+
+  @include respond(tab-land) {
+    margin-top: -6rem;
+  }
+
+  @include respond(sm-phone) {
+    margin-top: -2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: $color-white;
+  }
+
   &__options {
     display: flex;
     align-items: center;
@@ -53,6 +122,31 @@
     background: $color-white;
     padding: 2.5rem 1.5rem 1.5rem;
 
+    @include respond(mini-lap) {
+      width: 60%;
+      padding: 1.5rem 1rem;
+    }
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+
+    @include respond(tab-port) {
+      width: 90%;
+      padding: 1rem;
+    }
+
+    @include respond(sm-phone) {
+      width: 100%;
+      padding: 1rem;
+      margin-top: -5rem;
+    }
+
+    @include respond(smallest) {
+      width: 100%;
+      padding: 0rem;
+    }
+
     a {
       display: flex;
       flex-direction: column;
@@ -62,6 +156,20 @@
 
       img {
         display: inline-block;
+
+        @include respond(sm-phone) {
+          width: 56px;
+          height: 56px;
+        }
+      }
+
+      h4 {
+        @include respond(tab-port) {
+          font-size: 0.9rem;
+        }
+        @include respond(sm-phone) {
+          font-size: 0.7rem;
+        }
       }
     }
 
@@ -70,6 +178,14 @@
     &-more {
       &--img {
         padding: 1rem;
+      }
+    }
+
+    &-more {
+      &--img {
+        @include respond(tab-port) {
+          padding-top: 1.2rem;
+        }
       }
     }
   }
@@ -101,6 +217,26 @@
     gap: 0.5rem;
     color: $color-white;
     background-color: $color-primary;
+
+    @include respond(mini-lap) {
+      width: 30%;
+    }
+
+    @include respond(tab-land) {
+      width: 40%;
+    }
+
+    @include respond(tab-port) {
+      width: 60%;
+    }
+
+    @include respond(sm-phone) {
+      width: 70%;
+    }
+
+    @include respond(smallest) {
+      width: 90%;
+    }
 
     img {
       display: inline-block;

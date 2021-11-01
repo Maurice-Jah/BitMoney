@@ -620,10 +620,20 @@ select {
   background-repeat: no-repeat;
   background-size: cover;
   top: -10px;
+
+  @include respond(sm-phone) {
+    display: none;
+  }
 }
 
 .dashboard {
+  @include respond(sm-phone) {
+    display: none;
+  }
   .nav {
+    @include respond(tab-port) {
+      padding: 1rem 1.5rem;
+    }
     &__link {
       &-list {
         &--item {
@@ -665,12 +675,20 @@ select {
   position: relative;
   z-index: 100;
 
+  @include respond(sm-phone) {
+    display: none;
+  }
+
   &__text {
     margin-top: 4rem;
     text-align: center;
     color: $color-white;
     font-size: 1.5rem;
     font-weight: 500;
+
+    @include respond(mini-lap) {
+      margin-top: 2rem;
+    }
 
     &-welcome {
       margin-bottom: 1rem;
@@ -685,9 +703,21 @@ select {
   z-index: 800;
   margin-top: -8rem;
 
+  @include respond(mini-lap) {
+    margin-top: -6rem;
+  }
+
+  @include respond(tab-land) {
+    margin-top: -3rem;
+  }
+
+  @include respond(sm-phone) {
+    display: none;
+  }
+
   &__options {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-around;
     width: 50%;
     margin: 0 auto;
@@ -695,6 +725,18 @@ select {
     border-radius: 8px;
     background: $color-white;
     padding: 2.5rem 1.5rem 1.5rem;
+
+    @include respond(tab-port) {
+      margin-top: 2rem;
+      width: 85%;
+      padding: 1rem;
+    }
+
+    h4 {
+      @include respond(tab-port) {
+        font-size: 0.9rem;
+      }
+    }
 
     a {
       display: flex;
@@ -712,7 +754,7 @@ select {
     &-trade,
     &-more {
       &--img {
-        padding: 1rem;
+        padding: 1.1rem;
       }
     }
   }
@@ -721,13 +763,16 @@ select {
   &__bitcoin,
   &__eth,
   &__add {
-    margin: 1.4rem;
     max-height: 6.5rem;
     width: 40%;
     margin: 2.5rem auto;
     padding: 2rem 1rem;
     box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
     a {
       display: flex;
       align-items: center;
@@ -740,6 +785,9 @@ select {
       }
     }
     .text {
+      @include respond(tab-port) {
+        padding-left: 1rem;
+      }
       p {
         font-weight: 300;
       }
@@ -753,11 +801,161 @@ select {
   &__add {
     background-color: $color-primary;
 
+    @include respond(tab-land) {
+      padding: 2rem 1rem;
+    }
+
+    @include respond(tab-port) {
+      padding: 1.5rem 1rem;
+    }
+
     a {
       color: $color-white;
       font-weight: 600;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       line-height: 2.5rem;
+
+      @include respond(tab-land) {
+        font-size: 1rem;
+      }
+
+      .text {
+        @include respond(tab-port) {
+          padding-left: 0rem !important;
+        }
+      }
+    }
+  }
+}
+
+// For the smaller screen
+.hero-dashboard {
+  background: linear-gradient(
+    110.84deg,
+    #f1590e 36.17%,
+    rgba(241, 89, 14, 0.928183) 48.29%,
+    rgba(241, 89, 14, 0.872992) 54.84%,
+    rgba(241, 89, 14, 0.898406) 60.4%,
+    rgba(241, 89, 14, 0.85) 66.7%,
+    rgba(241, 89, 14, 0.99) 75.66%,
+    rgba(241, 89, 14, 0.807835) 90.5%,
+    rgba(241, 89, 14, 0.592108) 97.2%,
+    rgba(241, 89, 14, 0.505766) 101.87%,
+    rgba(241, 89, 14, 0) 133.89%
+  );
+  padding: 1rem;
+  padding-bottom: 5rem;
+
+  display: none;
+
+  @include respond(sm-phone) {
+    display: block;
+  }
+
+  &__text {
+    margin-top: 2rem;
+    color: $color-white;
+
+    &-welcome {
+      font-size: 0.7rem;
+      letter-spacing: 0.02rem;
+      font-weight: 300;
+    }
+
+    &-amount {
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+  }
+
+  &__activities {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    a {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      img {
+        display: block;
+        padding: 1rem;
+        border-radius: 8px;
+        background-color: $color-white;
+      }
+
+      h4 {
+        color: $color-white;
+        font-weight: 500;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+// ============ CURRENCY SECTION ======================//
+.currency {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  margin-top: -3rem;
+  background: $color-white;
+  padding: 1.2rem;
+
+  display: none;
+
+  @include respond(sm-phone) {
+    display: block;
+  }
+
+  &__local,
+  &__crypto {
+    padding-top: 0.5rem;
+    &-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    &-naira,
+    &-btc,
+    &-eth {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: $color-black;
+      margin: 0.8rem 0rem;
+      padding: 0.8rem 0.5rem;
+      border-radius: 8px;
+      box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+
+    &-img {
+      display: block;
+    }
+    &-text {
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+  }
+
+  &__crypto {
+    margin-top: 2rem;
+
+    &-btc,
+    &-eth {
+      margin-bottom: 1.5rem;
+      &--text {
+        h4 {
+          font-size: 0.9rem;
+          font-weight: 700;
+        }
+        p {
+          font-weight: 300;
+          font-size: 0.8rem;
+        }
+      }
     }
   }
 }

@@ -131,3 +131,53 @@
     }
   }
 }
+
+// ========= FIXED FOOTER =============//
+
+.footer-fixed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.2rem 0.5rem 1.2rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+
+  opacity: 0;
+  visibility: hidden;
+
+  @include respond(sm-phone) {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__wallet,
+  &__trade,
+  &__referral,
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+
+    &-img {
+      display: block;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    &-text {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+  }
+}
+
+// ====== hide footer on small screen =========//
+
+.footer-hide {
+  @include respond(sm-phone) {
+    display: none;
+  }
+}
