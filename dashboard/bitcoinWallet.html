@@ -243,7 +243,7 @@
             </a>
             <p>Select An Action</p>
           </div>
-          <a href="">
+          <a href="#receive-popup">
             <img src="../images/receive_icon.svg" />
             <h4>Receive</h4>
           </a>
@@ -254,6 +254,33 @@
           </a>
         </div>
       </a>
+    </div>
+
+    <!-- ======== For the receive popup =============== -->
+    <div class="receive-popup" id="receive-popup">
+      <a href="#" class="close-popup"> </a>
+      <div class="popup-more">
+        <a href="" class="receive-popup__goBack">
+          <img src="../images/back.svg" />
+          <p>Go back</p>
+        </a>
+        <p>Find your receive address below</p>
+
+        <div class="receive-popup__coinAddress">
+          <img src="../images/logo_bitcoin.png" />
+          <label for="walletAddress">WALLET ADDRESS</label>
+          <input
+            type="text"
+            id="walletAddress"
+            placeholder="Enter wallet address"
+          />
+        </div>
+
+        <div class="receive-popup__info">
+          <img src="../images/Group.svg" />
+          <p>You can only recieve BTC to this address</p>
+        </div>
+      </div>
     </div>
 
     <!-- footer -->

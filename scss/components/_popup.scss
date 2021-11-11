@@ -1,4 +1,5 @@
-.popup {
+.popup,
+.receive-popup {
   position: fixed;
   top: 0;
   height: 100vh;
@@ -114,6 +115,130 @@
 
     @include respond(sm-phone) {
       transform: translate(0%, 0%) scale(1);
+    }
+  }
+}
+
+// For the receive popup
+.receive-popup {
+  img {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: unset;
+    background-color: transparent;
+  }
+
+  .popup-more {
+    top: 70vh !important;
+    padding: 1rem 1rem 3rem 1rem;
+
+    p:nth-last-child(3) {
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+  }
+  &__goBack {
+    width: 30% !important;
+    gap: 0 !important;
+    display: flex;
+
+    p {
+      color: $color-primary !important;
+    }
+  }
+
+  &__info {
+    background-color: rgba($color-black, 0.33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+    color: $color-white;
+    border-radius: 4px;
+
+    img {
+      display: block;
+      width: 2.5rem;
+      height: auto;
+    }
+  }
+
+  &__coinAddress {
+    border: 2px solid red;
+    margin-top: 1.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid $color-ash;
+    background-color: $color-white;
+    border-radius: 8px;
+
+    img {
+      display: inline-block;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+
+    input {
+      padding: 1.2rem 1.5rem;
+      padding-left: 0.2rem;
+      background-color: $color-white;
+      color: #383838;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+
+      &:focus-within {
+        background-color: #fff;
+      }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      box-shadow: 0 0 0 90px white inset !important;
+    }
+
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    ::placeholder {
+      color: rgb(158, 153, 153);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    label {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 0.8rem;
+      background-color: #fff;
+      transition: 500ms opacity ease-in;
+      font-weight: 600;
+      padding: 5px 15px;
+      color: #383838;
+    }
+
+    &:focus-within label,
+    input:not(:placeholder-shown) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

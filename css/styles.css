@@ -340,7 +340,8 @@ section {
 .hero__cta-sell img:nth-child(4) {
   margin-right: 1rem; }
 
-.popup {
+.popup,
+.receive-popup {
   position: fixed;
   top: 0;
   height: 100vh;
@@ -348,10 +349,12 @@ section {
   z-index: 800;
   opacity: 0;
   visibility: hidden; }
-  .popup:target {
+  .popup:target,
+  .receive-popup:target {
     opacity: 1;
     visibility: visible; }
-  .popup-more {
+  .popup-more,
+  .receive-popup-more {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -381,18 +384,22 @@ section {
     -o-transition: all 0.5s 0.3s;
     transition: all 0.5s 0.3s; }
     @media only screen and (max-width: 69em) {
-      .popup-more {
+      .popup-more,
+      .receive-popup-more {
         padding: 2rem; } }
     @media only screen and (max-width: 56.25em) {
-      .popup-more {
+      .popup-more,
+      .receive-popup-more {
         width: 60%;
         padding: 1.5rem 1rem; } }
     @media only screen and (max-width: 43.75em) {
-      .popup-more {
+      .popup-more,
+      .receive-popup-more {
         width: 70%;
         padding: 1rem; } }
     @media only screen and (max-width: 25em) {
-      .popup-more {
+      .popup-more,
+      .receive-popup-more {
         left: 0%;
         bottom: 0%;
         top: auto;
@@ -401,7 +408,8 @@ section {
                 transform: translate(0%, 0%) scale(0.5);
         width: 100%;
         border-radius: 8px 8px 0px 0px; } }
-    .popup-more a {
+    .popup-more a,
+    .receive-popup-more a {
       text-decoration: none;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -415,49 +423,203 @@ section {
       font-weight: 300;
       width: 28%; }
       @media only screen and (max-width: 43.75em) {
-        .popup-more a {
+        .popup-more a,
+        .receive-popup-more a {
           font-size: 1.1rem;
           gap: 1rem; } }
-    .popup-more img {
+    .popup-more img,
+    .receive-popup-more img {
       display: inline-block;
       border-radius: 50%;
       padding: 0.8rem;
       background-color: #f1590e; }
       @media only screen and (max-width: 43.75em) {
-        .popup-more img {
+        .popup-more img,
+        .receive-popup-more img {
           padding: 0.5rem;
           width: 40px;
           height: 40px; } }
-    .popup-more__back {
+    .popup-more__back,
+    .receive-popup-more__back {
       display: none; }
       @media only screen and (max-width: 25em) {
-        .popup-more__back {
+        .popup-more__back,
+        .receive-popup-more__back {
           display: block; } }
-      .popup-more__back a {
+      .popup-more__back a,
+      .receive-popup-more__back a {
         width: 35%;
         gap: 0.5rem; }
-        .popup-more__back a img {
+        .popup-more__back a img,
+        .receive-popup-more__back a img {
           height: 1.5rem;
           width: 1.5rem;
           display: block;
           border-radius: 0%;
           padding: 0rem;
           background-color: white; }
-      .popup-more__back p:nth-child(3) {
+      .popup-more__back p:nth-child(3),
+      .receive-popup-more__back p:nth-child(3) {
         font-size: 1.1rem;
         margin-top: 1.5rem;
         margin-left: 1rem;
         font-weight: 500; }
-  .popup:target .popup-more {
+  .popup:target .popup-more,
+  .receive-popup:target .popup-more, .popup:target
+  .receive-popup-more,
+  .receive-popup:target
+  .receive-popup-more {
     opacity: 1;
     -webkit-transform: translate(-50%, -50%) scale(1);
         -ms-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1); }
     @media only screen and (max-width: 25em) {
-      .popup:target .popup-more {
+      .popup:target .popup-more,
+      .receive-popup:target .popup-more, .popup:target
+      .receive-popup-more,
+      .receive-popup:target
+      .receive-popup-more {
         -webkit-transform: translate(0%, 0%) scale(1);
             -ms-transform: translate(0%, 0%) scale(1);
                 transform: translate(0%, 0%) scale(1); } }
+
+.receive-popup img {
+  display: inline-block;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: unset;
+  background-color: transparent; }
+
+.receive-popup .popup-more {
+  top: 70vh !important;
+  padding: 1rem 1rem 3rem 1rem; }
+  .receive-popup .popup-more p:nth-last-child(3) {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-left: 1rem; }
+
+.receive-popup__goBack {
+  width: 30% !important;
+  gap: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .receive-popup__goBack p {
+    color: #f1590e !important; }
+
+.receive-popup__info {
+  background-color: rgba(0, 0, 0, 0.33);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #fff;
+  border-radius: 4px; }
+  .receive-popup__info img {
+    display: block;
+    width: 2.5rem;
+    height: auto; }
+
+.receive-popup__coinAddress {
+  border: 2px solid red;
+  margin-top: 1.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px; }
+  .receive-popup__coinAddress img {
+    display: inline-block;
+    width: 3.5rem;
+    height: 3.5rem; }
+  .receive-popup__coinAddress input {
+    padding: 1.2rem 1.5rem;
+    padding-left: 0.2rem;
+    background-color: #fff;
+    color: #383838;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 500; }
+    .receive-popup__coinAddress input:focus-within {
+      background-color: #fff; }
+  .receive-popup__coinAddress input:-webkit-autofill,
+  .receive-popup__coinAddress input:-webkit-autofill:hover,
+  .receive-popup__coinAddress input:-webkit-autofill:focus,
+  .receive-popup__coinAddress input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 90px white inset !important;
+            box-shadow: 0 0 0 90px white inset !important; }
+  .receive-popup__coinAddress input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  .receive-popup__coinAddress ::-webkit-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .receive-popup__coinAddress ::-moz-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .receive-popup__coinAddress :-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .receive-popup__coinAddress ::-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .receive-popup__coinAddress ::placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .receive-popup__coinAddress label {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.8rem;
+    background-color: #fff;
+    -webkit-transition: 500ms opacity ease-in;
+    -o-transition: 500ms opacity ease-in;
+    transition: 500ms opacity ease-in;
+    font-weight: 600;
+    padding: 5px 15px;
+    color: #383838; }
+  .receive-popup__coinAddress input:not(:-moz-placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .receive-popup__coinAddress input:not(:-ms-input-placeholder) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .receive-popup__coinAddress:focus-within label,
+  .receive-popup__coinAddress input:not(:placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
 
 .close-popup {
   width: 100%;
