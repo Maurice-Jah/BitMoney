@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- add icon link -->
+    <link rel="icon" href="images/bitmoney-logo.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>BitMoney</title>
+  </head>
+  <body>
+    <!-- Nav section -->
+    <div class="dashboard dashboard__buyCoin">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="../images/logo-2.svg" alt="logo-img" />
+          </a>
+        </div>
+
+        <ul class="nav__link">
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Home</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Wallet</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Trade</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Referrals</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Profile</a>
+          </li>
+        </ul>
+
+        <a href="#" class="nav__button btn">
+          <img src="../images/logout_icon.svg" />
+          <p>Log out</p>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ===========Buy Bitcoin from wallet============ -->
+    <section class="buyCoin">
+      <div class="buyCoin__bitcoin">
+        <h3 class="buyCoin__bitcoin-heading">Buy Bitcoin</h3>
+
+        <div class="buyCoin__bitcoin-amount">
+          <img src="../images/logo_bitcoin.png" />
+          <label for="btc">BTC AMOUNT</label>
+          <input type="text" id="btc" placeholder="BTC AMOUNT" />
+        </div>
+
+        <div class="buyCoin__naira-amount">
+          <img src="../images/pencil_icon.svg" />
+          <label for="naira">NAIRA AMOUNT</label>
+          <input type="text" id="naira" placeholder="NAIRA AMOUNT" />
+        </div>
+
+        <!----------------- Dropdown for the wallets------------ -->
+        <form class="buyCoin__select">
+          <label for="options-view" class="select-label" id="select-label">
+            <p class="select-text">PAY WITH</p>
+            <input type="checkbox" id="options-view" />
+            <p class="select-text1">PAY WITH</p>
+
+            <div class="options">
+              <label for="bitcoinWallet" class="option">
+                <input type="radio" id="bitcoinWallet" name="platform" />
+                <img src="../images/logo_bitcoin.png" />
+                <span class="name">Bitcoin Wallet</span>
+              </label>
+
+              <label for="ethereumWallet" class="option">
+                <input type="radio" id="ethereumWallet" name="platform" />
+                <img src="../images/logo_eth.svg" />
+                <span class="name">Ethereum Wallet</span>
+              </label>
+
+              <label for="nairaWallet" class="option">
+                <input type="radio" id="nairaWallet" name="platform" />
+                <img src="../images/logo_nigeria.svg" />
+                <span class="name">Naira Wallet</span>
+              </label>
+            </div>
+          </label>
+          <div class="buyCoin-actions">
+            <a href="#popup-failure" class="buyCoin__select-btn btn">PROCEED</a>
+            <a href="index_dashboard.html" class="buyCoin__select-back">
+              <img src="../images/back.svg" class="buyCoin__select-back--img" />
+              <p class="buyCoin__select-back--text">Go back</p>
+            </a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-----------------  popup success------------->
+    <div class="popup-background" id="popup-success">
+      <a href="" class="popup-success__close"> </a>
+      <div class="popup-success">
+        <img src="../images/success-img.svg" class="popup-success__img" />
+        <p class="popup-success__text">Transaction Successful</p>
+        <button class="popup-success__view btn">VIEW TRANSACTION</button>
+      </div>
+    </div>
+
+    <!-----------------  popup failure------------->
+    <div class="popup-background" id="popup-failure">
+      <a href="" class="popup-failure__close"> </a>
+      <div class="popup-failure">
+        <img src="../images/error.svg" class="popup-failure__img" />
+        <div class="popup-failure__text">
+          <h4>Insufficient Balance!</h4>
+          <p>
+            Oops! Looks like you don’t have enough funds to complete this
+            transaction. Fund your wallet to continue.
+          </p>
+        </div>
+        <button class="popup-failure__view btn">DEPOSIT FUND</button>
+      </div>
+    </div>
+  </body>
+</html>

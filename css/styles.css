@@ -465,6 +465,90 @@ section {
   display: block;
   background-color: rgba(0, 0, 0, 0.8); }
 
+.popup-background {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 800;
+  opacity: 0;
+  visibility: hidden; }
+  .popup-background:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup-background .popup-success,
+  .popup-background .popup-failure {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1.5rem;
+    padding: 3rem;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    z-index: 999;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+        -ms-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+    -webkit-transition: all 0.5s 0.3s;
+    -o-transition: all 0.5s 0.3s;
+    transition: all 0.5s 0.3s; }
+    .popup-background .popup-success__img,
+    .popup-background .popup-failure__img {
+      display: inline-block;
+      width: 4rem;
+      height: 4rem; }
+    .popup-background .popup-success__text,
+    .popup-background .popup-failure__text {
+      font-weight: 500;
+      text-align: center; }
+      .popup-background .popup-success__text h4,
+      .popup-background .popup-failure__text h4 {
+        margin-bottom: 1rem; }
+      .popup-background .popup-success__text p,
+      .popup-background .popup-failure__text p {
+        font-size: 0.8rem;
+        font-weight: 400; }
+    .popup-background .popup-success__view,
+    .popup-background .popup-failure__view {
+      border-radius: 3px; }
+    .popup-background .popup-success__close,
+    .popup-background .popup-failure__close {
+      text-decoration: none;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      display: block;
+      background-color: rgba(0, 0, 0, 0.8); }
+  .popup-background:target .popup-success,
+  .popup-background:target .popup-failure {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1); }
+    @media only screen and (max-width: 25em) {
+      .popup-background:target .popup-success,
+      .popup-background:target .popup-failure {
+        -webkit-transform: translate(0%, 0%) scale(1);
+            -ms-transform: translate(0%, 0%) scale(1);
+                transform: translate(0%, 0%) scale(1); } }
+
 .footer {
   position: relative;
   display: -webkit-box;
@@ -1469,6 +1553,70 @@ select {
         font-weight: 300;
         font-size: 0.8rem; }
 
+.buy-backgroound {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden; }
+  .buy-backgroound:target {
+    opacity: 1;
+    visibility: visible; }
+    .buy-backgroound:target .buy-action {
+      -webkit-transform: translate(-50%, -50%) scale(1);
+          -ms-transform: translate(-50%, -50%) scale(1);
+              transform: translate(-50%, -50%) scale(1); }
+  .buy-backgroound .buy-action {
+    position: absolute;
+    bottom: -13%;
+    left: 50%;
+    width: 50%;
+    padding: 4rem 2rem 2rem 2rem;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+        -ms-transform: translate(-50%, -50%) scale(0.5);
+            transform: translate(-50%, -50%) scale(0.5);
+    -webkit-transition: all 0.5s 0.3s;
+    -o-transition: all 0.5s 0.3s;
+    transition: all 0.5s 0.3s; }
+    .buy-backgroound .buy-action__heading {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      background: #fff;
+      color: #000; }
+    .buy-backgroound .buy-action__coin {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      text-decoration: none;
+      color: #000;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+      width: 10%; }
+    .buy-backgroound .buy-action__img {
+      width: 2rem;
+      height: 2rem;
+      display: inline-block; }
+    .buy-backgroound .buy-action__coinName {
+      font-size: 1.2rem;
+      font-weight: 500; }
+
+.background__close {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.9); }
+
 .curve_naira {
   height: 60vh;
   width: 100%;
@@ -2081,3 +2229,258 @@ select {
       display: inline-block; }
     .dashboard-ethereum__start .text h3 {
       font-weight: 300; }
+
+.dashboard__buyCoin {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+
+.buyCoin__bitcoin, .buyCoin__naira {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem; }
+  .buyCoin__bitcoin-heading, .buyCoin__naira-heading {
+    text-align: center; }
+  .buyCoin__bitcoin-amount, .buyCoin__naira-amount {
+    margin-top: 1.5rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    border: 1px solid #cbc8c8;
+    background-color: #fff;
+    border-radius: 8px; }
+    .buyCoin__bitcoin-amount img, .buyCoin__naira-amount img {
+      display: inline-block;
+      margin-left: 0.8rem;
+      width: 1.5rem;
+      height: 1.5rem; }
+    .buyCoin__bitcoin-amount input, .buyCoin__naira-amount input {
+      padding: 1.2rem 1.5rem;
+      background-color: #fff;
+      color: #383838;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      font-weight: 500; }
+      .buyCoin__bitcoin-amount input:focus-within, .buyCoin__naira-amount input:focus-within {
+        background-color: #fff; }
+    .buyCoin__bitcoin-amount input:-webkit-autofill,
+    .buyCoin__bitcoin-amount input:-webkit-autofill:hover,
+    .buyCoin__bitcoin-amount input:-webkit-autofill:focus,
+    .buyCoin__bitcoin-amount input:-webkit-autofill:active, .buyCoin__naira-amount input:-webkit-autofill,
+    .buyCoin__naira-amount input:-webkit-autofill:hover,
+    .buyCoin__naira-amount input:-webkit-autofill:focus,
+    .buyCoin__naira-amount input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 90px white inset !important;
+              box-shadow: 0 0 0 90px white inset !important; }
+    .buyCoin__bitcoin-amount input:focus::-webkit-input-placeholder, .buyCoin__naira-amount input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .buyCoin__bitcoin-amount ::-webkit-input-placeholder, .buyCoin__naira-amount ::-webkit-input-placeholder {
+      color: #9e9999;
+      font-size: 0.8rem; }
+    .buyCoin__bitcoin-amount ::-moz-placeholder, .buyCoin__naira-amount ::-moz-placeholder {
+      color: #9e9999;
+      font-size: 0.8rem; }
+    .buyCoin__bitcoin-amount :-ms-input-placeholder, .buyCoin__naira-amount :-ms-input-placeholder {
+      color: #9e9999;
+      font-size: 0.8rem; }
+    .buyCoin__bitcoin-amount ::-ms-input-placeholder, .buyCoin__naira-amount ::-ms-input-placeholder {
+      color: #9e9999;
+      font-size: 0.8rem; }
+    .buyCoin__bitcoin-amount ::placeholder, .buyCoin__naira-amount ::placeholder {
+      color: #9e9999;
+      font-size: 0.8rem; }
+    .buyCoin__bitcoin-amount label, .buyCoin__naira-amount label {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 0.8rem;
+      background-color: #fff;
+      -webkit-transition: 500ms opacity ease-in;
+      -o-transition: 500ms opacity ease-in;
+      transition: 500ms opacity ease-in;
+      font-weight: 600;
+      padding: 5px 15px;
+      color: #383838; }
+    .buyCoin__bitcoin-amount input:not(:-moz-placeholder-shown) ~ label, .buyCoin__naira-amount input:not(:-moz-placeholder-shown) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+    .buyCoin__bitcoin-amount input:not(:-ms-input-placeholder) ~ label, .buyCoin__naira-amount input:not(:-ms-input-placeholder) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+    .buyCoin__bitcoin-amount:focus-within label,
+    .buyCoin__bitcoin-amount input:not(:placeholder-shown) ~ label, .buyCoin__naira-amount:focus-within label,
+    .buyCoin__naira-amount input:not(:placeholder-shown) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+
+.buyCoin__select {
+  margin-top: 1.5rem; }
+  .buyCoin__select .select-label {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid #cbc8c8;
+    cursor: pointer; }
+    .buyCoin__select .select-label::before {
+      position: absolute;
+      content: "";
+      top: 1rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #000;
+      right: 1rem; }
+    .buyCoin__select .select-label::after {
+      position: absolute;
+      content: "";
+      top: 1.7rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #000;
+      right: 1rem; }
+    .buyCoin__select .select-label .select-text1 {
+      position: absolute;
+      top: -0.6rem;
+      left: 2rem;
+      background-color: #fff;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 0.8rem;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .buyCoin__select .select-label #options-view:hover + .select-text1 {
+      opacity: 1;
+      visibility: visible; }
+    .buyCoin__select .select-label .select-text {
+      color: #9e9999;
+      font-size: 0.8rem;
+      margin-left: 2rem;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .buyCoin__select .select-label input[type="checkbox"] {
+      display: none; }
+    .buyCoin__select .select-label .options {
+      position: absolute;
+      z-index: 30;
+      left: -1px;
+      top: 3.3rem;
+      border-radius: 8px;
+      border-right: 1px solid #cbc8c8;
+      border-left: 1px solid #cbc8c8;
+      border-bottom: 1px solid #cbc8c8;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      border-radius: 0px;
+      background: white;
+      width: 100.4%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+      .buyCoin__select .select-label .options .option {
+        position: relative;
+        z-index: 30;
+        padding: 0.8rem 1rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 0.8rem;
+        -webkit-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        cursor: pointer; }
+        .buyCoin__select .select-label .options .option:hover {
+          background-color: #f7931a;
+          color: #fff; }
+        .buyCoin__select .select-label .options .option img {
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem; }
+      .buyCoin__select .select-label .options input[type="radio"] {
+        display: none; }
+    .buyCoin__select .select-label:hover .select-text {
+      opacity: 0; }
+  .buyCoin__select-btn {
+    border-radius: 5px;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+  .buyCoin__select-back {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    gap: 0.8rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #f1590e; }
+    .buyCoin__select-back--img {
+      width: 1.5rem;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      height: auto; }
+    .buyCoin__select-back:hover .buyCoin__select-back--img {
+      -webkit-transform: translateX(-0.3rem);
+          -ms-transform: translateX(-0.3rem);
+              transform: translateX(-0.3rem); }
+  .buyCoin__select #options-view:checked ~ .options {
+    opacity: 1;
+    visibility: visible; }
+
+.buyCoin-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }

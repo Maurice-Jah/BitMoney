@@ -959,3 +959,74 @@ select {
     }
   }
 }
+
+// ============ DASHBOAARD BUY SECTION ======================//
+.buy-backgroound {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+    // show on target
+    .buy-action {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  .buy-action {
+    position: absolute;
+    bottom: -13%;
+    left: 50%;
+    width: 50%;
+    padding: 4rem 2rem 2rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 1px 1px 2px rgba(0, 0, 0, 0.1);
+    background: $color-white;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.5s 0.3s;
+
+    &__heading {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      background: $color-white;
+      color: $color-black;
+    }
+
+    &__coin {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: $color-black;
+      gap: 0.6rem;
+      margin-bottom: 2rem;
+      width: 10%;
+    }
+
+    &__img {
+      width: 2rem;
+      height: 2rem;
+      display: inline-block;
+    }
+
+    &__coinName {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+  }
+}
+
+// Close background on click
+.background__close {
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-decoration: none;
+  background-color: rgba($color-black, 0.9);
+}
