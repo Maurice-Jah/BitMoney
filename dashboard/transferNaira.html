@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- add icon link -->
+    <link rel="icon" href="images/bitmoney-logo.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>BitMoney</title>
+  </head>
+  <body>
+    <!-- Nav section -->
+    <div class="dashboard dashboard__transferNaira">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="../images/logo-2.svg" alt="logo-img" />
+          </a>
+        </div>
+
+        <ul class="nav__link">
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Home</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Wallet</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Trade</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Referrals</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Profile</a>
+          </li>
+        </ul>
+
+        <a href="#" class="nav__button btn">
+          <img src="../images/logout_icon.svg" />
+          <p>Log out</p>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ===========Withdraw naira section ============ -->
+    <section class="transferNaira">
+      <div class="transferNaira__form">
+        <h3 class="transferNaira__heading">Transfer</h3>
+
+        <!----------------- Dropdown for the wallets------------ -->
+        <form class="transferNaira__select">
+          <label for="options-view" class="select-label" id="select-label">
+            <img src="../images/logo_bitcoin.png" />
+            <p class="select-text">BTC</p>
+            <input type="checkbox" id="options-view" />
+            <p class="select-text1">SELECT CURRENCY</p>
+
+            <div class="options">
+              <label for="ethereum" class="option">
+                <input type="radio" id="ethereum" name="platform" />
+                <img src="../images/logo_eth.svg" />
+                <span class="name">Ethereum</span>
+              </label>
+
+              <label for="eNaira" class="option">
+                <input type="radio" id="eNaira" name="platform" />
+                <img src="../images/logo_nigeria.svg" />
+                <span class="name">eNaira</span>
+              </label>
+            </div>
+          </label>
+        </form>
+
+        <form class="transferNaira__select2">
+          <label for="options-view1" class="select-label" id="select-label">
+            <img src="../images/person_1.svg" />
+            <p class="select-text">TRANSFER MODE</p>
+            <input type="checkbox" id="options-view1" />
+            <p class="select-text1">TRANSFER TO USER BY</p>
+
+            <div class="options">
+              <label for="phone" class="option">
+                <input type="radio" id="phone" name="platform" />
+                <img src="../images/person_1.svg" />
+                <span class="name">Phone number</span>
+              </label>
+
+              <label for="emailTransfer" class="option">
+                <input type="radio" id="emailTransfer" name="platform" />
+                <img src="../images/mail.svg" />
+                <span class="name">Eamil Address </span>
+              </label>
+            </div>
+          </label>
+        </form>
+
+        <div class="transferNaira__phoneNumber">
+          <img src="../images/flag.png" />
+          <label for="account">PHONE NUMBER </label>
+          <input type="text" id="account" placeholder="PHONE NUMBER" />
+        </div>
+
+        <div class="transferNaira__email">
+          <img src="../images/mail.svg" />
+          <label for="emailTransfer">EMAIL </label>
+          <input type="text" id="emailTransfer" placeholder="EMAIL ADDRESS" />
+        </div>
+
+        <div class="transferNaira__accountName">
+          <img src="../images/user.svg" />
+          <label for="accountName">ACCOUNT NAME</label>
+          <input type="text" id="accountName" placeholder=" Account Name" />
+        </div>
+
+        <div class="transferNaira__amount">
+          <img src="../images/naira.svg" style="height: 30px" />
+          <label for="amount">AMOUNT</label>
+          <input type="text" id="amount" placeholder=" Amount" />
+        </div>
+
+        <!-- Proceed or quit actions -->
+        <div class="transferNaira-actions">
+          <a href="#popup-failure" class="transferNaira__select-btn btn"
+            >PROCEED</a
+          >
+          <a href="nairaWallet.html" class="transferNaira__select-back">
+            <img
+              src="../images/back.svg"
+              class="transferNaira__select-back--img"
+            />
+            <p class="transferNaira__select-back--text">Go back</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-----------------  popup success------------->
+    <div class="popup-background" id="popup-success">
+      <a href="" class="popup-success__close"> </a>
+      <div class="popup-success">
+        <img src="../images/success-img.svg" class="popup-success__img" />
+        <p class="popup-success__text">Transaction Successful</p>
+        <button class="popup-success__view btn">VIEW TRANSACTION</button>
+      </div>
+    </div>
+
+    <!----------------- popup failure------------->
+    <div class="popup-background" id="popup-failure">
+      <a href="" class="popup-failure__close"> </a>
+      <div class="popup-failure">
+        <img src="../images/error.svg" class="popup-failure__img" />
+        <div class="popup-failure__text">
+          <h4>Verification Error</h4>
+          <p>
+            Couldn’t verify user account. Please make sure you typed the correct
+            values.
+          </p>
+        </div>
+        <a href="" class="popup-failure__view btn">GO BACK</a>
+      </div>
+    </div>
+  </body>
+</html>
