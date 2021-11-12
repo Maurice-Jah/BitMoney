@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- add icon link -->
+    <link rel="icon" href="images/bitmoney-logo.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>BitMoney</title>
+  </head>
+  <body>
+    <!-- Nav section -->
+    <div class="dashboard dashboard__withdrawNaira">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="../images/logo-2.svg" alt="logo-img" />
+          </a>
+        </div>
+
+        <ul class="nav__link">
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Home</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Wallet</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Trade</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Referrals</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Profile</a>
+          </li>
+        </ul>
+
+        <a href="#" class="nav__button btn">
+          <img src="../images/logout_icon.svg" />
+          <p>Log out</p>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ===========Withdraw naira section ============ -->
+    <section class="withdrawNaira">
+      <!----------Successful Transaction--------------- -->
+      <div class="withdrawNaira__success" id="withdrawNaira__success">
+        <div class="withdrawNaira__success-time">
+          <p>01:20</p>
+          <svg class="progress-ring" width="160" height="160">
+            <circle
+              class="progress-ring__circle"
+              stroke="#f1590e"
+              stroke-width="4"
+              fill="transparent"
+              r="72"
+              cx="80"
+              cy="80"
+            />
+          </svg>
+        </div>
+        <div class="withdrawNaira__success-text">
+          <p class="withdrawNaira__success-text--heading">
+            Transaction Processing
+          </p>
+
+          <p class="withdrawNaira__success-text--sub">
+            Your transaction is processing, the withdrawn amount will be sent to
+            your local bank shortly. You can view the status of this transaction
+            on the transaction page.
+          </p>
+        </div>
+
+        <div class="withdrawNaira__success-viewTransaction">
+          <a href="" class="btn">VIEW TRANSACTION</a>
+        </div>
+      </div>
+
+      <!--===========----Withdraw from Naira-=========  -->
+      <div class="withdrawNaira__form">
+        <h3 class="withdrawNaira__heading">Withdraw</h3>
+
+        <!----------------- Dropdown for the wallets------------ -->
+        <form class="withdrawNaira__select">
+          <label for="options-view" class="select-label" id="select-label">
+            <img src="../images/bank_icon.svg" />
+            <p class="select-text">Select Bank to withdraw from</p>
+            <input type="checkbox" id="options-view" />
+            <p class="select-text1">SELECT BANK</p>
+
+            <div class="options">
+              <label for="access" class="option">
+                <input type="radio" id="access" name="platform" />
+                <img src="../images/bank_icon.svg" />
+                <span class="name">Access Bank</span>
+              </label>
+
+              <label for="uba" class="option">
+                <input type="radio" id="uba" name="platform" />
+                <img src="../images/bank_icon.svg" />
+                <span class="name">UBA</span>
+              </label>
+
+              <label for="first bank" class="option">
+                <input type="radio" id="first bank" name="platform" />
+                <img src="../images/bank_icon.svg" />
+                <span class="name">First Bank</span>
+              </label>
+            </div>
+          </label>
+        </form>
+
+        <div class="withdrawNaira__account">
+          <img src="../images/pencil_icon.svg" />
+          <label for="account">ACCOUNT NUMBER</label>
+          <input type="text" id="account" placeholder=" Account Number" />
+        </div>
+
+        <div class="withdrawNaira__accountName">
+          <img src="../images/user.svg" />
+          <label for="accountName">ACCOUNT NAME</label>
+          <input type="text" id="accountName" placeholder=" Account Name" />
+        </div>
+
+        <div class="withdrawNaira__amount">
+          <img src="../images/naira.svg" style="height: 30px" />
+          <label for="amount">AMOUNT</label>
+          <input type="text" id="amount" placeholder=" Amount" />
+        </div>
+
+        <!-- Display information when fields are filled -->
+        <div class="withdrawNaira__fee">
+          <img
+            src="../images/info2.svg"
+            alt="withdrawNaira-img"
+            class="withdrawNaira__fee-img"
+          />
+          <p class="withdrawNaira__fee-text">Applicable ₦50 withdrawal fee</p>
+        </div>
+
+        <!-- Proceed or quit actions -->
+        <div class="withdrawNaira-actions">
+          <a
+            href="#withdrawNaira__success"
+            class="withdrawNaira__select-btn btn"
+            >PROCEED</a
+          >
+          <a href="nairaWallet.html" class="withdrawNaira__select-back">
+            <img
+              src="../images/back.svg"
+              class="withdrawNaira__select-back--img"
+            />
+            <p class="withdrawNaira__select-back--text">Go back</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

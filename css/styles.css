@@ -2904,3 +2904,363 @@ select {
   .sendCoin__select #options-view:checked ~ .options {
     opacity: 1;
     visibility: visible; }
+
+.sendCoin-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
+
+.dashboard__withdrawNaira {
+  background-color: #1b9a20;
+  padding: 1.5rem 2rem; }
+
+.withdrawNaira__form {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem; }
+
+.withdrawNaira__heading {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+
+.withdrawNaira__account, .withdrawNaira__amount, .withdrawNaira__accountName {
+  margin-top: 2.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px; }
+  .withdrawNaira__account img, .withdrawNaira__amount img, .withdrawNaira__accountName img {
+    display: inline-block;
+    margin-left: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+  .withdrawNaira__account input, .withdrawNaira__amount input, .withdrawNaira__accountName input {
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 500; }
+    .withdrawNaira__account input:focus-within, .withdrawNaira__amount input:focus-within, .withdrawNaira__accountName input:focus-within {
+      background-color: #fff; }
+  .withdrawNaira__account input:-webkit-autofill,
+  .withdrawNaira__account input:-webkit-autofill:hover,
+  .withdrawNaira__account input:-webkit-autofill:focus,
+  .withdrawNaira__account input:-webkit-autofill:active, .withdrawNaira__amount input:-webkit-autofill,
+  .withdrawNaira__amount input:-webkit-autofill:hover,
+  .withdrawNaira__amount input:-webkit-autofill:focus,
+  .withdrawNaira__amount input:-webkit-autofill:active, .withdrawNaira__accountName input:-webkit-autofill,
+  .withdrawNaira__accountName input:-webkit-autofill:hover,
+  .withdrawNaira__accountName input:-webkit-autofill:focus,
+  .withdrawNaira__accountName input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 90px white inset !important;
+            box-shadow: 0 0 0 90px white inset !important; }
+  .withdrawNaira__account input:focus::-webkit-input-placeholder, .withdrawNaira__amount input:focus::-webkit-input-placeholder, .withdrawNaira__accountName input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  .withdrawNaira__account ::-webkit-input-placeholder, .withdrawNaira__amount ::-webkit-input-placeholder, .withdrawNaira__accountName ::-webkit-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .withdrawNaira__account ::-moz-placeholder, .withdrawNaira__amount ::-moz-placeholder, .withdrawNaira__accountName ::-moz-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .withdrawNaira__account :-ms-input-placeholder, .withdrawNaira__amount :-ms-input-placeholder, .withdrawNaira__accountName :-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .withdrawNaira__account ::-ms-input-placeholder, .withdrawNaira__amount ::-ms-input-placeholder, .withdrawNaira__accountName ::-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .withdrawNaira__account ::placeholder, .withdrawNaira__amount ::placeholder, .withdrawNaira__accountName ::placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .withdrawNaira__account label, .withdrawNaira__amount label, .withdrawNaira__accountName label {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.8rem;
+    background-color: #fff;
+    -webkit-transition: 500ms opacity ease-in;
+    -o-transition: 500ms opacity ease-in;
+    transition: 500ms opacity ease-in;
+    font-weight: 600;
+    padding: 5px 15px;
+    color: #383838; }
+  .withdrawNaira__account input:not(:-moz-placeholder-shown) ~ label, .withdrawNaira__amount input:not(:-moz-placeholder-shown) ~ label, .withdrawNaira__accountName input:not(:-moz-placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .withdrawNaira__account input:not(:-ms-input-placeholder) ~ label, .withdrawNaira__amount input:not(:-ms-input-placeholder) ~ label, .withdrawNaira__accountName input:not(:-ms-input-placeholder) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .withdrawNaira__account:focus-within label,
+  .withdrawNaira__account input:not(:placeholder-shown) ~ label, .withdrawNaira__amount:focus-within label,
+  .withdrawNaira__amount input:not(:placeholder-shown) ~ label, .withdrawNaira__accountName:focus-within label,
+  .withdrawNaira__accountName input:not(:placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+
+.withdrawNaira__select {
+  margin-top: 1.5rem; }
+  .withdrawNaira__select .select-label {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid #cbc8c8;
+    cursor: pointer; }
+    .withdrawNaira__select .select-label img {
+      display: inline-block;
+      margin-left: -0.8rem;
+      width: 1.5rem;
+      height: 1.5rem; }
+    .withdrawNaira__select .select-label::before {
+      position: absolute;
+      content: "";
+      top: 1rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #000;
+      right: 1rem; }
+    .withdrawNaira__select .select-label::after {
+      position: absolute;
+      content: "";
+      top: 1.7rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #000;
+      right: 1rem; }
+    .withdrawNaira__select .select-label .select-text1 {
+      position: absolute;
+      top: -0.6rem;
+      left: 2rem;
+      background-color: #fff;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 0.8rem;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .withdrawNaira__select .select-label #options-view:hover + .select-text1 {
+      opacity: 1;
+      visibility: visible; }
+    .withdrawNaira__select .select-label .select-text {
+      color: #9e9999;
+      font-size: 1rem;
+      margin-left: 2rem;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .withdrawNaira__select .select-label input[type="checkbox"] {
+      display: none; }
+    .withdrawNaira__select .select-label .options {
+      position: absolute;
+      z-index: 30;
+      left: -1px;
+      top: 3.3rem;
+      border-radius: 8px;
+      border-right: 1px solid #cbc8c8;
+      border-left: 1px solid #cbc8c8;
+      border-bottom: 1px solid #cbc8c8;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      border-radius: 0px;
+      background: white;
+      width: 100.4%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+      .withdrawNaira__select .select-label .options .option {
+        position: relative;
+        z-index: 30;
+        padding: 0.8rem 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 0.8rem;
+        -webkit-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        cursor: pointer; }
+        .withdrawNaira__select .select-label .options .option:hover {
+          background-color: #1b9a20;
+          color: #fff; }
+        .withdrawNaira__select .select-label .options .option img {
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem; }
+      .withdrawNaira__select .select-label .options input[type="radio"] {
+        display: none; }
+    .withdrawNaira__select .select-label:hover .select-text {
+      opacity: 0; }
+  .withdrawNaira__select-btn {
+    border-radius: 5px;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: #1b9a20; }
+  .withdrawNaira__select-back {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    gap: 0.8rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #f1590e; }
+    .withdrawNaira__select-back--img {
+      width: 1.5rem;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      height: auto; }
+    .withdrawNaira__select-back:hover .withdrawNaira__select-back--img {
+      -webkit-transform: translateX(-0.3rem);
+          -ms-transform: translateX(-0.3rem);
+              transform: translateX(-0.3rem); }
+  .withdrawNaira__select #options-view:checked ~ .options {
+    opacity: 1;
+    visibility: visible; }
+
+.withdrawNaira__fee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem; }
+  .withdrawNaira__fee-img {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem; }
+  .withdrawNaira__fee-text {
+    color: #ababab;
+    font-size: 0.8rem; }
+
+.withdrawNaira-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
+
+.withdrawNaira__success {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 4rem 2rem;
+  display: none; }
+  .withdrawNaira__success-time {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .withdrawNaira__success-time p {
+      position: absolute;
+      color: #f1590e;
+      font-weight: 500;
+      font-size: 1.2rem; }
+    .withdrawNaira__success-time .progress-ring__circle {
+      stroke-dasharray: 5 25; }
+  .withdrawNaira__success-text {
+    padding: 3rem;
+    text-align: center; }
+    .withdrawNaira__success-text--heading {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      font-weight: 500; }
+    .withdrawNaira__success-text--sub {
+      font-size: 0.9rem; }
+  .withdrawNaira__success-viewTransaction {
+    text-align: center; }
+    .withdrawNaira__success-viewTransaction a {
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 3px; }
+
+.withdrawNaira__success:target {
+  display: block; }
+
+.withdrawNaira__success:target ~ .withdrawNaira__form {
+  display: none; }
