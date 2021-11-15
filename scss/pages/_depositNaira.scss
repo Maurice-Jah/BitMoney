@@ -1,11 +1,11 @@
 .dashboard {
-  &__withdrawNaira {
+  &__depositNaira {
     background-color: $color-green;
     padding: 1.5rem 2rem;
   }
 }
 
-.withdrawNaira {
+.depositNaira {
   &__form {
     width: 50%;
     border: 1px solid $color-ash;
@@ -253,23 +253,6 @@
     }
   }
 
-  &__fee {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    &-img {
-      display: inline-block;
-      width: 1rem;
-      height: 1rem;
-    }
-
-    &-text {
-      color: #ababab;
-      font-size: 0.8rem;
-    }
-  }
   &-actions {
     display: flex;
     flex-direction: column;
@@ -287,6 +270,11 @@
     border-radius: 4px;
     padding: 4rem 2rem;
     display: none;
+
+    &:target {
+      display: block;
+    }
+
     &-time {
       position: relative;
       display: flex;
@@ -319,7 +307,7 @@
         font-size: 0.9rem;
       }
     }
-    &-viewTransaction {
+    &-toWallet {
       text-align: center;
       a {
         text-decoration: none;
@@ -330,10 +318,93 @@
   }
 }
 
-.withdrawNaira__success:target {
-  display: block;
-}
+// Transferred section
+.transferredNaira {
+  width: 50%;
+  border: 1px solid $color-ash;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
 
-.withdrawNaira__success:target ~ .withdrawNaira__form {
   display: none;
+
+  &:target {
+    display: block;
+  }
+
+  &-img {
+    width: 15rem;
+    height: auto;
+    display: inline-block;
+  }
+
+  &__text {
+    padding: 1.5rem;
+    font-weight: 500;
+    &-main {
+      font-size: 1.2rem;
+      padding: 1.5rem;
+    }
+
+    &-sub {
+      font-size: 0.9rem;
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  &__details {
+    margin-top: 1.5rem;
+    width: 80%;
+    margin: 2rem auto;
+
+    &-accountNumber,
+    &-accountName,
+    &-paymentWindow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+
+      p:first-child {
+        color: $color-primary;
+        margin: 0.5rem;
+      }
+    }
+    &-status {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      border-radius: 4px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      margin-top: 3rem;
+      img {
+        display: inline-block;
+      }
+    }
+  }
+  &__fee {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    background-color: rgba($color-black, 0.33);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+
+    &-img {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+    }
+
+    &-text {
+      color: $color-white;
+      font-size: 0.8rem;
+    }
+  }
 }

@@ -27,7 +27,8 @@ $breakpoints
 
 html {
   color: #000;
-  font-size: 93.75%; }
+  font-size: 93.75%;
+  scroll-behavior: smooth; }
 
 body {
   -webkit-box-sizing: border-box;
@@ -3537,6 +3538,683 @@ select {
     visibility: visible; }
 
 .transferNaira-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
+
+.dashboard__depositNaira {
+  background-color: #1b9a20;
+  padding: 1.5rem 2rem; }
+
+.depositNaira__form {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem; }
+
+.depositNaira__heading {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+
+.depositNaira__account, .depositNaira__amount, .depositNaira__accountName {
+  margin-top: 2.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px; }
+  .depositNaira__account img, .depositNaira__amount img, .depositNaira__accountName img {
+    display: inline-block;
+    margin-left: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+  .depositNaira__account input, .depositNaira__amount input, .depositNaira__accountName input {
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 500; }
+    .depositNaira__account input:focus-within, .depositNaira__amount input:focus-within, .depositNaira__accountName input:focus-within {
+      background-color: #fff; }
+  .depositNaira__account input:-webkit-autofill,
+  .depositNaira__account input:-webkit-autofill:hover,
+  .depositNaira__account input:-webkit-autofill:focus,
+  .depositNaira__account input:-webkit-autofill:active, .depositNaira__amount input:-webkit-autofill,
+  .depositNaira__amount input:-webkit-autofill:hover,
+  .depositNaira__amount input:-webkit-autofill:focus,
+  .depositNaira__amount input:-webkit-autofill:active, .depositNaira__accountName input:-webkit-autofill,
+  .depositNaira__accountName input:-webkit-autofill:hover,
+  .depositNaira__accountName input:-webkit-autofill:focus,
+  .depositNaira__accountName input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 90px white inset !important;
+            box-shadow: 0 0 0 90px white inset !important; }
+  .depositNaira__account input:focus::-webkit-input-placeholder, .depositNaira__amount input:focus::-webkit-input-placeholder, .depositNaira__accountName input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  .depositNaira__account ::-webkit-input-placeholder, .depositNaira__amount ::-webkit-input-placeholder, .depositNaira__accountName ::-webkit-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .depositNaira__account ::-moz-placeholder, .depositNaira__amount ::-moz-placeholder, .depositNaira__accountName ::-moz-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .depositNaira__account :-ms-input-placeholder, .depositNaira__amount :-ms-input-placeholder, .depositNaira__accountName :-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .depositNaira__account ::-ms-input-placeholder, .depositNaira__amount ::-ms-input-placeholder, .depositNaira__accountName ::-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .depositNaira__account ::placeholder, .depositNaira__amount ::placeholder, .depositNaira__accountName ::placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .depositNaira__account label, .depositNaira__amount label, .depositNaira__accountName label {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.8rem;
+    background-color: #fff;
+    -webkit-transition: 500ms opacity ease-in;
+    -o-transition: 500ms opacity ease-in;
+    transition: 500ms opacity ease-in;
+    font-weight: 600;
+    padding: 5px 15px;
+    color: #383838; }
+  .depositNaira__account input:not(:-moz-placeholder-shown) ~ label, .depositNaira__amount input:not(:-moz-placeholder-shown) ~ label, .depositNaira__accountName input:not(:-moz-placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .depositNaira__account input:not(:-ms-input-placeholder) ~ label, .depositNaira__amount input:not(:-ms-input-placeholder) ~ label, .depositNaira__accountName input:not(:-ms-input-placeholder) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .depositNaira__account:focus-within label,
+  .depositNaira__account input:not(:placeholder-shown) ~ label, .depositNaira__amount:focus-within label,
+  .depositNaira__amount input:not(:placeholder-shown) ~ label, .depositNaira__accountName:focus-within label,
+  .depositNaira__accountName input:not(:placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+
+.depositNaira__select {
+  margin-top: 1.5rem; }
+  .depositNaira__select .select-label {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid #cbc8c8;
+    cursor: pointer; }
+    .depositNaira__select .select-label img {
+      display: inline-block;
+      margin-left: -0.8rem;
+      width: 1.5rem;
+      height: 1.5rem; }
+    .depositNaira__select .select-label::before {
+      position: absolute;
+      content: "";
+      top: 1rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #000;
+      right: 1rem; }
+    .depositNaira__select .select-label::after {
+      position: absolute;
+      content: "";
+      top: 1.7rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #000;
+      right: 1rem; }
+    .depositNaira__select .select-label .select-text1 {
+      position: absolute;
+      top: -0.6rem;
+      left: 2rem;
+      background-color: #fff;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 0.8rem;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .depositNaira__select .select-label #options-view:hover + .select-text1 {
+      opacity: 1;
+      visibility: visible; }
+    .depositNaira__select .select-label .select-text {
+      color: #9e9999;
+      font-size: 1rem;
+      margin-left: 2rem;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .depositNaira__select .select-label input[type="checkbox"] {
+      display: none; }
+    .depositNaira__select .select-label .options {
+      position: absolute;
+      z-index: 30;
+      left: -1px;
+      top: 3.3rem;
+      border-radius: 8px;
+      border-right: 1px solid #cbc8c8;
+      border-left: 1px solid #cbc8c8;
+      border-bottom: 1px solid #cbc8c8;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      border-radius: 0px;
+      background: white;
+      width: 100.4%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+      .depositNaira__select .select-label .options .option {
+        position: relative;
+        z-index: 30;
+        padding: 0.8rem 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 0.8rem;
+        -webkit-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        cursor: pointer; }
+        .depositNaira__select .select-label .options .option:hover {
+          background-color: #1b9a20;
+          color: #fff; }
+        .depositNaira__select .select-label .options .option img {
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem; }
+      .depositNaira__select .select-label .options input[type="radio"] {
+        display: none; }
+    .depositNaira__select .select-label:hover .select-text {
+      opacity: 0; }
+  .depositNaira__select-btn {
+    border-radius: 5px;
+    padding: 1rem 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: #1b9a20; }
+  .depositNaira__select-back {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    gap: 0.8rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #f1590e; }
+    .depositNaira__select-back--img {
+      width: 1.5rem;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      height: auto; }
+    .depositNaira__select-back:hover .depositNaira__select-back--img {
+      -webkit-transform: translateX(-0.3rem);
+          -ms-transform: translateX(-0.3rem);
+              transform: translateX(-0.3rem); }
+  .depositNaira__select #options-view:checked ~ .options {
+    opacity: 1;
+    visibility: visible; }
+
+.depositNaira-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
+
+.depositNaira__success {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 4rem 2rem;
+  display: none; }
+  .depositNaira__success:target {
+    display: block; }
+  .depositNaira__success-time {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .depositNaira__success-time p {
+      position: absolute;
+      color: #f1590e;
+      font-weight: 500;
+      font-size: 1.2rem; }
+    .depositNaira__success-time .progress-ring__circle {
+      stroke-dasharray: 5 25; }
+  .depositNaira__success-text {
+    padding: 3rem;
+    text-align: center; }
+    .depositNaira__success-text--heading {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      font-weight: 500; }
+    .depositNaira__success-text--sub {
+      font-size: 0.9rem; }
+  .depositNaira__success-toWallet {
+    text-align: center; }
+    .depositNaira__success-toWallet a {
+      text-decoration: none;
+      display: inline-block;
+      border-radius: 3px; }
+
+.transferredNaira {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem;
+  text-align: center;
+  display: none; }
+  .transferredNaira:target {
+    display: block; }
+  .transferredNaira-img {
+    width: 15rem;
+    height: auto;
+    display: inline-block; }
+  .transferredNaira__text {
+    padding: 1.5rem;
+    font-weight: 500; }
+    .transferredNaira__text-main {
+      font-size: 1.2rem;
+      padding: 1.5rem; }
+    .transferredNaira__text-sub {
+      font-size: 0.9rem;
+      width: 70%;
+      margin: 0 auto; }
+  .transferredNaira__details {
+    margin-top: 1.5rem;
+    width: 80%;
+    margin: 2rem auto; }
+    .transferredNaira__details-accountNumber, .transferredNaira__details-accountName, .transferredNaira__details-paymentWindow {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-weight: 600; }
+      .transferredNaira__details-accountNumber p:first-child, .transferredNaira__details-accountName p:first-child, .transferredNaira__details-paymentWindow p:first-child {
+        color: #f1590e;
+        margin: 0.5rem; }
+    .transferredNaira__details-status {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      gap: 0.5rem;
+      border-radius: 4px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      margin-top: 3rem; }
+      .transferredNaira__details-status img {
+        display: inline-block; }
+  .transferredNaira__fee {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    background-color: rgba(0, 0, 0, 0.33);
+    padding: 0.5rem 1rem;
+    border-radius: 4px; }
+    .transferredNaira__fee-img {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem; }
+    .transferredNaira__fee-text {
+      color: #fff;
+      font-size: 0.8rem; }
+
+.dashboard__addBank {
+  background-color: #1b9a20;
+  padding: 1.5rem 2rem; }
+
+.addBank__form {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem; }
+
+.addBank__heading {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+
+.addBank__account, .addBank__accountName {
+  margin-top: 2.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px; }
+  .addBank__account img, .addBank__accountName img {
+    display: inline-block;
+    margin-left: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+  .addBank__account input, .addBank__accountName input {
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 500; }
+    .addBank__account input:focus-within, .addBank__accountName input:focus-within {
+      background-color: #fff; }
+  .addBank__account input:-webkit-autofill,
+  .addBank__account input:-webkit-autofill:hover,
+  .addBank__account input:-webkit-autofill:focus,
+  .addBank__account input:-webkit-autofill:active, .addBank__accountName input:-webkit-autofill,
+  .addBank__accountName input:-webkit-autofill:hover,
+  .addBank__accountName input:-webkit-autofill:focus,
+  .addBank__accountName input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 90px white inset !important;
+            box-shadow: 0 0 0 90px white inset !important; }
+  .addBank__account input:focus::-webkit-input-placeholder, .addBank__accountName input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  .addBank__account ::-webkit-input-placeholder, .addBank__accountName ::-webkit-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .addBank__account ::-moz-placeholder, .addBank__accountName ::-moz-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .addBank__account :-ms-input-placeholder, .addBank__accountName :-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .addBank__account ::-ms-input-placeholder, .addBank__accountName ::-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .addBank__account ::placeholder, .addBank__accountName ::placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .addBank__account label, .addBank__accountName label {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.8rem;
+    background-color: #fff;
+    -webkit-transition: 500ms opacity ease-in;
+    -o-transition: 500ms opacity ease-in;
+    transition: 500ms opacity ease-in;
+    font-weight: 600;
+    padding: 5px 15px;
+    color: #383838; }
+  .addBank__account input:not(:-moz-placeholder-shown) ~ label, .addBank__accountName input:not(:-moz-placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .addBank__account input:not(:-ms-input-placeholder) ~ label, .addBank__accountName input:not(:-ms-input-placeholder) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .addBank__account:focus-within label,
+  .addBank__account input:not(:placeholder-shown) ~ label, .addBank__accountName:focus-within label,
+  .addBank__accountName input:not(:placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+
+.addBank__select {
+  margin-top: 1.5rem; }
+  .addBank__select .select-label {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid #cbc8c8;
+    cursor: pointer; }
+    .addBank__select .select-label img {
+      display: inline-block;
+      margin-left: -0.8rem;
+      width: 1.5rem;
+      height: 1.5rem; }
+    .addBank__select .select-label::before {
+      position: absolute;
+      content: "";
+      top: 1rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #000;
+      right: 1rem; }
+    .addBank__select .select-label::after {
+      position: absolute;
+      content: "";
+      top: 1.7rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #000;
+      right: 1rem; }
+    .addBank__select .select-label .select-text1 {
+      position: absolute;
+      top: -0.6rem;
+      left: 2rem;
+      background-color: #fff;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 0.8rem;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .addBank__select .select-label #options-view:hover + .select-text1 {
+      opacity: 1;
+      visibility: visible; }
+    .addBank__select .select-label .select-text {
+      color: #9e9999;
+      font-size: 1rem;
+      margin-left: 2rem;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .addBank__select .select-label input[type="checkbox"] {
+      display: none; }
+    .addBank__select .select-label .options {
+      position: absolute;
+      z-index: 30;
+      left: -1px;
+      top: 3.3rem;
+      border-radius: 8px;
+      border-right: 1px solid #cbc8c8;
+      border-left: 1px solid #cbc8c8;
+      border-bottom: 1px solid #cbc8c8;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      border-radius: 0px;
+      background: white;
+      width: 100.4%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+      .addBank__select .select-label .options .option {
+        position: relative;
+        z-index: 30;
+        padding: 0.8rem 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 0.8rem;
+        -webkit-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        cursor: pointer; }
+        .addBank__select .select-label .options .option:hover {
+          background-color: #1b9a20;
+          color: #fff; }
+        .addBank__select .select-label .options .option img {
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem; }
+      .addBank__select .select-label .options input[type="radio"] {
+        display: none; }
+    .addBank__select .select-label:hover .select-text {
+      opacity: 0; }
+  .addBank__select-btn {
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: #1b9a20; }
+  .addBank__select-back {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    gap: 0.8rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #f1590e; }
+    .addBank__select-back--img {
+      width: 1.5rem;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      height: auto; }
+    .addBank__select-back:hover .addBank__select-back--img {
+      -webkit-transform: translateX(-0.3rem);
+          -ms-transform: translateX(-0.3rem);
+              transform: translateX(-0.3rem); }
+  .addBank__select #options-view:checked ~ .options {
+    opacity: 1;
+    visibility: visible; }
+
+.addBank-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
