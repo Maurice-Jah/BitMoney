@@ -672,6 +672,25 @@ section {
     -webkit-transition: all 0.5s 0.3s;
     -o-transition: all 0.5s 0.3s;
     transition: all 0.5s 0.3s; }
+    @media only screen and (max-width: 69em) {
+      .popup-background .popup-success,
+      .popup-background .popup-failure {
+        width: 40%; } }
+    @media only screen and (max-width: 56.25em) {
+      .popup-background .popup-success,
+      .popup-background .popup-failure {
+        width: 50%;
+        padding: 2rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .popup-background .popup-success,
+      .popup-background .popup-failure {
+        width: 70%; } }
+    @media only screen and (max-width: 25em) {
+      .popup-background .popup-success,
+      .popup-background .popup-failure {
+        width: 90%;
+        left: 5%;
+        top: 30%; } }
     .popup-background .popup-success__img,
     .popup-background .popup-failure__img {
       display: inline-block;
@@ -1645,7 +1664,9 @@ select {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 2rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 2rem; }
     .hero-dashboard__activities a {
       text-decoration: none;
@@ -1747,12 +1768,29 @@ select {
     -webkit-transition: all 0.5s 0.3s;
     -o-transition: all 0.5s 0.3s;
     transition: all 0.5s 0.3s; }
+    @media only screen and (max-width: 56.25em) {
+      .buy-backgroound .buy-action {
+        padding: 2rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .buy-backgroound .buy-action {
+        padding: 1rem;
+        width: 70%; } }
+    @media only screen and (max-width: 25em) {
+      .buy-backgroound .buy-action {
+        bottom: 10%;
+        width: 90%; } }
     .buy-backgroound .buy-action__heading {
       font-size: 1.8rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
       background: #fff;
       color: #000; }
+      @media only screen and (max-width: 56.25em) {
+        .buy-backgroound .buy-action__heading {
+          font-size: 1.5rem; } }
+      @media only screen and (max-width: 43.75em) {
+        .buy-backgroound .buy-action__heading {
+          padding: 1.2rem; } }
     .buy-backgroound .buy-action__coin {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1765,6 +1803,10 @@ select {
       gap: 0.6rem;
       margin-bottom: 2rem;
       width: 10%; }
+      @media only screen and (max-width: 25em) {
+        .buy-backgroound .buy-action__coin {
+          margin-bottom: 0rem;
+          gap: 0.1rem; } }
     .buy-backgroound .buy-action__img {
       width: 2rem;
       height: 2rem;
@@ -1772,6 +1814,9 @@ select {
     .buy-backgroound .buy-action__coinName {
       font-size: 1.2rem;
       font-weight: 500; }
+      @media only screen and (max-width: 25em) {
+        .buy-backgroound .buy-action__coinName {
+          padding: 1rem; } }
 
 .background__close {
   width: 100%;
@@ -2396,6 +2441,19 @@ select {
 .dashboard__buyCoin {
   background-color: #f1590e;
   padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__buyCoin {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__buyCoin {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__buyCoin .nav__logo img {
+      height: 3rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__buyCoin .nav__button {
+      display: none; } }
 
 .buyCoin__bitcoin, .buyCoin__naira {
   width: 50%;
@@ -2403,8 +2461,22 @@ select {
   margin: 1rem auto;
   border-radius: 4px;
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .buyCoin__bitcoin, .buyCoin__naira {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .buyCoin__bitcoin, .buyCoin__naira {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .buyCoin__bitcoin, .buyCoin__naira {
+      width: 100%;
+      padding: 1rem; } }
   .buyCoin__bitcoin-heading, .buyCoin__naira-heading {
     text-align: center; }
+    @media only screen and (max-width: 25em) {
+      .buyCoin__bitcoin-heading, .buyCoin__naira-heading {
+        margin-top: 2rem;
+        margin-bottom: 2rem; } }
   .buyCoin__bitcoin-amount, .buyCoin__naira-amount {
     margin-top: 1.5rem;
     position: relative;
@@ -2436,6 +2508,9 @@ select {
       font-size: 1rem;
       border-radius: 8px;
       font-weight: 500; }
+      @media only screen and (max-width: 25em) {
+        .buyCoin__bitcoin-amount input, .buyCoin__naira-amount input {
+          padding: 1.1rem 1rem; } }
       .buyCoin__bitcoin-amount input:focus-within, .buyCoin__naira-amount input:focus-within {
         background-color: #fff; }
     .buyCoin__bitcoin-amount input:-webkit-autofill,
@@ -2518,6 +2593,11 @@ select {
       border-right: 7px solid transparent;
       border-bottom: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .buyCoin__select .select-label::before {
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #000; } }
     .buyCoin__select .select-label::after {
       position: absolute;
       content: "";
@@ -2528,6 +2608,12 @@ select {
       border-right: 7px solid transparent;
       border-top: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .buyCoin__select .select-label::after {
+          top: 1.6rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; } }
     .buyCoin__select .select-label .select-text1 {
       position: absolute;
       top: -0.6rem;
@@ -2611,6 +2697,10 @@ select {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex; }
+    @media only screen and (max-width: 25em) {
+      .buyCoin__select-btn {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400; } }
   .buyCoin__select-back {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -2619,12 +2709,18 @@ select {
     text-decoration: none;
     font-size: 1.2rem;
     color: #f1590e; }
+    @media only screen and (max-width: 25em) {
+      .buyCoin__select-back {
+        font-size: 1rem; } }
     .buyCoin__select-back--img {
       width: 1.5rem;
       -webkit-transition: all 0.2s ease-in;
       -o-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
       height: auto; }
+      @media only screen and (max-width: 25em) {
+        .buyCoin__select-back--img {
+          width: 1rem; } }
     .buyCoin__select-back:hover .buyCoin__select-back--img {
       -webkit-transform: translateX(-0.3rem);
           -ms-transform: translateX(-0.3rem);
@@ -2647,10 +2743,26 @@ select {
           align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem; }
+  @media only screen and (max-width: 25em) {
+    .buyCoin-actions {
+      gap: 2rem; } }
 
 .dashboard__sendCoin {
   background-color: #f1590e;
   padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__sendCoin {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__sendCoin {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__sendCoin .nav__logo img {
+      height: 3rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__sendCoin .nav__button {
+      display: none; } }
 
 .sendCoin__form {
   width: 50%;
@@ -2658,11 +2770,25 @@ select {
   margin: 1rem auto;
   border-radius: 4px;
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .sendCoin__form {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .sendCoin__form {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .sendCoin__form {
+      width: 100%;
+      padding: 1rem; } }
 
 .sendCoin__heading {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 25em) {
+    .sendCoin__heading {
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
 
 .sendCoin__coinName, .sendCoin__amount {
   margin-top: 2.5rem;
@@ -2695,6 +2821,9 @@ select {
     font-size: 1rem;
     border-radius: 8px;
     font-weight: 500; }
+    @media only screen and (max-width: 25em) {
+      .sendCoin__coinName input, .sendCoin__amount input {
+        padding: 1.1rem 1rem; } }
     .sendCoin__coinName input:focus-within, .sendCoin__amount input:focus-within {
       background-color: #fff; }
   .sendCoin__coinName input:-webkit-autofill,
@@ -2791,6 +2920,12 @@ select {
       border-right: 7px solid transparent;
       border-bottom: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .sendCoin__select .select-label::before {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #000; } }
     .sendCoin__select .select-label::after {
       position: absolute;
       content: "";
@@ -2801,6 +2936,12 @@ select {
       border-right: 7px solid transparent;
       border-top: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .sendCoin__select .select-label::after {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; } }
     .sendCoin__select .select-label .select-text1 {
       position: absolute;
       top: -0.6rem;
@@ -2824,6 +2965,9 @@ select {
       -webkit-transition: all 0.5s ease-in;
       -o-transition: all 0.5s ease-in;
       transition: all 0.5s ease-in; }
+      @media only screen and (max-width: 25em) {
+        .sendCoin__select .select-label .select-text {
+          margin-left: 1rem; } }
     .sendCoin__select .select-label input[type="checkbox"] {
       display: none; }
     .sendCoin__select .select-label .options {
@@ -2884,6 +3028,10 @@ select {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex; }
+    @media only screen and (max-width: 25em) {
+      .sendCoin__select-btn {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400; } }
   .sendCoin__select-back {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -2892,6 +3040,9 @@ select {
     text-decoration: none;
     font-size: 1.2rem;
     color: #f1590e; }
+    @media only screen and (max-width: 25em) {
+      .sendCoin__select-back {
+        font-size: 1rem; } }
     .sendCoin__select-back--img {
       width: 1.5rem;
       -webkit-transition: all 0.2s ease-in;
@@ -2920,10 +3071,26 @@ select {
           align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem; }
+  @media only screen and (max-width: 25em) {
+    .sendCoin-actions {
+      gap: 2rem; } }
 
 .dashboard__withdrawNaira {
   background-color: #1b9a20;
   padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__withdrawNaira {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__withdrawNaira {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__withdrawNaira .nav__logo img {
+      height: 3rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__withdrawNaira .nav__button {
+      display: none; } }
 
 .withdrawNaira__form {
   width: 50%;
@@ -2931,11 +3098,25 @@ select {
   margin: 1rem auto;
   border-radius: 4px;
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .withdrawNaira__form {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .withdrawNaira__form {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .withdrawNaira__form {
+      width: 100%;
+      padding: 1rem; } }
 
 .withdrawNaira__heading {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 25em) {
+    .withdrawNaira__heading {
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
 
 .withdrawNaira__account, .withdrawNaira__amount, .withdrawNaira__accountName {
   margin-top: 2.5rem;
@@ -2968,6 +3149,9 @@ select {
     font-size: 1rem;
     border-radius: 8px;
     font-weight: 500; }
+    @media only screen and (max-width: 25em) {
+      .withdrawNaira__account input, .withdrawNaira__amount input, .withdrawNaira__accountName input {
+        padding: 1.1rem 1rem; } }
     .withdrawNaira__account input:focus-within, .withdrawNaira__amount input:focus-within, .withdrawNaira__accountName input:focus-within {
       background-color: #fff; }
   .withdrawNaira__account input:-webkit-autofill,
@@ -3068,6 +3252,12 @@ select {
       border-right: 7px solid transparent;
       border-bottom: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .withdrawNaira__select .select-label::before {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #000; } }
     .withdrawNaira__select .select-label::after {
       position: absolute;
       content: "";
@@ -3078,6 +3268,12 @@ select {
       border-right: 7px solid transparent;
       border-top: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .withdrawNaira__select .select-label::after {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; } }
     .withdrawNaira__select .select-label .select-text1 {
       position: absolute;
       top: -0.6rem;
@@ -3226,6 +3422,18 @@ select {
   border-radius: 4px;
   padding: 4rem 2rem;
   display: none; }
+  @media only screen and (max-width: 69em) {
+    .withdrawNaira__success {
+      width: 60%; } }
+  @media only screen and (max-width: 56.25em) {
+    .withdrawNaira__success {
+      width: 70%; } }
+  @media only screen and (max-width: 43.75em) {
+    .withdrawNaira__success {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .withdrawNaira__success {
+      width: 100%; } }
   .withdrawNaira__success-time {
     position: relative;
     display: -webkit-box;
@@ -3247,6 +3455,12 @@ select {
   .withdrawNaira__success-text {
     padding: 3rem;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .withdrawNaira__success-text {
+        padding: 2rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .withdrawNaira__success-text {
+        padding: 2rem 0rem; } }
     .withdrawNaira__success-text--heading {
       font-size: 1.1rem;
       margin-bottom: 2rem;
@@ -3259,6 +3473,10 @@ select {
       text-decoration: none;
       display: inline-block;
       border-radius: 3px; }
+      @media only screen and (max-width: 43.75em) {
+        .withdrawNaira__success-viewTransaction a {
+          padding: 1rem;
+          font-size: 0.8rem; } }
 
 .withdrawNaira__success:target {
   display: block; }
@@ -3269,6 +3487,19 @@ select {
 .dashboard__transferNaira {
   background-color: #1b9a20;
   padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__transferNaira {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__transferNaira {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__transferNaira .nav__logo img {
+      height: 3rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__transferNaira .nav__button {
+      display: none; } }
 
 .transferNaira__form {
   width: 50%;
@@ -3276,6 +3507,16 @@ select {
   margin: 1rem auto;
   border-radius: 4px;
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .transferNaira__form {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .transferNaira__form {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .transferNaira__form {
+      width: 100%;
+      padding: 1rem; } }
 
 .transferNaira__heading {
   text-align: center;
@@ -3313,6 +3554,9 @@ select {
     font-size: 1rem;
     border-radius: 8px;
     font-weight: 500; }
+    @media only screen and (max-width: 25em) {
+      .transferNaira__phoneNumber input, .transferNaira__email input, .transferNaira__accountName input, .transferNaira__amount input {
+        padding: 1.1rem 1rem; } }
     .transferNaira__phoneNumber input:focus-within, .transferNaira__email input:focus-within, .transferNaira__accountName input:focus-within, .transferNaira__amount input:focus-within {
       background-color: #fff; }
   .transferNaira__phoneNumber input:-webkit-autofill,
@@ -3417,6 +3661,12 @@ select {
       border-right: 7px solid transparent;
       border-bottom: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .transferNaira__select .select-label::before, .transferNaira__select2 .select-label::before {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #000; } }
     .transferNaira__select .select-label::after, .transferNaira__select2 .select-label::after {
       position: absolute;
       content: "";
@@ -3427,6 +3677,12 @@ select {
       border-right: 7px solid transparent;
       border-top: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .transferNaira__select .select-label::after, .transferNaira__select2 .select-label::after {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; } }
     .transferNaira__select .select-label .select-text1, .transferNaira__select2 .select-label .select-text1 {
       position: absolute;
       top: -0.6rem;
@@ -3513,6 +3769,10 @@ select {
     display: -ms-inline-flexbox;
     display: inline-flex;
     background-color: #1b9a20; }
+    @media only screen and (max-width: 25em) {
+      .transferNaira__select-btn, .transferNaira__select2-btn {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400; } }
   .transferNaira__select-back, .transferNaira__select2-back {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -3521,12 +3781,18 @@ select {
     text-decoration: none;
     font-size: 1.2rem;
     color: #f1590e; }
+    @media only screen and (max-width: 25em) {
+      .transferNaira__select-back, .transferNaira__select2-back {
+        font-size: 1rem; } }
     .transferNaira__select-back--img, .transferNaira__select2-back--img {
       width: 1.5rem;
       -webkit-transition: all 0.2s ease-in;
       -o-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
       height: auto; }
+      @media only screen and (max-width: 25em) {
+        .transferNaira__select-back--img, .transferNaira__select2-back--img {
+          width: 1rem; } }
     .transferNaira__select-back:hover .transferNaira__select-back--img, .transferNaira__select2-back:hover .transferNaira__select-back--img, .transferNaira__select-back:hover .transferNaira__select2-back--img, .transferNaira__select2-back:hover .transferNaira__select2-back--img {
       -webkit-transform: translateX(-0.3rem);
           -ms-transform: translateX(-0.3rem);
@@ -3551,10 +3817,26 @@ select {
           align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem; }
+  @media only screen and (max-width: 25em) {
+    .transferNaira-actions {
+      gap: 2rem; } }
 
 .dashboard__depositNaira {
   background-color: #1b9a20;
   padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__depositNaira {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__depositNaira {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__depositNaira .nav__logo img {
+      height: 3rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__depositNaira .nav__button {
+      display: none; } }
 
 .depositNaira__form {
   width: 50%;
@@ -3562,11 +3844,25 @@ select {
   margin: 1rem auto;
   border-radius: 4px;
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .depositNaira__form {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .depositNaira__form {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .depositNaira__form {
+      width: 100%;
+      padding: 1rem; } }
 
 .depositNaira__heading {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 25em) {
+    .depositNaira__heading {
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
 
 .depositNaira__account, .depositNaira__amount, .depositNaira__accountName {
   margin-top: 2.5rem;
@@ -3599,6 +3895,9 @@ select {
     font-size: 1rem;
     border-radius: 8px;
     font-weight: 500; }
+    @media only screen and (max-width: 25em) {
+      .depositNaira__account input, .depositNaira__amount input, .depositNaira__accountName input {
+        padding: 1.1rem 1rem; } }
     .depositNaira__account input:focus-within, .depositNaira__amount input:focus-within, .depositNaira__accountName input:focus-within {
       background-color: #fff; }
   .depositNaira__account input:-webkit-autofill,
@@ -3699,6 +3998,12 @@ select {
       border-right: 7px solid transparent;
       border-bottom: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .depositNaira__select .select-label::before {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #000; } }
     .depositNaira__select .select-label::after {
       position: absolute;
       content: "";
@@ -3709,6 +4014,12 @@ select {
       border-right: 7px solid transparent;
       border-top: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .depositNaira__select .select-label::after {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; } }
     .depositNaira__select .select-label .select-text1 {
       position: absolute;
       top: -0.6rem;
@@ -3793,6 +4104,10 @@ select {
     display: -ms-inline-flexbox;
     display: inline-flex;
     background-color: #1b9a20; }
+    @media only screen and (max-width: 25em) {
+      .depositNaira__select-btn {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400; } }
   .depositNaira__select-back {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -3801,12 +4116,18 @@ select {
     text-decoration: none;
     font-size: 1.2rem;
     color: #f1590e; }
+    @media only screen and (max-width: 25em) {
+      .depositNaira__select-back {
+        font-size: 1rem; } }
     .depositNaira__select-back--img {
       width: 1.5rem;
       -webkit-transition: all 0.2s ease-in;
       -o-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
       height: auto; }
+      @media only screen and (max-width: 25em) {
+        .depositNaira__select-back--img {
+          width: 1rem; } }
     .depositNaira__select-back:hover .depositNaira__select-back--img {
       -webkit-transform: translateX(-0.3rem);
           -ms-transform: translateX(-0.3rem);
@@ -3837,6 +4158,18 @@ select {
   border-radius: 4px;
   padding: 4rem 2rem;
   display: none; }
+  @media only screen and (max-width: 69em) {
+    .depositNaira__success {
+      width: 60%; } }
+  @media only screen and (max-width: 56.25em) {
+    .depositNaira__success {
+      width: 70%; } }
+  @media only screen and (max-width: 43.75em) {
+    .depositNaira__success {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .depositNaira__success {
+      width: 100%; } }
   .depositNaira__success:target {
     display: block; }
   .depositNaira__success-time {
@@ -3860,6 +4193,12 @@ select {
   .depositNaira__success-text {
     padding: 3rem;
     text-align: center; }
+    @media only screen and (max-width: 56.25em) {
+      .depositNaira__success-text {
+        padding: 2rem; } }
+    @media only screen and (max-width: 43.75em) {
+      .depositNaira__success-text {
+        padding: 2rem 0rem; } }
     .depositNaira__success-text--heading {
       font-size: 1.1rem;
       margin-bottom: 2rem;
@@ -3872,6 +4211,10 @@ select {
       text-decoration: none;
       display: inline-block;
       border-radius: 3px; }
+      @media only screen and (max-width: 43.75em) {
+        .depositNaira__success-toWallet a {
+          padding: 1rem;
+          font-size: 0.8rem; } }
 
 .transferredNaira {
   width: 50%;
@@ -3881,6 +4224,19 @@ select {
   padding: 2rem;
   text-align: center;
   display: none; }
+  @media only screen and (max-width: 69em) {
+    .transferredNaira {
+      width: 60%; } }
+  @media only screen and (max-width: 56.25em) {
+    .transferredNaira {
+      width: 75%; } }
+  @media only screen and (max-width: 43.75em) {
+    .transferredNaira {
+      width: 80%;
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .transferredNaira {
+      width: 90%; } }
   .transferredNaira:target {
     display: block; }
   .transferredNaira-img {
@@ -3897,10 +4253,19 @@ select {
       font-size: 0.9rem;
       width: 70%;
       margin: 0 auto; }
+      @media only screen and (max-width: 43.75em) {
+        .transferredNaira__text-sub {
+          width: 100%; } }
   .transferredNaira__details {
     margin-top: 1.5rem;
     width: 80%;
     margin: 2rem auto; }
+    @media only screen and (max-width: 69em) {
+      .transferredNaira__details {
+        width: 90%; } }
+    @media only screen and (max-width: 43.75em) {
+      .transferredNaira__details {
+        width: 100%; } }
     .transferredNaira__details-accountNumber, .transferredNaira__details-accountName, .transferredNaira__details-paymentWindow {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -3912,6 +4277,9 @@ select {
           -ms-flex-align: center;
               align-items: center;
       font-weight: 600; }
+      @media only screen and (max-width: 43.75em) {
+        .transferredNaira__details-accountNumber, .transferredNaira__details-accountName, .transferredNaira__details-paymentWindow {
+          width: 100%; } }
       .transferredNaira__details-accountNumber p:first-child, .transferredNaira__details-accountName p:first-child, .transferredNaira__details-paymentWindow p:first-child {
         color: #f1590e;
         margin: 0.5rem; }
@@ -3958,6 +4326,19 @@ select {
 .dashboard__addBank {
   background-color: #1b9a20;
   padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__addBank {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__addBank {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__addBank .nav__logo img {
+      height: 3rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__addBank .nav__button {
+      display: none; } }
 
 .addBank__form {
   width: 50%;
@@ -3965,11 +4346,25 @@ select {
   margin: 1rem auto;
   border-radius: 4px;
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .addBank__form {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .addBank__form {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .addBank__form {
+      width: 100%;
+      padding: 1rem; } }
 
 .addBank__heading {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 25em) {
+    .addBank__heading {
+      margin-top: 2rem;
+      margin-bottom: 2rem; } }
 
 .addBank__account, .addBank__accountName {
   margin-top: 2.5rem;
@@ -4002,6 +4397,9 @@ select {
     font-size: 1rem;
     border-radius: 8px;
     font-weight: 500; }
+    @media only screen and (max-width: 25em) {
+      .addBank__account input, .addBank__accountName input {
+        padding: 1.1rem 1rem; } }
     .addBank__account input:focus-within, .addBank__accountName input:focus-within {
       background-color: #fff; }
   .addBank__account input:-webkit-autofill,
@@ -4098,6 +4496,12 @@ select {
       border-right: 7px solid transparent;
       border-bottom: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .addBank__select .select-label::before {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #000; } }
     .addBank__select .select-label::after {
       position: absolute;
       content: "";
@@ -4108,6 +4512,12 @@ select {
       border-right: 7px solid transparent;
       border-top: 7px solid #000;
       right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .addBank__select .select-label::after {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; } }
     .addBank__select .select-label .select-text1 {
       position: absolute;
       top: -0.6rem;
@@ -4192,6 +4602,10 @@ select {
     display: -ms-inline-flexbox;
     display: inline-flex;
     background-color: #1b9a20; }
+    @media only screen and (max-width: 25em) {
+      .addBank__select-btn {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400; } }
   .addBank__select-back {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -4200,12 +4614,18 @@ select {
     text-decoration: none;
     font-size: 1.2rem;
     color: #f1590e; }
+    @media only screen and (max-width: 25em) {
+      .addBank__select-back {
+        font-size: 1rem; } }
     .addBank__select-back--img {
       width: 1.5rem;
       -webkit-transition: all 0.2s ease-in;
       -o-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
       height: auto; }
+      @media only screen and (max-width: 25em) {
+        .addBank__select-back--img {
+          width: 1rem; } }
     .addBank__select-back:hover .addBank__select-back--img {
       -webkit-transform: translateX(-0.3rem);
           -ms-transform: translateX(-0.3rem);

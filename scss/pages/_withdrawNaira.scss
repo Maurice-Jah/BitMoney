@@ -2,6 +2,29 @@
   &__withdrawNaira {
     background-color: $color-green;
     padding: 1.5rem 2rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+    }
+
+    @include respond(sm-phone) {
+      display: block;
+      padding: 0;
+    }
+
+    .nav__logo {
+      @include respond(sm-phone) {
+        img {
+          height: 3rem;
+        }
+      }
+    }
+
+    .nav__button {
+      @include respond(sm-phone) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -12,12 +35,29 @@
     margin: 1rem auto;
     border-radius: 4px;
     padding: 2rem;
+
+    @include respond(tab-land) {
+      width: 60%;
+    }
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    @include respond(sm-phone) {
+      width: 100%;
+      padding: 1rem;
+    }
   }
 
   &__heading {
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 3rem;
+
+    @include respond(sm-phone) {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__account,
@@ -50,6 +90,10 @@
       font-size: 1rem;
       border-radius: 8px;
       font-weight: 500;
+
+      @include respond(sm-phone) {
+        padding: 1.1rem 1rem;
+      }
 
       &:focus-within {
         background-color: #fff;
@@ -126,6 +170,13 @@
         border-right: 7px solid transparent;
         border-bottom: 7px solid $color-black;
         right: 1rem;
+
+        @include respond(sm-phone) {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid $color-black;
+        }
       }
 
       &::after {
@@ -138,6 +189,13 @@
         border-right: 7px solid transparent;
         border-top: 7px solid $color-black;
         right: 1rem;
+
+        @include respond(sm-phone) {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid $color-black;
+        }
       }
 
       .select-text1 {
@@ -287,6 +345,23 @@
     border-radius: 4px;
     padding: 4rem 2rem;
     display: none;
+
+    @include respond(mini-lap) {
+      width: 60%;
+    }
+
+    @include respond(tab-land) {
+      width: 70%;
+    }
+
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    @include respond(sm-phone) {
+      width: 100%;
+    }
+
     &-time {
       position: relative;
       display: flex;
@@ -309,6 +384,14 @@
       padding: 3rem;
       text-align: center;
 
+      @include respond(tab-land) {
+        padding: 2rem;
+      }
+
+      @include respond(tab-port) {
+        padding: 2rem 0rem;
+      }
+
       &--heading {
         font-size: 1.1rem;
         margin-bottom: 2rem;
@@ -321,10 +404,16 @@
     }
     &-viewTransaction {
       text-align: center;
+
       a {
         text-decoration: none;
         display: inline-block;
         border-radius: 3px;
+
+        @include respond(tab-port) {
+          padding: 1rem;
+          font-size: 0.8rem;
+        }
       }
     }
   }

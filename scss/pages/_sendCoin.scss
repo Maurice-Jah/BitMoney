@@ -2,6 +2,29 @@
   &__sendCoin {
     background-color: $color-primary;
     padding: 1.5rem 2rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+    }
+
+    @include respond(sm-phone) {
+      display: block;
+      padding: 0;
+    }
+
+    .nav__logo {
+      @include respond(sm-phone) {
+        img {
+          height: 3rem;
+        }
+      }
+    }
+
+    .nav__button {
+      @include respond(sm-phone) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -12,12 +35,29 @@
     margin: 1rem auto;
     border-radius: 4px;
     padding: 2rem;
+
+    @include respond(tab-land) {
+      width: 60%;
+    }
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    @include respond(sm-phone) {
+      width: 100%;
+      padding: 1rem;
+    }
   }
 
   &__heading {
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 3rem;
+
+    @include respond(sm-phone) {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
   }
 
   &__coinName,
@@ -49,6 +89,10 @@
       font-size: 1rem;
       border-radius: 8px;
       font-weight: 500;
+
+      @include respond(sm-phone) {
+        padding: 1.1rem 1rem;
+      }
 
       &:focus-within {
         background-color: #fff;
@@ -125,6 +169,13 @@
         border-right: 7px solid transparent;
         border-bottom: 7px solid $color-black;
         right: 1rem;
+
+        @include respond(sm-phone) {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid $color-black;
+        }
       }
 
       &::after {
@@ -137,6 +188,13 @@
         border-right: 7px solid transparent;
         border-top: 7px solid $color-black;
         right: 1rem;
+
+        @include respond(sm-phone) {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid $color-black;
+        }
       }
 
       .select-text1 {
@@ -162,6 +220,10 @@
         font-size: 1rem;
         margin-left: 2rem;
         transition: all 0.5s ease-in;
+
+        @include respond(sm-phone) {
+          margin-left: 1rem;
+        }
       }
 
       input[type="checkbox"] {
@@ -225,6 +287,11 @@
       font-weight: 600;
       text-decoration: none;
       display: inline-flex;
+
+      @include respond(sm-phone) {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400;
+      }
     }
 
     &-back {
@@ -233,6 +300,10 @@
       text-decoration: none;
       font-size: 1.2rem;
       color: $color-primary;
+
+      @include respond(sm-phone) {
+        font-size: 1rem;
+      }
 
       &--img {
         width: 1.5rem;
@@ -258,5 +329,9 @@
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 1rem;
+
+    @include respond(sm-phone) {
+      gap: 2rem;
+    }
   }
 }

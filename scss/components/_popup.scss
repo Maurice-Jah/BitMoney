@@ -282,6 +282,25 @@
     transform: translate(-50%, -50%) scale(0.5);
     transition: all 0.5s 0.3s;
 
+    @include respond(mini-lap) {
+      width: 40%;
+    }
+
+    @include respond(tab-land) {
+      width: 50%;
+      padding: 2rem;
+    }
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+
+    @include respond(sm-phone) {
+      width: 90%;
+      left: 5%;
+      top: 30%;
+    }
+
     &__img {
       display: inline-block;
       width: 4rem;
