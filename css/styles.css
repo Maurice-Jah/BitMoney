@@ -494,17 +494,40 @@ section {
 .receive-popup .popup-more {
   top: 70vh !important;
   padding: 1rem 1rem 3rem 1rem; }
+  @media only screen and (max-width: 69em) {
+    .receive-popup .popup-more {
+      width: 50%; } }
+  @media only screen and (max-width: 56.25em) {
+    .receive-popup .popup-more {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .receive-popup .popup-more {
+      width: 80%; } }
+  @media only screen and (max-width: 25em) {
+    .receive-popup .popup-more {
+      bottom: 0vh !important;
+      width: 100%; } }
   .receive-popup .popup-more p:nth-last-child(3) {
     font-weight: 600;
     font-size: 1.5rem;
     margin-left: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .receive-popup .popup-more p:nth-last-child(3) {
+        font-size: 1.1rem; } }
 
 .receive-popup__goBack {
-  width: 30% !important;
+  width: 32% !important;
   gap: 0 !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 43.75em) {
+    .receive-popup__goBack {
+      width: 34% !important; } }
+  @media only screen and (max-width: 43.75em) {
+    .receive-popup__goBack img {
+      width: 2.5rem;
+      height: auto; } }
   .receive-popup__goBack p {
     color: #f1590e !important; }
 
@@ -522,17 +545,25 @@ section {
   width: 70%;
   margin: 0 auto;
   margin-top: 1rem;
-  text-align: center;
   font-size: 0.8rem;
   color: #fff;
   border-radius: 4px; }
+  @media only screen and (max-width: 69em) {
+    .receive-popup__info {
+      width: 80%; } }
+  @media only screen and (max-width: 43.75em) {
+    .receive-popup__info {
+      width: 90%;
+      font-size: 0.6rem; } }
   .receive-popup__info img {
     display: block;
     width: 2.5rem;
     height: auto; }
+    @media only screen and (max-width: 43.75em) {
+      .receive-popup__info img {
+        width: 1.8rem; } }
 
 .receive-popup__coinAddress {
-  border: 2px solid red;
   margin-top: 1.5rem;
   position: relative;
   display: -webkit-box;
@@ -548,10 +579,17 @@ section {
   border: 1px solid #cbc8c8;
   background-color: #fff;
   border-radius: 8px; }
+  @media only screen and (max-width: 43.75em) {
+    .receive-popup__coinAddress {
+      margin-top: 0.5rem; } }
   .receive-popup__coinAddress img {
     display: inline-block;
     width: 3.5rem;
     height: 3.5rem; }
+    @media only screen and (max-width: 43.75em) {
+      .receive-popup__coinAddress img {
+        width: 2.5rem;
+        height: 2.5rem; } }
   .receive-popup__coinAddress input {
     padding: 1.2rem 1.5rem;
     padding-left: 0.2rem;
@@ -563,6 +601,10 @@ section {
     font-size: 1rem;
     border-radius: 8px;
     font-weight: 500; }
+    @media only screen and (max-width: 43.75em) {
+      .receive-popup__coinAddress input {
+        padding: 1rem 1.5rem;
+        padding-left: 0.2rem; } }
     .receive-popup__coinAddress input:focus-within {
       background-color: #fff; }
   .receive-popup__coinAddress input:-webkit-autofill,

@@ -133,16 +133,48 @@
     top: 70vh !important;
     padding: 1rem 1rem 3rem 1rem;
 
+    @include respond(mini-lap) {
+      width: 50%;
+    }
+
+    @include respond(tab-land) {
+      width: 60%;
+    }
+
+    @include respond(tab-port) {
+      width: 80%;
+    }
+
+    @include respond(sm-phone) {
+      bottom: 0vh !important;
+      width: 100%;
+    }
+
     p:nth-last-child(3) {
       font-weight: 600;
       font-size: 1.5rem;
       margin-left: 1rem;
+
+      @include respond(tab-land) {
+        font-size: 1.1rem;
+      }
     }
   }
   &__goBack {
-    width: 30% !important;
+    width: 32% !important;
     gap: 0 !important;
     display: flex;
+
+    @include respond(tab-port) {
+      width: 34% !important;
+    }
+
+    img {
+      @include respond(tab-port) {
+        width: 2.5rem;
+        height: auto;
+      }
+    }
 
     p {
       color: $color-primary !important;
@@ -157,20 +189,31 @@
     width: 70%;
     margin: 0 auto;
     margin-top: 1rem;
-    text-align: center;
     font-size: 0.8rem;
     color: $color-white;
     border-radius: 4px;
+
+    @include respond(mini-lap) {
+      width: 80%;
+    }
+
+    @include respond(tab-port) {
+      width: 90%;
+      font-size: 0.6rem;
+    }
 
     img {
       display: block;
       width: 2.5rem;
       height: auto;
+
+      @include respond(tab-port) {
+        width: 1.8rem;
+      }
     }
   }
 
   &__coinAddress {
-    border: 2px solid red;
     margin-top: 1.5rem;
     position: relative;
     display: flex;
@@ -181,10 +224,19 @@
     background-color: $color-white;
     border-radius: 8px;
 
+    @include respond(tab-port) {
+      margin-top: 0.5rem;
+    }
+
     img {
       display: inline-block;
       width: 3.5rem;
       height: 3.5rem;
+
+      @include respond(tab-port) {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
     }
 
     input {
@@ -198,6 +250,11 @@
       font-size: 1rem;
       border-radius: 8px;
       font-weight: 500;
+
+      @include respond(tab-port) {
+        padding: 1rem 1.5rem;
+        padding-left: 0.2rem;
+      }
 
       &:focus-within {
         background-color: #fff;
