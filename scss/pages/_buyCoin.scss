@@ -12,17 +12,41 @@
       padding: 0;
     }
 
-    .nav__logo {
+    .nav {
       @include respond(sm-phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        padding: 1rem;
+        padding-bottom: 5rem;
+      }
+
+      &__back {
+        gap: 0.3rem;
+        font-size: 0.7rem;
+        color: $color-white;
+        text-decoration: none;
+        display: none;
         img {
-          height: 3rem;
+          display: inline-block;
+        }
+        @include respond(sm-phone) {
+          display: flex;
         }
       }
-    }
+      &__logo {
+        @include respond(sm-phone) {
+          img {
+            height: 1.5rem;
+          }
+        }
+      }
 
-    .nav__button {
-      @include respond(sm-phone) {
-        display: none;
+      &__button {
+        @include respond(sm-phone) {
+          display: none;
+        }
       }
     }
   }
@@ -30,6 +54,9 @@
 
 //  ======== Buying coins section ====================//
 .buyCoin {
+  @include respond(sm-phone) {
+    padding: 0;
+  }
   &__bitcoin,
   &__naira {
     width: 50%;
@@ -47,15 +74,20 @@
 
     @include respond(sm-phone) {
       width: 100%;
-      padding: 1rem;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid $color-white;
+      border-radius: 1.8rem;
+      background-color: $color-white;
     }
 
     &-heading {
       text-align: center;
 
       @include respond(sm-phone) {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
       }
     }
 

@@ -146,7 +146,7 @@
     }
 
     @include respond(sm-phone) {
-      bottom: 0vh !important;
+      top: 55vh !important;
       width: 100%;
     }
 
