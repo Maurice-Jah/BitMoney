@@ -82,13 +82,13 @@ section {
 .underline,
 .underline-white {
   position: relative;
-  padding-bottom: 0.2rem; }
+  padding-bottom: 0.3rem; }
   .underline::before,
   .underline-white::before {
     position: absolute;
     bottom: 0;
     content: "";
-    width: 1.5rem;
+    width: 1.8rem;
     height: 2px;
     background-color: #f1590e;
     left: 50%;
@@ -4921,3 +4921,251 @@ select {
           align-items: center;
   margin-top: 2rem;
   margin-bottom: 1rem; }
+
+.dashboard__sendCoin {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__sendCoin {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__sendCoin {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__sendCoin .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem;
+      padding-bottom: 5rem; } }
+  .dashboard__sendCoin .nav__back {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    display: none; }
+    .dashboard__sendCoin .nav__back img {
+      display: inline-block; }
+    @media only screen and (max-width: 25em) {
+      .dashboard__sendCoin .nav__back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__sendCoin .nav__logo img {
+      height: 1.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__sendCoin .nav__button {
+      display: none; } }
+
+@media only screen and (max-width: 25em) {
+  .referral {
+    padding: 0; } }
+
+.referral__body {
+  width: 50%;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem;
+  position: relative;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content; }
+  @media only screen and (max-width: 56.25em) {
+    .referral__body {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .referral__body {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .referral__body {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid #fff;
+      border-radius: 1.8rem;
+      background-color: #fff; } }
+
+.referral__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  .referral__list-item {
+    list-style: none; }
+    .referral__list-item--heading {
+      font-weight: 500;
+      cursor: pointer; }
+    .referral__list-item input {
+      display: none; }
+    .referral__list-item .tab-content {
+      background-color: #fff;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 6rem;
+      padding: 2rem;
+      border-radius: 4px;
+      -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+      display: none; }
+      .referral__list-item .tab-content-main {
+        font-weight: 500;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        gap: 0.3rem; }
+        .referral__list-item .tab-content-main .referral-code {
+          color: #f1590e;
+          font-weight: 600; }
+      .referral__list-item .tab-content h2 {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem; }
+  .referral__list input[id^="tab"]:checked + label {
+    padding-bottom: 0.2rem;
+    border-bottom: 3px solid #f1590e; }
+  .referral__list input[id^="tab"]:checked ~ .tab-content {
+    display: block; }
+
+.referral__person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem; }
+  .referral__person-00, .referral__person-01, .referral__person-02, .referral__person-03 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.8rem;
+    font-weight: 700; }
+    .referral__person-00--img, .referral__person-01--img, .referral__person-02--img, .referral__person-03--img {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: blue;
+      border-radius: 50%;
+      position: relative; }
+      .referral__person-00--img img, .referral__person-01--img img, .referral__person-02--img img, .referral__person-03--img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        display: inline-block; }
+      .referral__person-00--img::before, .referral__person-01--img::before, .referral__person-02--img::before, .referral__person-03--img::before {
+        content: "KK";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        color: #fff;
+        font-weight: 600; }
+    .referral__person-00--amount, .referral__person-01--amount, .referral__person-02--amount, .referral__person-03--amount {
+      color: #1b9a20; }
+    .referral__person-00--actions p:nth-child(2), .referral__person-01--actions p:nth-child(2), .referral__person-02--actions p:nth-child(2), .referral__person-03--actions p:nth-child(2) {
+      font-weight: 300;
+      font-size: 0.6rem;
+      margin-top: 0.2rem; }
+  .referral__person-01--img {
+    background-color: #cbc8c8; }
+    .referral__person-01--img::before {
+      content: "MS"; }
+  .referral__person-03--img {
+    background-color: #f1590e; }
+    .referral__person-03--img::before {
+      content: "NS"; }
+  .referral__person .has-image--img {
+    background: transparent; }
+    .referral__person .has-image--img::before {
+      display: none; }
+
+.referral .accordion {
+  width: 100%;
+  overflow: hidden; }
+  .referral .accordion-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer; }
+    .referral .accordion-label::after {
+      content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      -webkit-transition: all 0.35s;
+      -o-transition: all 0.35s;
+      transition: all 0.35s; }
+  .referral .accordion-contents {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    padding: 1em;
+    -webkit-transition: all 0.35s;
+    -o-transition: all 0.35s;
+    transition: all 0.35s; }
+
+.referral input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.referral input:checked ~ .accordion-contents {
+  max-height: 100vh;
+  opacity: 1;
+  visibility: visible; }
+
+.referral__none, .referral__invite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  gap: 1.5rem; }
+  .referral__none-img, .referral__invite-img {
+    width: 15rem;
+    height: 15rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem; }
+    .referral__none-img img, .referral__invite-img img {
+      width: 100%;
+      height: auto;
+      display: inline-block; }
+  .referral__none-main, .referral__invite-main {
+    font-weight: 600; }
+  .referral__none-sub, .referral__invite-sub {
+    font-size: 0.9rem;
+    width: 80%; }

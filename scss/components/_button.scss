@@ -26,13 +26,13 @@
 .underline,
 .underline-white {
   position: relative;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.3rem;
 
   &::before {
     position: absolute;
     bottom: 0;
     content: "";
-    width: 1.5rem;
+    width: 1.8rem;
     height: 2px;
     background-color: $color-primary;
     left: 50%;

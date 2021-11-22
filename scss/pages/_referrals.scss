@@ -1,0 +1,294 @@
+.dashboard {
+  &__sendCoin {
+    background-color: $color-primary;
+    padding: 1.5rem 2rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+    }
+
+    @include respond(sm-phone) {
+      display: block;
+      padding: 0;
+    }
+
+    .nav {
+      @include respond(sm-phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        padding: 1rem;
+        padding-bottom: 5rem;
+      }
+
+      &__back {
+        gap: 0.3rem;
+        font-size: 0.7rem;
+        color: $color-white;
+        text-decoration: none;
+        display: none;
+        img {
+          display: inline-block;
+        }
+        @include respond(sm-phone) {
+          display: flex;
+        }
+      }
+      &__logo {
+        @include respond(sm-phone) {
+          img {
+            height: 1.5rem;
+          }
+        }
+      }
+
+      &__button {
+        @include respond(sm-phone) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.referral {
+  @include respond(sm-phone) {
+    padding: 0;
+  }
+  &__body {
+    width: 50%;
+    // border: 1px solid $color-ash;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    margin: 1rem auto;
+    border-radius: 4px;
+    padding: 2rem;
+    position: relative;
+    height: max-content;
+
+    @include respond(tab-land) {
+      width: 60%;
+    }
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    @include respond(sm-phone) {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid $color-white;
+      border-radius: 1.8rem;
+      background-color: $color-white;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+      list-style: none;
+
+      &--heading {
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      input {
+        display: none;
+      }
+
+      .tab-content {
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: 6rem;
+        padding: 2rem;
+        border-radius: 4px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+
+        display: none;
+
+        &-main {
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          gap: 0.3rem;
+
+          .referral-code {
+            color: $color-primary;
+            font-weight: 600;
+          }
+        }
+
+        h2 {
+          margin-top: 1.5rem;
+          margin-bottom: 3rem;
+        }
+      }
+    }
+
+    input[id^="tab"]:checked + label {
+      padding-bottom: 0.2rem;
+      border-bottom: 3px solid $color-primary;
+    }
+
+    input[id^="tab"]:checked ~ .tab-content {
+      display: block;
+    }
+  }
+
+  &__person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+
+    &-00,
+    &-01,
+    &-02,
+    &-03 {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-weight: 700;
+      &--img {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: blue;
+        border-radius: 50%;
+        position: relative;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          display: inline-block;
+        }
+
+        &::before {
+          content: "KK";
+          @include absCenter;
+          color: $color-white;
+          font-weight: 600;
+        }
+      }
+
+      &--amount {
+        color: $color-green;
+      }
+
+      &--actions {
+        p:nth-child(2) {
+          font-weight: 300;
+          font-size: 0.6rem;
+          margin-top: 0.2rem;
+        }
+      }
+    }
+
+    &-01 {
+      &--img {
+        background-color: $color-ash;
+
+        &::before {
+          content: "MS";
+        }
+      }
+    }
+
+    &-03 {
+      &--img {
+        background-color: $color-primary;
+
+        &::before {
+          content: "NS";
+        }
+      }
+    }
+
+    .has-image {
+      &--img {
+        background: transparent;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .accordion {
+    width: 100%;
+    overflow: hidden;
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+
+      &::after {
+        content: "\276F";
+        width: 1em;
+        height: 1em;
+        text-align: center;
+        transition: all 0.35s;
+      }
+    }
+    &-contents {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      padding: 1em;
+      transition: all 0.35s;
+    }
+  }
+
+  // :checked
+  input:checked {
+    + .accordion-label {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+    & ~ .accordion-contents {
+      max-height: 100vh;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__none,
+  &__invite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+
+    &-img {
+      width: 15rem;
+      height: 15rem;
+      margin-top: 2rem;
+      margin-bottom: -2rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: inline-block;
+      }
+    }
+
+    &-main {
+      font-weight: 600;
+    }
+
+    &-sub {
+      font-size: 0.9rem;
+      width: 80%;
+    }
+  }
+}
