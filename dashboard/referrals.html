@@ -30,7 +30,7 @@
   </head>
   <body>
     <!-- Nav section -->
-    <div class="dashboard dashboard__sendCoin">
+    <div class="dashboard dashboard__referral">
       <nav class="nav">
         <div class="nav__logo">
           <a href="index.html">
@@ -48,18 +48,18 @@
             <a href="index_dashboard.html" class="nav__link-list--item">Home</a>
           </li>
           <li class="nav__link-list">
-            <a href="#" class="nav__link-list--item">Wallet</a>
+            <a href="index_dashboard.html" class="nav__link-list--item">Wallet</a>
           </li>
           <li class="nav__link-list">
-            <a href="#" class="nav__link-list--item">Trade</a>
+            <a href="trade.html" class="nav__link-list--item">Trade</a>
           </li>
           <li class="nav__link-list">
-            <a href="#" class="nav__link-list--item underline-white"
+            <a href="referrals.html" class="nav__link-list--item underline-white"
               >Referrals</a
             >
           </li>
           <li class="nav__link-list">
-            <a href="#" class="nav__link-list--item">Profile</a>
+            <a href="profile.html" class="nav__link-list--item">Profile</a>
           </li>
         </ul>
 
@@ -96,7 +96,9 @@
             <label for="tab2" class="referral__list-item--heading">Referrals</label>
             <div class="tab-content">
                 <p class="tab-content-main">Your Referral code is <span class="referral-code"> A12B3CD </span></p>
-                
+
+
+                <!-- =================== When there are referrals ============= -->
                 <!-- <div class="referral__person">
                 <div class="referral__person-00">
                     <div class="referral__person-00--img">
@@ -136,11 +138,10 @@
                         <p class="referral__person-03--name"> Nafisat Eyitanwa </p>
                     </div>
                     <p class="referral__person-03--amount">$300</p>
-                </div>
-                -->
+                </div> -->
+               
 
                 <!-- =========No referral yet =====-->
-
                 <div class="referral__none">
                     <div class="referral__none-img">
                         <img src="../images/referral-none.png">
@@ -179,21 +180,7 @@
             </div>
         </li>
     </ul>
-
-
-
-
-
-
-       
     </section>
-
- 
-
-     
- 
-
-
 
     <!-- footer -->
     <div class="footer-fixed">
@@ -202,15 +189,15 @@
         <p class="footer-fixed__wallet-text inactive-color">Wallet</p>
       </a>
       <a href="" class="footer-fixed__trade">
-        <img src="../images/trade_icon.svg" class="footer-fixed__trade-img" />
-        <p class="footer-fixed__trade-text color">Trade</p>
+        <img src="../images/trade-img.svg" class="footer-fixed__trade-img" />
+        <p class="footer-fixed__trade-text inactive-color">Trade</p>
       </a>
       <a href="" class="footer-fixed__referral">
         <img
-          src="../images/referral-img.svg"
+          src="../images/referral-active.svg"
           class="footer-fixed__referral-img"
         />
-        <p class="footer-fixed__referral-text inactive-color">Referrals</p>
+        <p class="footer-fixed__referral-text color">Referrals</p>
       </a>
       <a href="" class="footer-fixed__profile">
         <img

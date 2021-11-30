@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- add icon link -->
+    <link rel="icon" href="images/bitmoney-logo.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>BitMoney</title>
+  </head>
+  <body>
+    <!-- Nav section -->
+    <div class="dashboard dashboard__profile">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="../images/logo-2.svg" alt="logo-img" />
+          </a>
+        </div>
+
+        <a href="bitcoinWallet.html" class="nav__back">
+          <img src="../images/back-white.svg" alt="" />
+          <span>Go Back</span>
+        </a>
+
+        <ul class="nav__link">
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Home</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="#" class="nav__link-list--item">Wallet</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="trade.html" class="nav__link-list--item underline-white"
+              >Trade</a
+            >
+          </li>
+          <li class="nav__link-list">
+            <a href="referrals.html" class="nav__link-list--item">Referrals</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="profile.html" class="nav__link-list--item">Profile</a>
+          </li>
+        </ul>
+
+        <a href="#" class="nav__button btn">
+          <img src="../images/logout_icon.svg" />
+          <p>Log out</p>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ===========PROFILE SECTION============ -->
+    <section class="profile">
+      <div class="profile__manageWallet">
+        <p class="profile__manageWallet-title">Manage Wallets</p>
+        <a href="editProfile.html" class="profile__manageWallet-coin1">
+          <span class="image-name">
+            <img src="../images/logo_nigeria.svg" />
+            <p>NGN 0.00</p>
+          </span>
+          <img src="../images/arrow-right.svg" />
+        </a>
+        <a href="changePin.html" class="profile__manageWallet-coin2">
+          <span class="image-name">
+            <img src="../images/bitcoin.png" />
+            <p>BTC 0.00</p>
+          </span>
+          <img src="../images/arrow-right.svg" />
+        </a>
+        <a href="manageWallet.html" class="profile__manageWallet-coin3">
+          <span class="image-name">
+            <img src="../images/logo_eth.svg" />
+            <p>ETH 0.00</p>
+          </span>
+          <img src="../images/arrow-right.svg" />
+        </a>
+        <a href="manageBank.html" class="profile__manageWallet-bank">
+          <span class="image-name">
+            <img src="../images/bank_icon.svg" />
+            <p>Manage Bank</p>
+          </span>
+          <img src="../images/arrow-right.svg" />
+        </a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div class="footer-fixed">
+      <a href="" class="footer-fixed__wallet">
+        <img src="../images/wallet_icon.svg" class="footer-fixed__wallet-img" />
+        <p class="footer-fixed__wallet-text inactive-color">Wallet</p>
+      </a>
+      <a href="" class="footer-fixed__trade">
+        <img src="../images/trade_icon.svg" class="footer-fixed__trade-img" />
+        <p class="footer-fixed__trade-text color">Trade</p>
+      </a>
+      <a href="" class="footer-fixed__referral">
+        <img
+          src="../images/referral-img.svg"
+          class="footer-fixed__referral-img"
+        />
+        <p class="footer-fixed__referral-text inactive-color">Referrals</p>
+      </a>
+      <a href="" class="footer-fixed__profile">
+        <img
+          src="../images/profile-img.svg"
+          class="footer-fixed__profile-img"
+        />
+        <p class="footer-fixed__profile-text inactive-color">Profile</p>
+      </a>
+    </div>
+  </body>
+</html>

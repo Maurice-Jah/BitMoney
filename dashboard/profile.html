@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- add icon link -->
+    <link rel="icon" href="images/bitmoney-logo.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>BitMoney</title>
+  </head>
+  <body>
+    <!-- Nav section -->
+    <div class="dashboard dashboard__profile">
+      <nav class="nav">
+        <div class="nav__logo">
+          <a href="index.html">
+            <img src="../images/logo-2.svg" alt="logo-img" />
+          </a>
+        </div>
+
+        <a href="index_dashboard.html" class="nav__back">
+          <img src="../images/back-white.svg" alt="" />
+          <span>Go Back</span>
+        </a>
+
+        <ul class="nav__link">
+          <li class="nav__link-list">
+            <a href="index_dashboard.html" class="nav__link-list--item">Home</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="index_dashboard.html" class="nav__link-list--item"
+              >Wallet</a
+            >
+          </li>
+          <li class="nav__link-list">
+            <a href="trade.html" class="nav__link-list--item">Trade</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="referrals.html" class="nav__link-list--item">Referrals</a>
+          </li>
+          <li class="nav__link-list">
+            <a href="profile.html" class="nav__link-list--item underline-white"
+              >Profile</a
+            >
+          </li>
+        </ul>
+
+        <a href="#" class="nav__button btn">
+          <img src="../images/logout_icon.svg" />
+          <p>Log out</p>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ===========PROFILE SECTION============ -->
+    <section class="profile">
+      <div class="profile__action">
+        <div class="profile__action-image">
+          <img
+            src="../images/man.jpg"
+            alt="profile-img"
+            class="profile__action-image--img"
+          />
+        </div>
+        <p class="profile__action-title">Accounts</p>
+        <a href="editProfile.html" class="profile__action-settings">
+          <span class="image-name">
+            <img src="../images/profile-settings.svg" />
+            <p>Profile Settings</p>
+          </span>
+          <img src="../images/arrow-right.svg" />
+        </a>
+        <a href="changePin.html" class="profile__action-security">
+          <span class="image-name">
+            <img src="../images/lock.svg" />
+            <p>Change Security Pin</p>
+          </span>
+          <img src="../images/arrow-right.svg" />
+        </a>
+        <a href="manageWallet.html" class="profile__action-manageWallet">
+          <span class="image-name">
+            <img src="../images/carbon_wallet.svg" />
+            <p>Manage Wallets</p>
+          </span>
+          <img src="../images/arrow-right.svg" />
+        </a>
+        <a href="" class="profile__action-transactionHistory">
+          <span class="image-name">
+            <img src="../images/cycle.svg" />
+            <p>Transaction History</p>
+          </span>
+          <img src="../images/arrow-right.svg" />
+        </a>
+
+        <p class="profile__action-title">Notification</p>
+        <a href="" class="profile__action-notification">
+          <span class="image-name">
+            <img src="../images/cnotification-bell.svg" />
+            <p>Push Notifications</p>
+            <span class="profile__action-notification--slider">
+              <input type="checkbox" id="checkbox" />
+              <label
+                for="checkbox"
+                class="profile__action-notification--switch"
+              >
+              </label>
+            </span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div class="footer-fixed">
+      <a href="" class="footer-fixed__wallet">
+        <img src="../images/wallet_icon.svg" class="footer-fixed__wallet-img" />
+        <p class="footer-fixed__wallet-text inactive-color">Wallet</p>
+      </a>
+      <a href="" class="footer-fixed__trade">
+        <img src="../images/trade_icon.svg" class="footer-fixed__trade-img" />
+        <p class="footer-fixed__trade-text color">Trade</p>
+      </a>
+      <a href="" class="footer-fixed__referral">
+        <img
+          src="../images/referral-img.svg"
+          class="footer-fixed__referral-img"
+        />
+        <p class="footer-fixed__referral-text inactive-color">Referrals</p>
+      </a>
+      <a href="" class="footer-fixed__profile">
+        <img
+          src="../images/profile-img.svg"
+          class="footer-fixed__profile-img"
+        />
+        <p class="footer-fixed__profile-text inactive-color">Profile</p>
+      </a>
+    </div>
+  </body>
+</html>

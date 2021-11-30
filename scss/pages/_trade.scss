@@ -1,0 +1,321 @@
+.dashboard {
+  &__trade {
+    background-color: $color-primary;
+    padding: 1.5rem 2rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+    }
+
+    @include respond(sm-phone) {
+      display: block;
+      padding: 0;
+    }
+
+    .nav {
+      @include respond(sm-phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        padding: 1rem;
+        padding-bottom: 5rem;
+      }
+
+      &__back {
+        gap: 0.3rem;
+        font-size: 0.7rem;
+        color: $color-white;
+        text-decoration: none;
+        display: none;
+        img {
+          display: inline-block;
+        }
+        @include respond(sm-phone) {
+          display: flex;
+        }
+      }
+      &__logo {
+        @include respond(sm-phone) {
+          img {
+            height: 1.5rem;
+          }
+        }
+      }
+
+      &__button {
+        @include respond(sm-phone) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.trade {
+  &__balance {
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 500;
+    color: $color-white;
+    padding-bottom: 13rem;
+
+    &-heading {
+      font-size: 2rem;
+    }
+    &-amount {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 1.5rem;
+
+      img {
+        display: inline-block;
+      }
+
+      span:nth-child(3) {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  &-coin {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+
+    &__coin {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: $color-white;
+      margin-top: 0.5rem;
+      position: relative;
+      z-index: 30;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -120%;
+        left: -15%;
+        border: 50px solid rgba($color-white, 0.1);
+        border-radius: 50%;
+      }
+
+      &--name {
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+
+      img {
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-size: cover;
+        position: relative;
+        z-index: 30;
+      }
+    }
+
+    &__activity {
+      display: flex;
+      gap: 4rem;
+      margin-block: 2.5rem;
+      color: $color-white;
+      position: relative;
+      z-index: 10;
+
+      &--price,
+      &--position,
+      &--flow {
+        p:nth-child(1) {
+          color: rgba($color-white, 0.7);
+          padding-bottom: 0.3rem;
+        }
+      }
+
+      &--flow {
+        span {
+          display: flex;
+          align-items: center;
+          gap: 0.3rem;
+          justify-content: center;
+        }
+        img {
+          display: inline-block;
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__btn {
+      color: $color-yellow;
+      background-color: $color-white;
+      letter-spacing: 0.1;
+      font-size: 1.1rem;
+      font-weight: 300;
+      display: inline-flex;
+    }
+  }
+
+  &-bitcon,
+  &-ethereum {
+    background-color: $color-yellow;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    margin-top: -8rem;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-left: 100px solid transparent;
+      border-right: 120px solid transparent;
+      border-bottom: 300px solid rgba($color-white, 0.15);
+      z-index: 2;
+      bottom: -40%;
+      left: 10%;
+      transform: rotate(50deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 300px solid rgba($color-white, 0.1);
+      z-index: 1;
+      bottom: -50%;
+      left: 20%;
+      transform: rotate(40deg);
+    }
+  }
+
+  &-ethereum {
+    background-color: $color-blue;
+
+    a {
+      color: $color-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.trade-tab {
+  display: flex;
+  gap: 2rem;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 2rem;
+  position: relative;
+  min-height: 100vh;
+
+  .tab1,
+  .tab2 {
+    height: max-content;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: rgba($color-ash, 0.3);
+    cursor: pointer;
+  }
+
+  input:checked + label {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  input:checked + label + div {
+    display: block;
+  }
+
+  &__content {
+    position: absolute;
+    margin-top: 5rem;
+    margin-inline: 2rem;
+    width: 100%;
+    left: 0;
+    border: 1px solid $color-ash;
+    border-radius: 8px;
+
+    display: none;
+
+    &-coin1,
+    &-coin2,
+    &-coin3,
+    &-trade {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+
+      border-bottom: 1px solid rgba($color-ash, 0.3);
+
+      &--detail {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+
+        img {
+          display: inline-block;
+          width: 2rem;
+          height: auto;
+        }
+      }
+    }
+
+    &-amount {
+      p:first-child {
+        font-weight: 700;
+      }
+
+      p:last-child {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: rgba($color-black, 0.7);
+      }
+    }
+
+    &-flow {
+      font-weight: 500;
+    }
+
+    &-margin {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-weight: 500;
+    }
+
+    &-activity {
+      p:first-child {
+        font-weight: 500;
+      }
+
+      p:last-child {
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: rgba($color-black, 0.7);
+        margin-top: 0.3rem;
+      }
+    }
+
+    &-action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-weight: 500;
+      gap: 0.3rem;
+    }
+  }
+}

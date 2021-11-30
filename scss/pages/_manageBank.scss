@@ -1,0 +1,366 @@
+.dashboard {
+  &__manageBank {
+    background-color: $color-primary;
+    padding: 1.5rem 2rem;
+
+    @include respond(tab-land) {
+      padding: 1rem;
+    }
+
+    @include respond(sm-phone) {
+      display: block;
+      padding: 0;
+    }
+    .nav {
+      @include respond(sm-phone) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+        padding: 1rem;
+        padding-bottom: 5rem;
+      }
+
+      &__back {
+        gap: 0.3rem;
+        font-size: 0.7rem;
+        color: $color-white;
+        text-decoration: none;
+        display: none;
+        img {
+          display: inline-block;
+        }
+        @include respond(sm-phone) {
+          display: flex;
+        }
+      }
+      &__logo {
+        @include respond(sm-phone) {
+          img {
+            height: 1.5rem;
+          }
+        }
+      }
+
+      &__button {
+        @include respond(sm-phone) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.manageBank {
+  @include respond(sm-phone) {
+    padding: 0;
+  }
+  &__form {
+    width: 50%;
+    border: 1px solid $color-ash;
+    margin: 1rem auto;
+    border-radius: 4px;
+    padding: 2rem;
+
+    @include respond(tab-land) {
+      width: 60%;
+    }
+    @include respond(tab-port) {
+      width: 90%;
+    }
+
+    @include respond(sm-phone) {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid $color-white;
+      border-radius: 1.8rem;
+      background-color: $color-white;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+
+    @include respond(sm-phone) {
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__account,
+  &__accountName,
+  &__amount {
+    margin-top: 2.5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid $color-ash;
+    background-color: $color-white;
+    border-radius: 8px;
+
+    img {
+      display: inline-block;
+      margin-left: 0.8rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    input {
+      padding: 1.2rem 1.5rem;
+      background-color: $color-white;
+      color: #383838;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      font-weight: 500;
+
+      @include respond(sm-phone) {
+        padding: 1.1rem 1rem;
+      }
+
+      &:focus-within {
+        background-color: #fff;
+      }
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      box-shadow: 0 0 0 90px white inset !important;
+    }
+
+    input:focus::-webkit-input-placeholder {
+      color: transparent;
+    }
+
+    ::placeholder {
+      color: rgb(158, 153, 153);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    label {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 0.8rem;
+      background-color: #fff;
+      transition: 500ms opacity ease-in;
+      font-weight: 600;
+      padding: 5px 15px;
+      color: #383838;
+    }
+
+    &:focus-within label,
+    input:not(:placeholder-shown) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__select {
+    margin-top: 1.5rem;
+    .select-label {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 1.2rem 1.5rem;
+      background-color: $color-white;
+      color: #383838;
+      border-radius: 8px;
+      font-weight: 500;
+      border: 1px solid $color-ash;
+      cursor: pointer;
+
+      img {
+        display: inline-block;
+        margin-left: -0.8rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 1rem;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid $color-black;
+        right: 1rem;
+
+        @include respond(sm-phone) {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid $color-black;
+        }
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 1.7rem;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 7px solid $color-black;
+        right: 1rem;
+
+        @include respond(sm-phone) {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid $color-black;
+        }
+      }
+
+      .select-text1 {
+        position: absolute;
+        top: -0.6rem;
+        left: 2rem;
+        background-color: $color-white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        font-size: 0.8rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in;
+      }
+
+      #options-view:hover + .select-text1 {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .select-text {
+        color: rgb(158, 153, 153);
+        font-size: 1rem;
+        margin-left: 2rem;
+        transition: all 0.5s ease-in;
+      }
+
+      input[type="checkbox"] {
+        display: none;
+      }
+
+      //================= Wallets selection =======//
+      .options {
+        position: absolute;
+        z-index: 30;
+        left: -1px;
+        top: 3.3rem;
+        border-radius: 8px;
+        border-right: 1px solid $color-ash;
+        border-left: 1px solid $color-ash;
+        border-bottom: 1px solid $color-ash;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0px;
+        background: white;
+        width: 100.4%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease-in;
+
+        .option {
+          position: relative;
+          z-index: 30;
+          padding: 0.8rem 2rem;
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          transition: all 0.5s ease-in;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $color-green;
+            color: $color-white;
+          }
+
+          img {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+
+        input[type="radio"] {
+          display: none;
+        }
+      }
+
+      &:hover .select-text {
+        opacity: 0;
+      }
+    }
+
+    &-btn {
+      border-radius: 5px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      background-color: $color-primary;
+
+      @include respond(sm-phone) {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400;
+      }
+    }
+
+    &-back {
+      display: inline-flex;
+      gap: 0.8rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: $color-primary;
+
+      @include respond(sm-phone) {
+        font-size: 1rem;
+      }
+
+      &--img {
+        width: 1.5rem;
+        transition: all 0.2s ease-in;
+        height: auto;
+
+        @include respond(sm-phone) {
+          width: 1rem;
+        }
+      }
+
+      &:hover &--img {
+        transform: translateX(-0.3rem);
+      }
+    }
+
+    #options-view:checked ~ .options {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}

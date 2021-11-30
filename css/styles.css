@@ -58,6 +58,9 @@ section {
 .inactive-color {
   color: #cbc8c8; }
 
+.rise {
+  color: #1b9a20; }
+
 .btn {
   padding: 0.8rem 2rem;
   border-radius: 1.6rem;
@@ -4922,18 +4925,18 @@ select {
   margin-top: 2rem;
   margin-bottom: 1rem; }
 
-.dashboard__sendCoin {
+.dashboard__referral {
   background-color: #f1590e;
   padding: 1.5rem 2rem; }
   @media only screen and (max-width: 56.25em) {
-    .dashboard__sendCoin {
+    .dashboard__referral {
       padding: 1rem; } }
   @media only screen and (max-width: 25em) {
-    .dashboard__sendCoin {
+    .dashboard__referral {
       display: block;
       padding: 0; } }
   @media only screen and (max-width: 25em) {
-    .dashboard__sendCoin .nav {
+    .dashboard__referral .nav {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -4947,25 +4950,29 @@ select {
       gap: 1.2rem;
       padding: 1rem;
       padding-bottom: 5rem; } }
-  .dashboard__sendCoin .nav__back {
+  .dashboard__referral .nav__back {
     gap: 0.3rem;
     font-size: 0.7rem;
     color: #fff;
     text-decoration: none;
     display: none; }
-    .dashboard__sendCoin .nav__back img {
+    .dashboard__referral .nav__back img {
       display: inline-block; }
     @media only screen and (max-width: 25em) {
-      .dashboard__sendCoin .nav__back {
+      .dashboard__referral .nav__back {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; } }
   @media only screen and (max-width: 25em) {
-    .dashboard__sendCoin .nav__logo img {
+    .dashboard__referral .nav__logo img {
       height: 1.5rem; } }
   @media only screen and (max-width: 25em) {
-    .dashboard__sendCoin .nav__button {
+    .dashboard__referral .nav__button {
       display: none; } }
+
+@media only screen and (max-width: 43.75em) {
+  .referral {
+    padding-inline: 1rem; } }
 
 @media only screen and (max-width: 25em) {
   .referral {
@@ -4981,7 +4988,8 @@ select {
   position: relative;
   height: -webkit-max-content;
   height: -moz-max-content;
-  height: max-content; }
+  height: max-content;
+  z-index: 50; }
   @media only screen and (max-width: 56.25em) {
     .referral__body {
       width: 60%; } }
@@ -4992,10 +5000,8 @@ select {
     .referral__body {
       width: 100%;
       padding: 2rem;
-      padding-top: 0;
       margin-top: -1.5rem;
-      border: 1px solid #fff;
-      border-radius: 1.8rem;
+      border-radius: 1.8rem 1.8rem 0 0;
       background-color: #fff; } }
 
 .referral__list {
@@ -5022,8 +5028,14 @@ select {
       -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
               box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
       display: none; }
+      @media only screen and (max-width: 25em) {
+        .referral__list-item .tab-content {
+          top: 5rem;
+          border-radius: unset;
+          -webkit-box-shadow: unset;
+                  box-shadow: unset; } }
       .referral__list-item .tab-content-main {
-        font-weight: 500;
+        font-weight: 600;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -5116,8 +5128,8 @@ select {
     cursor: pointer; }
     .referral .accordion-label::after {
       content: "\276F";
-      width: 1em;
-      height: 1em;
+      width: 1rem;
+      height: 1rem;
       text-align: center;
       -webkit-transition: all 0.35s;
       -o-transition: all 0.35s;
@@ -5127,10 +5139,15 @@ select {
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-    padding: 1em;
+    padding: 1rem;
     -webkit-transition: all 0.35s;
     -o-transition: all 0.35s;
     transition: all 0.35s; }
+    @media only screen and (max-width: 25em) {
+      .referral .accordion-contents {
+        padding-inline: 0;
+        font-size: 0.9rem;
+        color: rgba(0, 0, 0, 0.7); } }
 
 .referral input:checked + .accordion-label::after {
   -webkit-transform: rotate(90deg);
@@ -5140,7 +5157,10 @@ select {
 .referral input:checked ~ .accordion-contents {
   max-height: 100vh;
   opacity: 1;
-  visibility: visible; }
+  visibility: visible;
+  -webkit-transition: all 0.35s;
+  -o-transition: all 0.35s;
+  transition: all 0.35s; }
 
 .referral__none, .referral__invite {
   display: -webkit-box;
@@ -5155,11 +5175,18 @@ select {
           align-items: center;
   padding: 2rem;
   gap: 1.5rem; }
+  @media only screen and (max-width: 25em) {
+    .referral__none, .referral__invite {
+      padding: 0; } }
   .referral__none-img, .referral__invite-img {
     width: 15rem;
     height: 15rem;
     margin-top: 2rem;
     margin-bottom: -2rem; }
+    @media only screen and (max-width: 25em) {
+      .referral__none-img, .referral__invite-img {
+        width: 10rem;
+        height: 10rem; } }
     .referral__none-img img, .referral__invite-img img {
       width: 100%;
       height: auto;
@@ -5169,3 +5196,1841 @@ select {
   .referral__none-sub, .referral__invite-sub {
     font-size: 0.9rem;
     width: 80%; }
+    @media only screen and (max-width: 25em) {
+      .referral__none-sub, .referral__invite-sub {
+        width: 90%;
+        text-align: center; } }
+
+.dashboard__trade {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__trade {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__trade {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__trade .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem;
+      padding-bottom: 5rem; } }
+  .dashboard__trade .nav__back {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    display: none; }
+    .dashboard__trade .nav__back img {
+      display: inline-block; }
+    @media only screen and (max-width: 25em) {
+      .dashboard__trade .nav__back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__trade .nav__logo img {
+      height: 1.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__trade .nav__button {
+      display: none; } }
+
+.trade__balance {
+  background-color: #f1590e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  font-weight: 500;
+  color: #fff;
+  padding-bottom: 13rem; }
+  .trade__balance-heading {
+    font-size: 2rem; }
+  .trade__balance-amount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.3rem;
+    font-size: 1.5rem; }
+    .trade__balance-amount img {
+      display: inline-block; }
+    .trade__balance-amount span:nth-child(3) {
+      margin-left: 0.5rem; }
+
+.trade-coin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5rem; }
+  .trade-coin__coin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+    margin-top: 0.5rem;
+    position: relative;
+    z-index: 30; }
+    .trade-coin__coin::before {
+      position: absolute;
+      content: "";
+      top: -120%;
+      left: -15%;
+      border: 50px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%; }
+    .trade-coin__coin--name {
+      font-size: 1.5rem;
+      font-weight: 300; }
+    .trade-coin__coin img {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background-size: cover;
+      position: relative;
+      z-index: 30; }
+  .trade-coin__activity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4rem;
+    margin-block: 2.5rem;
+    color: #fff;
+    position: relative;
+    z-index: 10; }
+    .trade-coin__activity--price p:nth-child(1), .trade-coin__activity--position p:nth-child(1), .trade-coin__activity--flow p:nth-child(1) {
+      color: rgba(255, 255, 255, 0.7);
+      padding-bottom: 0.3rem; }
+    .trade-coin__activity--flow span {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 0.3rem;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+    .trade-coin__activity--flow img {
+      display: inline-block;
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+  .trade-coin__btn {
+    color: #f7931a;
+    background-color: #fff;
+    letter-spacing: 0.1;
+    font-size: 1.1rem;
+    font-weight: 300;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+
+.trade-bitcon, .trade-ethereum {
+  background-color: #f7931a;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  margin-top: -8rem;
+  position: relative;
+  z-index: 10;
+  overflow: hidden; }
+  .trade-bitcon::before, .trade-ethereum::before {
+    position: absolute;
+    content: "";
+    border-left: 100px solid transparent;
+    border-right: 120px solid transparent;
+    border-bottom: 300px solid rgba(255, 255, 255, 0.15);
+    z-index: 2;
+    bottom: -40%;
+    left: 10%;
+    -webkit-transform: rotate(50deg);
+        -ms-transform: rotate(50deg);
+            transform: rotate(50deg); }
+  .trade-bitcon::after, .trade-ethereum::after {
+    position: absolute;
+    content: "";
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 300px solid rgba(255, 255, 255, 0.1);
+    z-index: 1;
+    bottom: -50%;
+    left: 20%;
+    -webkit-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+            transform: rotate(40deg); }
+
+.trade-ethereum {
+  background-color: #6149cd; }
+  .trade-ethereum a {
+    color: #6149cd;
+    text-decoration: none; }
+
+.trade-tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  width: 80%;
+  margin: 1rem auto;
+  padding: 2rem;
+  position: relative;
+  min-height: 100vh; }
+  .trade-tab .tab1,
+  .trade-tab .tab2 {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content; }
+  .trade-tab input {
+    display: none; }
+  .trade-tab label {
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: rgba(203, 200, 200, 0.3);
+    cursor: pointer; }
+  .trade-tab input:checked + label {
+    background-color: #f1590e;
+    color: #fff; }
+  .trade-tab input:checked + label + div {
+    display: block; }
+  .trade-tab__content {
+    position: absolute;
+    margin-top: 5rem;
+    margin-inline: 2rem;
+    width: 100%;
+    left: 0;
+    border: 1px solid #cbc8c8;
+    border-radius: 8px;
+    display: none; }
+    .trade-tab__content-coin1, .trade-tab__content-coin2, .trade-tab__content-coin3, .trade-tab__content-trade {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding: 2rem;
+      border-bottom: 1px solid rgba(203, 200, 200, 0.3); }
+      .trade-tab__content-coin1--detail, .trade-tab__content-coin2--detail, .trade-tab__content-coin3--detail, .trade-tab__content-trade--detail {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 0.8rem;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .trade-tab__content-coin1--detail img, .trade-tab__content-coin2--detail img, .trade-tab__content-coin3--detail img, .trade-tab__content-trade--detail img {
+          display: inline-block;
+          width: 2rem;
+          height: auto; }
+    .trade-tab__content-amount p:first-child {
+      font-weight: 700; }
+    .trade-tab__content-amount p:last-child {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: rgba(0, 0, 0, 0.7); }
+    .trade-tab__content-flow {
+      font-weight: 500; }
+    .trade-tab__content-margin {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      font-weight: 500; }
+    .trade-tab__content-activity p:first-child {
+      font-weight: 500; }
+    .trade-tab__content-activity p:last-child {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: rgba(0, 0, 0, 0.7);
+      margin-top: 0.3rem; }
+    .trade-tab__content-action {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      font-weight: 500;
+      gap: 0.3rem; }
+
+.dashboard__trade-bitcoin {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__trade-bitcoin {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__trade-bitcoin {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__trade-bitcoin .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem;
+      padding-bottom: 5rem; } }
+  .dashboard__trade-bitcoin .nav__back {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    display: none; }
+    .dashboard__trade-bitcoin .nav__back img {
+      display: inline-block; }
+    @media only screen and (max-width: 25em) {
+      .dashboard__trade-bitcoin .nav__back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__trade-bitcoin .nav__logo img {
+      height: 1.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__trade-bitcoin .nav__button {
+      display: none; } }
+
+@media only screen and (max-width: 25em) {
+  .trade-bitcoin {
+    padding: 0; } }
+
+.trade-bitcoin__form {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .trade-bitcoin__form {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .trade-bitcoin__form {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .trade-bitcoin__form {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid #fff;
+      border-radius: 1.8rem;
+      background-color: #fff; } }
+
+.trade-bitcoin__heading {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 25em) {
+    .trade-bitcoin__heading {
+      margin-top: 3rem;
+      margin-bottom: 4rem; } }
+
+.trade-bitcoin__amount, .trade-bitcoin__quantity {
+  margin-top: 2.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px; }
+  .trade-bitcoin__amount input, .trade-bitcoin__quantity input {
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 500; }
+    @media only screen and (max-width: 25em) {
+      .trade-bitcoin__amount input, .trade-bitcoin__quantity input {
+        padding: 1.1rem 1rem; } }
+    .trade-bitcoin__amount input:focus-within, .trade-bitcoin__quantity input:focus-within {
+      background-color: #fff; }
+  .trade-bitcoin__amount input:-webkit-autofill,
+  .trade-bitcoin__amount input:-webkit-autofill:hover,
+  .trade-bitcoin__amount input:-webkit-autofill:focus,
+  .trade-bitcoin__amount input:-webkit-autofill:active, .trade-bitcoin__quantity input:-webkit-autofill,
+  .trade-bitcoin__quantity input:-webkit-autofill:hover,
+  .trade-bitcoin__quantity input:-webkit-autofill:focus,
+  .trade-bitcoin__quantity input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 90px white inset !important;
+            box-shadow: 0 0 0 90px white inset !important; }
+  .trade-bitcoin__amount input:focus::-webkit-input-placeholder, .trade-bitcoin__quantity input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  .trade-bitcoin__amount ::-webkit-input-placeholder, .trade-bitcoin__quantity ::-webkit-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .trade-bitcoin__amount ::-moz-placeholder, .trade-bitcoin__quantity ::-moz-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .trade-bitcoin__amount :-ms-input-placeholder, .trade-bitcoin__quantity :-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .trade-bitcoin__amount ::-ms-input-placeholder, .trade-bitcoin__quantity ::-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .trade-bitcoin__amount ::placeholder, .trade-bitcoin__quantity ::placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .trade-bitcoin__amount label, .trade-bitcoin__quantity label {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.8rem;
+    background-color: #fff;
+    -webkit-transition: 500ms opacity ease-in;
+    -o-transition: 500ms opacity ease-in;
+    transition: 500ms opacity ease-in;
+    font-weight: 600;
+    padding: 5px;
+    color: #383838; }
+  .trade-bitcoin__amount input:not(:-moz-placeholder-shown) ~ label, .trade-bitcoin__quantity input:not(:-moz-placeholder-shown) ~ label {
+    top: -28%;
+    left: 2%;
+    opacity: 1;
+    visibility: visible; }
+  .trade-bitcoin__amount input:not(:-ms-input-placeholder) ~ label, .trade-bitcoin__quantity input:not(:-ms-input-placeholder) ~ label {
+    top: -28%;
+    left: 2%;
+    opacity: 1;
+    visibility: visible; }
+  .trade-bitcoin__amount:focus-within label,
+  .trade-bitcoin__amount input:not(:placeholder-shown) ~ label, .trade-bitcoin__quantity:focus-within label,
+  .trade-bitcoin__quantity input:not(:placeholder-shown) ~ label {
+    top: -28%;
+    left: 2%;
+    opacity: 1;
+    visibility: visible; }
+
+.trade-bitcoin__select {
+  margin-top: 1.5rem; }
+  .trade-bitcoin__select .select-label {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid #cbc8c8;
+    cursor: pointer; }
+    .trade-bitcoin__select .select-label::after {
+      position: absolute;
+      content: "";
+      top: 1.7rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #000;
+      right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .trade-bitcoin__select .select-label::after {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; } }
+    .trade-bitcoin__select .select-label .select-text1 {
+      position: absolute;
+      top: -0.6rem;
+      left: 2%;
+      background-color: #fff;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 0.8rem;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .trade-bitcoin__select .select-label #options-view:hover + .select-text1 {
+      opacity: 1;
+      visibility: visible; }
+    .trade-bitcoin__select .select-label .select-text {
+      color: #9e9999;
+      font-size: 1rem;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .trade-bitcoin__select .select-label input[type="checkbox"] {
+      display: none; }
+    .trade-bitcoin__select .select-label .options {
+      position: absolute;
+      z-index: 30;
+      left: -1px;
+      top: 3.3rem;
+      border-radius: 8px;
+      border-right: 1px solid #cbc8c8;
+      border-left: 1px solid #cbc8c8;
+      border-bottom: 1px solid #cbc8c8;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      border-radius: 0px;
+      background: white;
+      width: 100.4%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+      .trade-bitcoin__select .select-label .options .option {
+        position: relative;
+        z-index: 30;
+        padding: 0.8rem 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 0.8rem;
+        -webkit-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        cursor: pointer; }
+        .trade-bitcoin__select .select-label .options .option:hover {
+          background-color: #f7931a;
+          color: #fff; }
+      .trade-bitcoin__select .select-label .options input[type="radio"] {
+        display: none; }
+    .trade-bitcoin__select .select-label:hover .select-text {
+      opacity: 0; }
+  .trade-bitcoin__select #options-view:checked ~ .options {
+    opacity: 1;
+    visibility: visible; }
+
+.trade-bitcoin__trend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .trade-bitcoin__trend-price p:first-child {
+    font-size: 1.2rem; }
+  .trade-bitcoin__trend-price p:last-child {
+    font-size: 2rem;
+    font-weight: 500; }
+  .trade-bitcoin__trend-price .small {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-right: 0.2rem; }
+  .trade-bitcoin__trend-percentage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem; }
+    .trade-bitcoin__trend-percentage .percentage-rise {
+      background-color: rgba(23, 239, 70, 0.21);
+      border-radius: 15px;
+      padding: 0.2rem 0.3rem; }
+
+.trade-bitcoin__chart {
+  border: 1px solid #cbc8c8;
+  margin-block: 2rem;
+  height: 40vh; }
+
+.trade-bitcoin__action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+  margin-block: 3rem 0.5rem; }
+  .trade-bitcoin__action-long, .trade-bitcoin__action-short {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem; }
+    .trade-bitcoin__action-long--title, .trade-bitcoin__action-short--title {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 0.5rem; }
+      .trade-bitcoin__action-long--title img, .trade-bitcoin__action-short--title img {
+        display: inline-block; }
+      .trade-bitcoin__action-long--title span, .trade-bitcoin__action-short--title span {
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5); }
+    .trade-bitcoin__action-long--btn, .trade-bitcoin__action-short--btn {
+      text-decoration: none;
+      text-align: center;
+      border-radius: 4px;
+      padding-block: 1.1rem;
+      font-weight: 600; }
+  .trade-bitcoin__action-long--btn {
+    background-color: rgba(27, 154, 32, 0.7); }
+  .trade-bitcoin__action-short--btn {
+    background-color: #ec5656; }
+
+.dashboard__profile {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__profile {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem;
+      padding-bottom: 11rem; } }
+  .dashboard__profile .nav__back {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    display: none; }
+    .dashboard__profile .nav__back img {
+      display: inline-block; }
+    @media only screen and (max-width: 25em) {
+      .dashboard__profile .nav__back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile .nav__logo img {
+      height: 1.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile .nav__button {
+      display: none; } }
+
+@media only screen and (max-width: 25em) {
+  .profile {
+    padding: 0; } }
+
+.profile__action {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .profile__action {
+      width: 70%;
+      margin: 3rem auto; } }
+  @media only screen and (max-width: 43.75em) {
+    .profile__action {
+      width: 100%; } }
+  @media only screen and (max-width: 25em) {
+    .profile__action {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid #fff;
+      border-radius: 1.8rem;
+      background-color: #fff; } }
+  .profile__action-image {
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 100; }
+    @media only screen and (max-width: 25em) {
+      .profile__action-image {
+        top: -15%;
+        width: 5rem;
+        height: 5rem; } }
+    .profile__action-image--img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      border-radius: 50%; }
+  .profile__action-title {
+    margin-top: 3rem;
+    font-weight: 500;
+    font-size: 1.2rem; }
+  .profile__action-settings, .profile__action-security, .profile__action-manageWallet, .profile__action-transactionHistory, .profile__action-notification {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    margin-block: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #000;
+    font-weight: 500;
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); }
+    .profile__action-settings .image-name, .profile__action-security .image-name, .profile__action-manageWallet .image-name, .profile__action-transactionHistory .image-name, .profile__action-notification .image-name {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 0.8rem; }
+      .profile__action-settings .image-name img, .profile__action-security .image-name img, .profile__action-manageWallet .image-name img, .profile__action-transactionHistory .image-name img, .profile__action-notification .image-name img {
+        width: 1.8rem;
+        height: 1.8rem;
+        padding: 0.2rem;
+        border-radius: 2px;
+        background-size: contain; }
+  .profile__action-settings img:first-child {
+    background-color: rgba(179, 9, 183, 0.15); }
+  .profile__action-security img:first-child {
+    background-color: #ffedec; }
+  .profile__action-manageWallet img:first-child {
+    background-color: rgba(255, 167, 60, 0.27); }
+  .profile__action-transactionHistory img:first-child {
+    background-color: #d9f4ef; }
+  .profile__action-notification {
+    position: relative; }
+    .profile__action-notification img:first-child {
+      background-color: #d9e4f3; }
+    .profile__action-notification--switch {
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      right: 0;
+      background-color: #cbc8c8;
+      width: 3rem;
+      height: 1.5rem;
+      border-radius: 5rem;
+      -webkit-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      cursor: pointer; }
+      .profile__action-notification--switch:before {
+        position: absolute;
+        content: "";
+        height: 1rem;
+        width: 1rem;
+        left: 4px;
+        top: 0.25rem;
+        background-color: #fff;
+        border-radius: 50%;
+        -webkit-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s; }
+      input:checked + .profile__action-notification--switch:before {
+        -webkit-transform: translateX(1.5rem);
+            -ms-transform: translateX(1.5rem);
+                transform: translateX(1.5rem); }
+    .profile__action-notification--slider {
+      position: absolute;
+      right: 0; }
+    .profile__action-notification input {
+      opacity: 0;
+      visibility: hidden;
+      display: none; }
+    input:checked + .profile__action-notification--switch {
+      background-color: #2196f3; }
+
+.dashboard__profile-edit {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__profile-edit {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile-edit {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile-edit .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem;
+      padding-bottom: 5rem; } }
+  .dashboard__profile-edit .nav__back {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    display: none; }
+    .dashboard__profile-edit .nav__back img {
+      display: inline-block; }
+    @media only screen and (max-width: 25em) {
+      .dashboard__profile-edit .nav__back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile-edit .nav__logo img {
+      height: 1.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile-edit .nav__button {
+      display: none; } }
+
+@media only screen and (max-width: 25em) {
+  .profile-edit {
+    padding: 0; } }
+
+.profile-edit__edit {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .profile-edit__edit {
+      width: 70%;
+      margin: 3rem auto; } }
+  @media only screen and (max-width: 43.75em) {
+    .profile-edit__edit {
+      width: 100% !important; } }
+  @media only screen and (max-width: 25em) {
+    .profile-edit__edit {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid #fff;
+      border-radius: 1.8rem;
+      background-color: #fff; } }
+  .profile-edit__edit-image {
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    text-decoration: none;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 100; }
+    @media only screen and (max-width: 25em) {
+      .profile-edit__edit-image {
+        width: 5rem;
+        height: 5rem; } }
+    .profile-edit__edit-image--img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      border-radius: 50%; }
+    .profile-edit__edit-image--editIcon {
+      position: absolute;
+      display: inline-block;
+      left: 85%;
+      bottom: -5%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .profile-edit__edit-heading {
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: 500;
+    font-size: 1.2rem; }
+    @media only screen and (max-width: 25em) {
+      .profile-edit__edit-heading {
+        margin-top: 5rem !important;
+        margin-bottom: 4rem; } }
+  .profile-edit__edit-name, .profile-edit__edit-phone, .profile-edit__edit-email, .profile-edit__edit-address {
+    margin-top: 2.5rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    border: 1px solid #cbc8c8;
+    background-color: #fff;
+    border-radius: 8px; }
+    .profile-edit__edit-name img, .profile-edit__edit-phone img, .profile-edit__edit-email img, .profile-edit__edit-address img {
+      display: inline-block;
+      margin-left: 0.8rem;
+      width: 1.5rem;
+      height: 1.5rem; }
+    .profile-edit__edit-name input, .profile-edit__edit-phone input, .profile-edit__edit-email input, .profile-edit__edit-address input {
+      padding: 1.2rem 1.5rem;
+      background-color: #fff;
+      color: #383838;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      font-weight: 500; }
+      @media only screen and (max-width: 25em) {
+        .profile-edit__edit-name input, .profile-edit__edit-phone input, .profile-edit__edit-email input, .profile-edit__edit-address input {
+          padding: 1.1rem 1rem; } }
+      .profile-edit__edit-name input:focus-within, .profile-edit__edit-phone input:focus-within, .profile-edit__edit-email input:focus-within, .profile-edit__edit-address input:focus-within {
+        background-color: #fff; }
+    .profile-edit__edit-name input:-webkit-autofill,
+    .profile-edit__edit-name input:-webkit-autofill:hover,
+    .profile-edit__edit-name input:-webkit-autofill:focus,
+    .profile-edit__edit-name input:-webkit-autofill:active, .profile-edit__edit-phone input:-webkit-autofill,
+    .profile-edit__edit-phone input:-webkit-autofill:hover,
+    .profile-edit__edit-phone input:-webkit-autofill:focus,
+    .profile-edit__edit-phone input:-webkit-autofill:active, .profile-edit__edit-email input:-webkit-autofill,
+    .profile-edit__edit-email input:-webkit-autofill:hover,
+    .profile-edit__edit-email input:-webkit-autofill:focus,
+    .profile-edit__edit-email input:-webkit-autofill:active, .profile-edit__edit-address input:-webkit-autofill,
+    .profile-edit__edit-address input:-webkit-autofill:hover,
+    .profile-edit__edit-address input:-webkit-autofill:focus,
+    .profile-edit__edit-address input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 90px white inset !important;
+              box-shadow: 0 0 0 90px white inset !important; }
+    .profile-edit__edit-name input:focus::-webkit-input-placeholder, .profile-edit__edit-phone input:focus::-webkit-input-placeholder, .profile-edit__edit-email input:focus::-webkit-input-placeholder, .profile-edit__edit-address input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .profile-edit__edit-name ::-webkit-input-placeholder, .profile-edit__edit-phone ::-webkit-input-placeholder, .profile-edit__edit-email ::-webkit-input-placeholder, .profile-edit__edit-address ::-webkit-input-placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-edit__edit-name ::-moz-placeholder, .profile-edit__edit-phone ::-moz-placeholder, .profile-edit__edit-email ::-moz-placeholder, .profile-edit__edit-address ::-moz-placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-edit__edit-name :-ms-input-placeholder, .profile-edit__edit-phone :-ms-input-placeholder, .profile-edit__edit-email :-ms-input-placeholder, .profile-edit__edit-address :-ms-input-placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-edit__edit-name ::-ms-input-placeholder, .profile-edit__edit-phone ::-ms-input-placeholder, .profile-edit__edit-email ::-ms-input-placeholder, .profile-edit__edit-address ::-ms-input-placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-edit__edit-name ::placeholder, .profile-edit__edit-phone ::placeholder, .profile-edit__edit-email ::placeholder, .profile-edit__edit-address ::placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-edit__edit-name label, .profile-edit__edit-phone label, .profile-edit__edit-email label, .profile-edit__edit-address label {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 0.8rem;
+      background-color: #fff;
+      -webkit-transition: 500ms opacity ease-in;
+      -o-transition: 500ms opacity ease-in;
+      transition: 500ms opacity ease-in;
+      font-weight: 600;
+      padding: 5px 15px;
+      color: #383838; }
+    .profile-edit__edit-name input:not(:-moz-placeholder-shown) ~ label, .profile-edit__edit-phone input:not(:-moz-placeholder-shown) ~ label, .profile-edit__edit-email input:not(:-moz-placeholder-shown) ~ label, .profile-edit__edit-address input:not(:-moz-placeholder-shown) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+    .profile-edit__edit-name input:not(:-ms-input-placeholder) ~ label, .profile-edit__edit-phone input:not(:-ms-input-placeholder) ~ label, .profile-edit__edit-email input:not(:-ms-input-placeholder) ~ label, .profile-edit__edit-address input:not(:-ms-input-placeholder) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+    .profile-edit__edit-name:focus-within label,
+    .profile-edit__edit-name input:not(:placeholder-shown) ~ label, .profile-edit__edit-phone:focus-within label,
+    .profile-edit__edit-phone input:not(:placeholder-shown) ~ label, .profile-edit__edit-email:focus-within label,
+    .profile-edit__edit-email input:not(:placeholder-shown) ~ label, .profile-edit__edit-address:focus-within label,
+    .profile-edit__edit-address input:not(:placeholder-shown) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+  .profile-edit__edit-select {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 25em) {
+      .profile-edit__edit-select {
+        gap: 2rem; } }
+    .profile-edit__edit-select--btn {
+      border-radius: 5px;
+      padding: 1rem 2.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+      @media only screen and (max-width: 25em) {
+        .profile-edit__edit-select--btn {
+          padding: 0.5rem 1.5rem;
+          font-weight: 400; } }
+    .profile-edit__edit-select--back {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      gap: 0.8rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #f1590e; }
+      @media only screen and (max-width: 25em) {
+        .profile-edit__edit-select--back {
+          font-size: 1rem; } }
+    .profile-edit__edit-select--img {
+      width: 1.5rem;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      height: auto; }
+    .profile-edit__edit-select:hover .profile-edit__edit-select--img {
+      -webkit-transform: translateX(-0.3rem);
+          -ms-transform: translateX(-0.3rem);
+              transform: translateX(-0.3rem); }
+
+.dashboard__profile-pin {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__profile-pin {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile-pin {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile-pin .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem;
+      padding-bottom: 5rem; } }
+  .dashboard__profile-pin .nav__back {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    display: none; }
+    .dashboard__profile-pin .nav__back img {
+      display: inline-block; }
+    @media only screen and (max-width: 25em) {
+      .dashboard__profile-pin .nav__back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile-pin .nav__logo img {
+      height: 1.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile-pin .nav__button {
+      display: none; } }
+
+@media only screen and (max-width: 25em) {
+  .profile-pin {
+    padding: 0; } }
+
+.profile-pin__edit {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .profile-pin__edit {
+      width: 70%;
+      margin: 3rem auto; } }
+  @media only screen and (max-width: 43.75em) {
+    .profile-pin__edit {
+      width: 100% !important; } }
+  @media only screen and (max-width: 25em) {
+    .profile-pin__edit {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid #fff;
+      border-radius: 1.8rem;
+      background-color: #fff; } }
+  .profile-pin__edit-image {
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    top: -2%;
+    left: 50%;
+    text-decoration: none;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 50; }
+    @media only screen and (max-width: 25em) {
+      .profile-pin__edit-image {
+        width: 5rem;
+        height: 5rem; } }
+    .profile-pin__edit-image--img {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      border-radius: 50%; }
+    .profile-pin__edit-image--editIcon {
+      position: absolute;
+      display: inline-block;
+      left: 85%;
+      bottom: -5%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+  .profile-pin__edit-heading {
+    text-align: center;
+    margin-top: 3rem;
+    font-weight: 500;
+    font-size: 1.2rem; }
+    @media only screen and (max-width: 25em) {
+      .profile-pin__edit-heading {
+        margin-top: 3rem;
+        margin-bottom: 4rem; } }
+  .profile-pin__edit-oldPin, .profile-pin__edit-newPin, .profile-pin__edit-confirmPin {
+    margin-top: 2.5rem;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    border: 1px solid #cbc8c8;
+    background-color: #fff;
+    border-radius: 8px; }
+    .profile-pin__edit-oldPin img, .profile-pin__edit-newPin img, .profile-pin__edit-confirmPin img {
+      display: inline-block;
+      margin-left: 0.8rem;
+      width: 1.5rem;
+      height: 1.5rem; }
+    .profile-pin__edit-oldPin input, .profile-pin__edit-newPin input, .profile-pin__edit-confirmPin input {
+      padding: 1.2rem 1.5rem;
+      background-color: #fff;
+      color: #383838;
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      font-weight: 500; }
+      @media only screen and (max-width: 25em) {
+        .profile-pin__edit-oldPin input, .profile-pin__edit-newPin input, .profile-pin__edit-confirmPin input {
+          padding: 1.1rem 1rem; } }
+      .profile-pin__edit-oldPin input:focus-within, .profile-pin__edit-newPin input:focus-within, .profile-pin__edit-confirmPin input:focus-within {
+        background-color: #fff; }
+    .profile-pin__edit-oldPin input:-webkit-autofill,
+    .profile-pin__edit-oldPin input:-webkit-autofill:hover,
+    .profile-pin__edit-oldPin input:-webkit-autofill:focus,
+    .profile-pin__edit-oldPin input:-webkit-autofill:active, .profile-pin__edit-newPin input:-webkit-autofill,
+    .profile-pin__edit-newPin input:-webkit-autofill:hover,
+    .profile-pin__edit-newPin input:-webkit-autofill:focus,
+    .profile-pin__edit-newPin input:-webkit-autofill:active, .profile-pin__edit-confirmPin input:-webkit-autofill,
+    .profile-pin__edit-confirmPin input:-webkit-autofill:hover,
+    .profile-pin__edit-confirmPin input:-webkit-autofill:focus,
+    .profile-pin__edit-confirmPin input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 90px white inset !important;
+              box-shadow: 0 0 0 90px white inset !important; }
+    .profile-pin__edit-oldPin input:focus::-webkit-input-placeholder, .profile-pin__edit-newPin input:focus::-webkit-input-placeholder, .profile-pin__edit-confirmPin input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .profile-pin__edit-oldPin ::-webkit-input-placeholder, .profile-pin__edit-newPin ::-webkit-input-placeholder, .profile-pin__edit-confirmPin ::-webkit-input-placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-pin__edit-oldPin ::-moz-placeholder, .profile-pin__edit-newPin ::-moz-placeholder, .profile-pin__edit-confirmPin ::-moz-placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-pin__edit-oldPin :-ms-input-placeholder, .profile-pin__edit-newPin :-ms-input-placeholder, .profile-pin__edit-confirmPin :-ms-input-placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-pin__edit-oldPin ::-ms-input-placeholder, .profile-pin__edit-newPin ::-ms-input-placeholder, .profile-pin__edit-confirmPin ::-ms-input-placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-pin__edit-oldPin ::placeholder, .profile-pin__edit-newPin ::placeholder, .profile-pin__edit-confirmPin ::placeholder {
+      color: #9e9999;
+      font-size: 1rem;
+      font-weight: 600; }
+    .profile-pin__edit-oldPin label, .profile-pin__edit-newPin label, .profile-pin__edit-confirmPin label {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      font-size: 0.8rem;
+      background-color: #fff;
+      -webkit-transition: 500ms opacity ease-in;
+      -o-transition: 500ms opacity ease-in;
+      transition: 500ms opacity ease-in;
+      font-weight: 600;
+      padding: 5px 15px;
+      color: #383838; }
+    .profile-pin__edit-oldPin input:not(:-moz-placeholder-shown) ~ label, .profile-pin__edit-newPin input:not(:-moz-placeholder-shown) ~ label, .profile-pin__edit-confirmPin input:not(:-moz-placeholder-shown) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+    .profile-pin__edit-oldPin input:not(:-ms-input-placeholder) ~ label, .profile-pin__edit-newPin input:not(:-ms-input-placeholder) ~ label, .profile-pin__edit-confirmPin input:not(:-ms-input-placeholder) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+    .profile-pin__edit-oldPin:focus-within label,
+    .profile-pin__edit-oldPin input:not(:placeholder-shown) ~ label, .profile-pin__edit-newPin:focus-within label,
+    .profile-pin__edit-newPin input:not(:placeholder-shown) ~ label, .profile-pin__edit-confirmPin:focus-within label,
+    .profile-pin__edit-confirmPin input:not(:placeholder-shown) ~ label {
+      top: -28%;
+      left: 5%;
+      opacity: 1;
+      visibility: visible; }
+  .profile-pin__edit-pin {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 25em) {
+      .profile-pin__edit-pin {
+        gap: 2rem; } }
+    .profile-pin__edit-pin--btn {
+      border-radius: 5px;
+      padding: 1rem 2.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+      @media only screen and (max-width: 25em) {
+        .profile-pin__edit-pin--btn {
+          padding: 0.5rem 1.5rem;
+          font-weight: 400; } }
+    .profile-pin__edit-pin--back {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      gap: 0.8rem;
+      text-decoration: none;
+      font-size: 1.2rem;
+      color: #f1590e; }
+      @media only screen and (max-width: 25em) {
+        .profile-pin__edit-pin--back {
+          font-size: 1rem; } }
+    .profile-pin__edit-pin--img {
+      width: 1.5rem;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      height: auto; }
+    .profile-pin__edit-pin:hover .profile-pin__edit-pin--img {
+      -webkit-transform: translateX(-0.3rem);
+          -ms-transform: translateX(-0.3rem);
+              transform: translateX(-0.3rem); }
+
+.dashboard__profile {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__profile {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem;
+      padding-bottom: 5rem; } }
+  .dashboard__profile .nav__back {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    display: none; }
+    .dashboard__profile .nav__back img {
+      display: inline-block; }
+    @media only screen and (max-width: 25em) {
+      .dashboard__profile .nav__back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile .nav__logo img {
+      height: 1.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__profile .nav__button {
+      display: none; } }
+
+@media only screen and (max-width: 25em) {
+  .profile {
+    padding: 0; } }
+
+.profile__manageWallet {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 8px;
+  padding: 2rem;
+  padding-top: 0;
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .profile__manageWallet {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .profile__manageWallet {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .profile__manageWallet {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid #fff;
+      border-radius: 1.8rem;
+      background-color: #fff; } }
+  .profile__manageWallet-title {
+    text-align: center;
+    margin-block: 3rem;
+    font-weight: 500;
+    font-size: 1.3rem; }
+  .profile__manageWallet-coin1, .profile__manageWallet-coin2, .profile__manageWallet-coin3, .profile__manageWallet-bank {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    margin-block: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #000;
+    font-weight: 500;
+    -webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); }
+    .profile__manageWallet-coin1 .image-name, .profile__manageWallet-coin2 .image-name, .profile__manageWallet-coin3 .image-name, .profile__manageWallet-bank .image-name {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 0.8rem; }
+      .profile__manageWallet-coin1 .image-name img, .profile__manageWallet-coin2 .image-name img, .profile__manageWallet-coin3 .image-name img, .profile__manageWallet-bank .image-name img {
+        width: 1.8rem;
+        height: 1.8rem;
+        padding: 0.2rem;
+        border-radius: 2px;
+        background-size: contain; }
+
+.dashboard__manageBank {
+  background-color: #f1590e;
+  padding: 1.5rem 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .dashboard__manageBank {
+      padding: 1rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__manageBank {
+      display: block;
+      padding: 0; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__manageBank .nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      gap: 1.2rem;
+      padding: 1rem;
+      padding-bottom: 5rem; } }
+  .dashboard__manageBank .nav__back {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+    color: #fff;
+    text-decoration: none;
+    display: none; }
+    .dashboard__manageBank .nav__back img {
+      display: inline-block; }
+    @media only screen and (max-width: 25em) {
+      .dashboard__manageBank .nav__back {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__manageBank .nav__logo img {
+      height: 1.5rem; } }
+  @media only screen and (max-width: 25em) {
+    .dashboard__manageBank .nav__button {
+      display: none; } }
+
+@media only screen and (max-width: 25em) {
+  .manageBank {
+    padding: 0; } }
+
+.manageBank__form {
+  width: 50%;
+  border: 1px solid #cbc8c8;
+  margin: 1rem auto;
+  border-radius: 4px;
+  padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .manageBank__form {
+      width: 60%; } }
+  @media only screen and (max-width: 43.75em) {
+    .manageBank__form {
+      width: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .manageBank__form {
+      width: 100%;
+      padding: 2rem;
+      padding-top: 0;
+      margin-top: -1.5rem;
+      border: 1px solid #fff;
+      border-radius: 1.8rem;
+      background-color: #fff; } }
+
+.manageBank__heading {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 25em) {
+    .manageBank__heading {
+      margin-top: 3rem;
+      margin-bottom: 4rem; } }
+
+.manageBank__account, .manageBank__accountName, .manageBank__amount {
+  margin-top: 2.5rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: 1px solid #cbc8c8;
+  background-color: #fff;
+  border-radius: 8px; }
+  .manageBank__account img, .manageBank__accountName img, .manageBank__amount img {
+    display: inline-block;
+    margin-left: 0.8rem;
+    width: 1.5rem;
+    height: 1.5rem; }
+  .manageBank__account input, .manageBank__accountName input, .manageBank__amount input {
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: 500; }
+    @media only screen and (max-width: 25em) {
+      .manageBank__account input, .manageBank__accountName input, .manageBank__amount input {
+        padding: 1.1rem 1rem; } }
+    .manageBank__account input:focus-within, .manageBank__accountName input:focus-within, .manageBank__amount input:focus-within {
+      background-color: #fff; }
+  .manageBank__account input:-webkit-autofill,
+  .manageBank__account input:-webkit-autofill:hover,
+  .manageBank__account input:-webkit-autofill:focus,
+  .manageBank__account input:-webkit-autofill:active, .manageBank__accountName input:-webkit-autofill,
+  .manageBank__accountName input:-webkit-autofill:hover,
+  .manageBank__accountName input:-webkit-autofill:focus,
+  .manageBank__accountName input:-webkit-autofill:active, .manageBank__amount input:-webkit-autofill,
+  .manageBank__amount input:-webkit-autofill:hover,
+  .manageBank__amount input:-webkit-autofill:focus,
+  .manageBank__amount input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 90px white inset !important;
+            box-shadow: 0 0 0 90px white inset !important; }
+  .manageBank__account input:focus::-webkit-input-placeholder, .manageBank__accountName input:focus::-webkit-input-placeholder, .manageBank__amount input:focus::-webkit-input-placeholder {
+    color: transparent; }
+  .manageBank__account ::-webkit-input-placeholder, .manageBank__accountName ::-webkit-input-placeholder, .manageBank__amount ::-webkit-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .manageBank__account ::-moz-placeholder, .manageBank__accountName ::-moz-placeholder, .manageBank__amount ::-moz-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .manageBank__account :-ms-input-placeholder, .manageBank__accountName :-ms-input-placeholder, .manageBank__amount :-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .manageBank__account ::-ms-input-placeholder, .manageBank__accountName ::-ms-input-placeholder, .manageBank__amount ::-ms-input-placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .manageBank__account ::placeholder, .manageBank__accountName ::placeholder, .manageBank__amount ::placeholder {
+    color: #9e9999;
+    font-size: 1rem;
+    font-weight: 600; }
+  .manageBank__account label, .manageBank__accountName label, .manageBank__amount label {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.8rem;
+    background-color: #fff;
+    -webkit-transition: 500ms opacity ease-in;
+    -o-transition: 500ms opacity ease-in;
+    transition: 500ms opacity ease-in;
+    font-weight: 600;
+    padding: 5px 15px;
+    color: #383838; }
+  .manageBank__account input:not(:-moz-placeholder-shown) ~ label, .manageBank__accountName input:not(:-moz-placeholder-shown) ~ label, .manageBank__amount input:not(:-moz-placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .manageBank__account input:not(:-ms-input-placeholder) ~ label, .manageBank__accountName input:not(:-ms-input-placeholder) ~ label, .manageBank__amount input:not(:-ms-input-placeholder) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+  .manageBank__account:focus-within label,
+  .manageBank__account input:not(:placeholder-shown) ~ label, .manageBank__accountName:focus-within label,
+  .manageBank__accountName input:not(:placeholder-shown) ~ label, .manageBank__amount:focus-within label,
+  .manageBank__amount input:not(:placeholder-shown) ~ label {
+    top: -28%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible; }
+
+.manageBank__select {
+  margin-top: 1.5rem; }
+  .manageBank__select .select-label {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.2rem 1.5rem;
+    background-color: #fff;
+    color: #383838;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 1px solid #cbc8c8;
+    cursor: pointer; }
+    .manageBank__select .select-label img {
+      display: inline-block;
+      margin-left: -0.8rem;
+      width: 1.5rem;
+      height: 1.5rem; }
+    .manageBank__select .select-label::before {
+      position: absolute;
+      content: "";
+      top: 1rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #000;
+      right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .manageBank__select .select-label::before {
+          top: 1.2rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid #000; } }
+    .manageBank__select .select-label::after {
+      position: absolute;
+      content: "";
+      top: 1.7rem;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #000;
+      right: 1rem; }
+      @media only screen and (max-width: 25em) {
+        .manageBank__select .select-label::after {
+          top: 1.8rem;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 5px solid #000; } }
+    .manageBank__select .select-label .select-text1 {
+      position: absolute;
+      top: -0.6rem;
+      left: 2rem;
+      background-color: #fff;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 0.8rem;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .manageBank__select .select-label #options-view:hover + .select-text1 {
+      opacity: 1;
+      visibility: visible; }
+    .manageBank__select .select-label .select-text {
+      color: #9e9999;
+      font-size: 1rem;
+      margin-left: 2rem;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+    .manageBank__select .select-label input[type="checkbox"] {
+      display: none; }
+    .manageBank__select .select-label .options {
+      position: absolute;
+      z-index: 30;
+      left: -1px;
+      top: 3.3rem;
+      border-radius: 8px;
+      border-right: 1px solid #cbc8c8;
+      border-left: 1px solid #cbc8c8;
+      border-bottom: 1px solid #cbc8c8;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      border-radius: 0px;
+      background: white;
+      width: 100.4%;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 0.5s ease-in;
+      -o-transition: all 0.5s ease-in;
+      transition: all 0.5s ease-in; }
+      .manageBank__select .select-label .options .option {
+        position: relative;
+        z-index: 30;
+        padding: 0.8rem 2rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 0.8rem;
+        -webkit-transition: all 0.5s ease-in;
+        -o-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        cursor: pointer; }
+        .manageBank__select .select-label .options .option:hover {
+          background-color: #1b9a20;
+          color: #fff; }
+        .manageBank__select .select-label .options .option img {
+          display: inline-block;
+          width: 1.5rem;
+          height: 1.5rem; }
+      .manageBank__select .select-label .options input[type="radio"] {
+        display: none; }
+    .manageBank__select .select-label:hover .select-text {
+      opacity: 0; }
+  .manageBank__select-btn {
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    background-color: #f1590e; }
+    @media only screen and (max-width: 25em) {
+      .manageBank__select-btn {
+        padding: 0.5rem 1.5rem;
+        font-weight: 400; } }
+  .manageBank__select-back {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    gap: 0.8rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #f1590e; }
+    @media only screen and (max-width: 25em) {
+      .manageBank__select-back {
+        font-size: 1rem; } }
+    .manageBank__select-back--img {
+      width: 1.5rem;
+      -webkit-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+      height: auto; }
+      @media only screen and (max-width: 25em) {
+        .manageBank__select-back--img {
+          width: 1rem; } }
+    .manageBank__select-back:hover .manageBank__select-back--img {
+      -webkit-transform: translateX(-0.3rem);
+          -ms-transform: translateX(-0.3rem);
+              transform: translateX(-0.3rem); }
+  .manageBank__select #options-view:checked ~ .options {
+    opacity: 1;
+    visibility: visible; }
+
+.manageBank-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; }
