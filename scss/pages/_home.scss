@@ -185,9 +185,31 @@ select {
 //============ Leverage Section ===================//
 
 .leverage {
+  background-image: url(../../images/bg-dark.jpg);
+  color: #fff;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @include respond(tab-port) {
+    background-position: 50% 50%;
+    width: auto;
+    background-size: unset;
+    height: auto;
+    object-fit: cover;
+  }
+
   &__heading {
     text-align: center;
     font-weight: 700;
+    font-size: 3rem;
+    color: $color-primary;
+    text-transform: capitalize;
+
+    @include respond(sm-phone) {
+      font-size: 2rem;
+    }
   }
 
   &-us {
@@ -205,6 +227,12 @@ select {
       gap: 2rem;
     }
 
+    @include respond(sm-phone) {
+      margin-top: 2rem;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
     &__about {
       width: 40%;
       font-weight: 600;
@@ -218,10 +246,12 @@ select {
       }
       &-main {
         color: $color-primary;
+        font-size: 1.5rem;
       }
 
       &-sub {
-        font-size: 1.875rem;
+        font-size: 5rem;
+        text-transform: capitalize;
 
         @include respond(mini-lap) {
           font-size: 1.6rem;
@@ -230,12 +260,17 @@ select {
         @include respond(tab-land) {
           font-size: 1.3rem;
         }
+
+        @include respond(tab-port) {
+          font-size: 2.5rem;
+        }
       }
     }
 
     &__text {
       width: 45%;
       font-weight: 500;
+      font-size: 1.3rem;
 
       @include respond(mini-lap) {
         font-size: 1rem;
@@ -246,6 +281,7 @@ select {
 
       @include respond(tab-port) {
         width: 100%;
+        font-size: 1.1rem;
       }
     }
   }
@@ -258,12 +294,26 @@ select {
     @include respond(tab-port) {
       flex-direction: column;
       gap: 2rem;
+
+      [class$="img"] {
+        text-align: center;
+      }
+    }
+
+    @include respond(tab-port) {
+      margin-top: 3rem;
+    }
+
+    @include respond(tab-port) {
+      margin-top: 2rem;
     }
 
     & > * {
       border: 1px solid $color-ash;
-      width: 28%;
+      width: 30%;
       padding: 3rem 1rem;
+      border-radius: 1rem;
+      box-shadow: 1px 3px 4px #aaa2a2;
 
       @include respond(mini-lap) {
         width: 31%;
@@ -271,12 +321,19 @@ select {
       }
 
       @include respond(tab-port) {
+        width: 85%;
+        margin-inline: auto;
+      }
+
+      @include respond(sm-phone) {
         width: 100%;
+        color: black;
+        background-color: #fff;
       }
 
       img {
-        width: 5rem;
-        height: 5rem;
+        width: 8rem;
+        height: 8rem;
         object-fit: contain;
         display: inline-block;
       }
@@ -286,18 +343,37 @@ select {
 
         &:nth-child(2) {
           font-weight: 500;
+          font-size: 1.8rem;
+
+          @include respond(tab-land) {
+            font-size: 1rem;
+            text-align: center;
+          }
+
+          @include respond(tab-port) {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+          }
+
+          @include respond(sm-phone) {
+            font-size: 1.6rem;
+          }
+        }
+
+        &:nth-child(3) {
           font-size: 1.2rem;
 
           @include respond(tab-land) {
             font-size: 1rem;
           }
-        }
 
-        &:nth-child(3) {
-          font-size: 0.9rem;
+          @include respond(tab-port) {
+            font-size: 1.3rem;
+          }
 
-          @include respond(tab-land) {
-            font-size: 0.8rem;
+          @include respond(sm-phone) {
+            font-size: 1rem;
           }
         }
       }
@@ -307,9 +383,20 @@ select {
 
 //============ Process Section ===================//
 .process {
+  position: relative;
+  overflow: hidden;
   &__heading {
     text-align: center;
     font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+
+    @include respond(sm-phone) {
+      margin-bottom: 0rem;
+      margin-top: 2rem;
+      color: $color-primary;
+    }
   }
 
   &__stage {
@@ -320,38 +407,72 @@ select {
       flex-direction: column;
     }
 
+    @include respond(sm-phone) {
+      margin-left: -1rem;
+      margin-right: -1rem;
+
+      [class$="img"] {
+        text-align: center;
+      }
+    }
+
     & > * {
-      width: 28%;
-      padding: 3rem 1rem;
+      margin-top: 2rem;
+      width: 30%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 1px 3px 4px #aaa2a2;
 
       @include respond(tab-port) {
         width: 100%;
+      }
+
+      @include respond(sm-phone) {
+        margin-bottom: 1rem;
       }
 
       img {
         max-width: 100%;
         height: auto;
         display: inline-block;
+        border-radius: 0.5rem 0.5rem 0 0;
       }
 
       & > p {
         margin-top: 1rem;
+        padding-inline: 1rem;
 
         &:nth-child(2) {
-          font-weight: 500;
-          font-size: 1.2rem;
+          font-weight: 600;
+          font-size: 1.6rem;
+          text-transform: capitalize;
 
           @include respond(mini-lap) {
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-size: 1.3rem;
+          }
+
+          @include respond(tab-port) {
+            font-size: 1.6rem;
+          }
+
+          @include respond(sm-phone) {
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: bold;
           }
         }
 
         &:nth-child(3) {
-          font-size: 0.9rem;
+          font-size: 1.1rem;
+          padding-bottom: 1rem;
 
           @include respond(mini-lap) {
-            font-size: 0.8rem;
+            font-size: 1rem;
+          }
+
+          @include respond(sm-phone) {
+            text-align: center;
+            margin-top: 0.5rem;
           }
         }
       }
@@ -383,7 +504,7 @@ select {
   }
 
   &__text {
-    width: 45%;
+    width: 50%;
 
     @include respond(mini-lap) {
       width: 60%;
@@ -395,7 +516,7 @@ select {
 
     &-main {
       font-weight: 600;
-      font-size: 1.875rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
 
       @include respond(mini-lap) {
@@ -406,11 +527,19 @@ select {
       @include respond(tab-land) {
         font-size: 1.3rem;
       }
+
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
+
+      @include respond(sm-phone) {
+        font-size: 2rem;
+      }
     }
 
     &-sub {
       margin-top: 2rem;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
     }
   }
 
@@ -428,9 +557,22 @@ select {
 //============ FAQ ===================//
 
 .faq {
+  background-color: #fef2ec;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+
+  &__animation {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    img {
+      width: 100%;
+    }
+  }
 
   @include respond(tab-port) {
     flex-direction: column;
@@ -442,7 +584,7 @@ select {
       display: inline-block;
 
       @include respond(mini-lap) {
-        width: 40vw;
+        max-width: 100%;
       }
 
       @include respond(tab-port) {
@@ -489,7 +631,11 @@ select {
         }
 
         @include respond(tab-port) {
-          font-size: 0.8rem;
+          font-size: 1.3rem;
+        }
+
+        @include respond(sm-phone) {
+          font-size: 1.1rem;
         }
       }
 
@@ -499,8 +645,13 @@ select {
         font-weight: 500;
 
         @include respond(tab-port) {
-          font-size: 0.8rem;
+          font-size: 1.2rem;
           font-weight: 400;
+        }
+
+        @include respond(sm-phone) {
+          font-size: 1rem;
+          white-space: nowrap;
         }
       }
     }
@@ -524,7 +675,11 @@ select {
         }
 
         @include respond(tab-port) {
-          font-size: 0.8rem;
+          font-size: 1.1rem;
+        }
+
+        @include respond(sm-phone) {
+          font-size: 1rem;
         }
 
         &::before {
@@ -548,11 +703,16 @@ select {
         overflow: hidden;
         transition: 0.5s;
         padding: 0 1rem;
+        text-align: justify;
+        hyphens: auto;
 
         @include respond(tab-port) {
           padding: 0rem;
-          font-size: 0.7rem;
           font-weight: 300;
+        }
+
+        @include respond(sm-phone) {
+          font-size: 1rem;
         }
       }
     }
@@ -572,12 +732,27 @@ select {
 
 //============ CTA ===================//
 .cta {
+  overflow: hidden;
+  background-image: url(../../images/bg-dark.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   position: relative;
+  color: #fff;
+  background-position: 50% 50%;
   padding-bottom: 10rem;
 
   @include respond(tab-land) {
     padding-bottom: 5rem;
+  }
+
+  @include respond(sm-phone) {
+    background-position: 50% 50%;
+    width: auto;
+    background-size: unset;
+    height: auto;
+    object-fit: cover;
+    padding-bottom: 8rem;
   }
 
   &__heading {
@@ -590,7 +765,11 @@ select {
   &__sub {
     margin: 2rem 0;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
+
+    @include respond(sm-phone) {
+      font-size: 1.2rem;
+    }
   }
 
   &__button {
@@ -603,9 +782,13 @@ select {
     width: 100%;
     position: absolute;
     background-image: url(../../images/wave_2.png);
-    bottom: -3px;
+    bottom: -5px;
     left: 0;
     background-repeat: no-repeat;
+
+    @include respond(sm-phone) {
+      height: 13rem;
+    }
   }
 }
 
