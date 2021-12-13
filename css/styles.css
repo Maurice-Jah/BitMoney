@@ -1090,6 +1090,8 @@ section {
   width: 100%;
   bottom: 0;
   left: 0;
+  background-color: #000;
+  min-height: 4rem;
   opacity: 0;
   visibility: hidden; }
   @media only screen and (max-width: 25em) {
