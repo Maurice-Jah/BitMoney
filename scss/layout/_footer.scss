@@ -143,9 +143,13 @@
   width: 100%;
   bottom: 0;
   left: 0;
-  background-color: $color-black;
+  background-color: $color-primary;
+  background-image: url(../images/bg-dark.jpg);
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-position: 50% 50%;
   min-height: 4rem;
-
+  z-index: 800;
   opacity: 0;
   visibility: hidden;
 
