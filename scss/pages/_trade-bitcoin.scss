@@ -22,24 +22,24 @@
         padding-bottom: 5rem;
       }
 
+      &__logo {
+        @include respond(sm-phone) {
+          display: none;
+        }
+      }
+
       &__back {
         gap: 0.3rem;
-        font-size: 0.7rem;
+        font-size: 1rem;
         color: $color-white;
         text-decoration: none;
         display: none;
         img {
           display: inline-block;
+          width: 2rem;
         }
         @include respond(sm-phone) {
           display: flex;
-        }
-      }
-      &__logo {
-        @include respond(sm-phone) {
-          img {
-            height: 1.5rem;
-          }
         }
       }
 
@@ -53,27 +53,28 @@
 }
 
 .trade-bitcoin {
+  @include respond(tab-port) {
+    padding-inline: 1rem;
+  }
   @include respond(sm-phone) {
     padding: 0;
   }
   &__form {
-    width: 50%;
+    width: 70%;
     border: 1px solid $color-ash;
     margin: 1rem auto;
     border-radius: 4px;
     padding: 2rem;
 
     @include respond(tab-land) {
-      width: 60%;
-    }
-    @include respond(tab-port) {
-      width: 90%;
+      width: 100%;
     }
 
     @include respond(sm-phone) {
       width: 100%;
-      padding: 2rem;
+      padding: 1rem;
       padding-top: 0;
+      padding-bottom: 5rem;
       margin-top: -1.5rem;
       border: 1px solid $color-white;
       border-radius: 1.8rem;
@@ -85,10 +86,12 @@
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 3rem;
+    font-size: 2rem;
 
     @include respond(sm-phone) {
-      margin-top: 3rem;
-      margin-bottom: 4rem;
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -300,6 +303,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      margin-bottom: 0.5rem;
 
       .percentage-rise {
         background-color: rgba(#17ef46, 0.21);
