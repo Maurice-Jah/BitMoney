@@ -2474,11 +2474,11 @@ select {
       gap: 0.3rem;
       color: #fff; }
       .bitcoin-hero__header-right p {
-        font-size: 0.9rem; }
+        font-size: 1.1rem; }
       .bitcoin-hero__header-right img {
         display: block;
-        width: 0.8rem;
-        height: 0.8rem; }
+        width: 1.1rem;
+        height: 2rem; }
   .bitcoin-hero__text {
     margin-top: 4rem;
     text-align: center;
@@ -5567,32 +5567,24 @@ select {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: start;
-          -ms-flex-align: start;
-              align-items: flex-start;
-      gap: 1.2rem;
-      padding: 1rem;
-      padding-bottom: 5rem; } }
-  .dashboard__trade .nav__back {
+      gap: 1rem;
+      padding: 1rem; } }
+  .dashboard__trade .nav__howItWorks {
     gap: 0.3rem;
-    font-size: 0.7rem;
+    font-size: 1rem;
     color: #fff;
     text-decoration: none;
     display: none; }
-    .dashboard__trade .nav__back img {
+    .dashboard__trade .nav__howItWorks img {
       display: inline-block; }
     @media only screen and (max-width: 25em) {
-      .dashboard__trade .nav__back {
+      .dashboard__trade .nav__howItWorks {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex; } }
   @media only screen and (max-width: 25em) {
     .dashboard__trade .nav__logo img {
-      height: 1.5rem; } }
+      height: 2.5rem; } }
   @media only screen and (max-width: 25em) {
     .dashboard__trade .nav__button {
       display: none; } }
@@ -5615,6 +5607,9 @@ select {
   padding-bottom: 13rem; }
   .trade__balance-heading {
     font-size: 2rem; }
+    @media only screen and (max-width: 25em) {
+      .trade__balance-heading {
+        font-size: 1.2rem; } }
   .trade__balance-amount {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5624,6 +5619,9 @@ select {
             align-items: center;
     gap: 0.3rem;
     font-size: 1.5rem; }
+    @media only screen and (max-width: 25em) {
+      .trade__balance-amount {
+        font-size: 1rem; } }
     .trade__balance-amount img {
       display: inline-block; }
     .trade__balance-amount span:nth-child(3) {
@@ -5636,7 +5634,26 @@ select {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 5rem; }
+  gap: 5rem;
+  margin-top: -8rem;
+  position: relative; }
+  @media only screen and (max-width: 56.25em) {
+    .trade-coin {
+      gap: 3rem;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+  @media only screen and (max-width: 25em) {
+    .trade-coin {
+      padding-top: 3rem;
+      background-color: #fff;
+      border-top-left-radius: 1.8rem;
+      border-top-right-radius: 1.8rem;
+      gap: 2rem; } }
+  .trade-coin::-webkit-scrollbar {
+    display: none; }
   .trade-coin__coin {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5675,6 +5692,10 @@ select {
     color: #fff;
     position: relative;
     z-index: 10; }
+    @media only screen and (max-width: 25em) {
+      .trade-coin__activity {
+        gap: 2rem;
+        margin-block: 1.5rem; } }
     .trade-coin__activity--price p:nth-child(1), .trade-coin__activity--position p:nth-child(1), .trade-coin__activity--flow p:nth-child(1) {
       color: rgba(255, 255, 255, 0.7);
       padding-bottom: 0.3rem; }
@@ -5703,45 +5724,85 @@ select {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex; }
+    @media only screen and (max-width: 25em) {
+      .trade-coin__btn {
+        font-size: 1rem; } }
+  .trade-coin__bitcoin, .trade-coin__ethereum {
+    background-color: #f7931a;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    position: relative;
+    z-index: 10; }
+    .trade-coin__bitcoin::before, .trade-coin__ethereum::before {
+      position: absolute;
+      content: "";
+      border-left: 100px solid transparent;
+      border-right: 120px solid transparent;
+      border-bottom: 300px solid rgba(255, 255, 255, 0.15);
+      z-index: 2;
+      bottom: -40%;
+      left: 10%;
+      -webkit-transform: rotate(50deg);
+          -ms-transform: rotate(50deg);
+              transform: rotate(50deg); }
+    .trade-coin__bitcoin::after, .trade-coin__ethereum::after {
+      position: absolute;
+      content: "";
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 300px solid rgba(255, 255, 255, 0.1);
+      z-index: 1;
+      bottom: -50%;
+      left: 20%;
+      -webkit-transform: rotate(40deg);
+          -ms-transform: rotate(40deg);
+              transform: rotate(40deg); }
+    @media only screen and (max-width: 25em) {
+      .trade-coin__bitcoin, .trade-coin__ethereum {
+        padding: 1rem; } }
+    @media only screen and (max-width: 25em) {
+      .trade-coin__bitcoin a, .trade-coin__ethereum a {
+        padding: 0.4rem 1rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .trade-coin__bitcoin {
+      margin-left: 1rem; } }
+  .trade-coin__ethereum {
+    background-color: #6149cd; }
+    @media only screen and (max-width: 56.25em) {
+      .trade-coin__ethereum {
+        margin-right: 1rem; } }
+    .trade-coin__ethereum a {
+      color: #6149cd;
+      text-decoration: none; }
 
-.trade-bitcon, .trade-ethereum {
-  background-color: #f7931a;
-  padding: 1rem 2.5rem;
-  border-radius: 8px;
-  margin-top: -8rem;
-  position: relative;
-  z-index: 10;
-  overflow: hidden; }
-  .trade-bitcon::before, .trade-ethereum::before {
-    position: absolute;
-    content: "";
-    border-left: 100px solid transparent;
-    border-right: 120px solid transparent;
-    border-bottom: 300px solid rgba(255, 255, 255, 0.15);
-    z-index: 2;
-    bottom: -40%;
-    left: 10%;
-    -webkit-transform: rotate(50deg);
-        -ms-transform: rotate(50deg);
-            transform: rotate(50deg); }
-  .trade-bitcon::after, .trade-ethereum::after {
-    position: absolute;
-    content: "";
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 300px solid rgba(255, 255, 255, 0.1);
-    z-index: 1;
-    bottom: -50%;
-    left: 20%;
-    -webkit-transform: rotate(40deg);
-        -ms-transform: rotate(40deg);
-            transform: rotate(40deg); }
+.indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1rem;
+  gap: 1.5rem;
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .indicators {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  .indicators span {
+    width: 3rem;
+    height: 0.5rem;
+    border-radius: 5rem;
+    cursor: pointer; }
+  .indicators .indicator-1 {
+    background-color: #f1590e; }
+  .indicators .indicator-2 {
+    background-color: #cbc8c8; }
 
-.trade-ethereum {
-  background-color: #6149cd; }
-  .trade-ethereum a {
-    color: #6149cd;
-    text-decoration: none; }
+@media only screen and (max-width: 43.75em) {
+  .trade-content {
+    padding-inline: 1rem; } }
 
 .trade-tab {
   display: -webkit-box;
@@ -5753,6 +5814,13 @@ select {
   padding: 2rem;
   position: relative;
   min-height: 100vh; }
+  @media only screen and (max-width: 56.25em) {
+    .trade-tab {
+      width: 90%; } }
+  @media only screen and (max-width: 43.75em) {
+    .trade-tab {
+      width: 100%;
+      padding: unset; } }
   .trade-tab .tab1,
   .trade-tab .tab2 {
     height: -webkit-max-content;
@@ -5779,6 +5847,9 @@ select {
     border: 1px solid #cbc8c8;
     border-radius: 8px;
     display: none; }
+    @media only screen and (max-width: 56.25em) {
+      .trade-tab__content {
+        margin-inline: unset; } }
     .trade-tab__content-coin1, .trade-tab__content-coin2, .trade-tab__content-coin3, .trade-tab__content-trade {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -5788,6 +5859,12 @@ select {
               justify-content: space-between;
       padding: 2rem;
       border-bottom: 1px solid rgba(203, 200, 200, 0.3); }
+      @media only screen and (max-width: 43.75em) {
+        .trade-tab__content-coin1, .trade-tab__content-coin2, .trade-tab__content-coin3, .trade-tab__content-trade {
+          padding: 2rem 1rem; } }
+      @media only screen and (max-width: 25em) {
+        .trade-tab__content-coin1, .trade-tab__content-coin2, .trade-tab__content-coin3, .trade-tab__content-trade {
+          font-size: 12px; } }
       .trade-tab__content-coin1--detail, .trade-tab__content-coin2--detail, .trade-tab__content-coin3--detail, .trade-tab__content-trade--detail {
         display: -webkit-box;
         display: -ms-flexbox;
